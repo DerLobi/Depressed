@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qVl-5S-NWb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Depressed?-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="Depressed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAA-z1-YBH">
+                                <rect key="frame" x="30" y="194" width="540" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="97t-Ha-5a1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start the Test">
+                                    <color key="titleColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x1E-NE-RC6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be asked 9 questions to determine if you are depressed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hi-nW-Wee">
+                                <rect key="frame" x="30" y="115" width="540" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.87647435202570301" green="0.83250155745646692" blue="0.96670029264343438" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="qAA-z1-YBH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="C9k-2s-iyO"/>
+                            <constraint firstItem="qAA-z1-YBH" firstAttribute="top" secondItem="8Hi-nW-Wee" secondAttribute="bottom" constant="61" id="OSY-Oh-wvL"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="8Hi-nW-Wee" secondAttribute="leading" constant="-10" id="S5A-4i-yfv"/>
+                            <constraint firstItem="8Hi-nW-Wee" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="51" id="Wjj-ov-Ow7"/>
+                            <constraint firstAttribute="trailing" secondItem="qAA-z1-YBH" secondAttribute="trailing" constant="30" id="bav-us-lO0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Hi-nW-Wee" secondAttribute="trailing" constant="10" id="xDS-aN-IpG"/>
+                            <constraint firstItem="qAA-z1-YBH" firstAttribute="centerX" secondItem="8Hi-nW-Wee" secondAttribute="centerX" id="y1d-kk-OyF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="y1d-kk-OyF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Depressed?" id="zXf-eP-or7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1248" y="359"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="fA5-Vd-lTf">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="2iT-wc-f4b" customClass="ResultViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tkn-dn-4kq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wf9-BC-EKz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zd9-yr-bKF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your answers indicate that you have a severe depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvL-49-Ptb">
+                                <rect key="frame" x="20" y="224" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You said that you had thoughts about being better of dead, please talk to your doctor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2E-Nh-YXO">
+                                <rect key="frame" x="20" y="289" width="560" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="I2E-Nh-YXO" secondAttribute="trailing" constant="20" id="7YO-yI-YzO"/>
+                            <constraint firstItem="I2E-Nh-YXO" firstAttribute="leading" secondItem="zd9-yr-bKF" secondAttribute="leading" constant="20" id="9wP-GM-LYs"/>
+                            <constraint firstItem="I2E-Nh-YXO" firstAttribute="top" secondItem="XvL-49-Ptb" secondAttribute="bottom" constant="44" id="GNN-66-2Ry"/>
+                            <constraint firstAttribute="trailing" secondItem="XvL-49-Ptb" secondAttribute="trailing" constant="20" id="Jzw-A2-qH3"/>
+                            <constraint firstItem="XvL-49-Ptb" firstAttribute="centerY" secondItem="zd9-yr-bKF" secondAttribute="centerY" constant="-65.5" id="gFg-gJ-nbD"/>
+                            <constraint firstItem="XvL-49-Ptb" firstAttribute="leading" secondItem="zd9-yr-bKF" secondAttribute="leading" constant="20" id="sgq-E9-W5w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="additionalLabel" destination="I2E-Nh-YXO" id="eL4-I5-Cpj"/>
+                        <outlet property="resultLabel" destination="XvL-49-Ptb" id="hIj-wS-DxI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rxW-hD-lpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="359"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jwH-9D-EFG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qVl-5S-NWb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="php-E5-fmz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.33524699871830083" green="0.18226750344884193" blue="0.59980872067373747" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2H3-xd-Sat"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kpf-vK-qor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="359"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+</document>
