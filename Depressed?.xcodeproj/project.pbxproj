@@ -12,6 +12,8 @@
 		CA6581011BEBC93600DA66E2 /* EvaluationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6581001BEBC93600DA66E2 /* EvaluationSpec.swift */; };
 		CA6581031BEBCF7C00DA66E2 /* QuestionIdentifierSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6581021BEBCF7C00DA66E2 /* QuestionIdentifierSpec.swift */; };
 		CA6600421BEC09EF00042495 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600411BEC09EF00042495 /* ResultViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		CA6600461BED244600042495 /* EvaluationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600451BED244600042495 /* EvaluationViewModel.swift */; settings = {ASSET_TAGS = (); }; };
+		CA6600491BED454A00042495 /* EvaluationViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		CA66004C1BED490200042495 /* MutableEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66004B1BED490200042495 /* MutableEvaluation.swift */; settings = {ASSET_TAGS = (); }; };
 		CA86836F1BE004A9003E87A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA86836E1BE004A9003E87A4 /* AppDelegate.swift */; };
 		CA8683711BE004A9003E87A4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683701BE004A9003E87A4 /* StartViewController.swift */; };
@@ -45,6 +47,8 @@
 		CA6581001BEBC93600DA66E2 /* EvaluationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationSpec.swift; sourceTree = "<group>"; };
 		CA6581021BEBCF7C00DA66E2 /* QuestionIdentifierSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIdentifierSpec.swift; sourceTree = "<group>"; };
 		CA6600411BEC09EF00042495 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CA6600451BED244600042495 /* EvaluationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationViewModel.swift; sourceTree = "<group>"; };
+		CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationViewModelSpec.swift; sourceTree = "<group>"; };
 		CA66004B1BED490200042495 /* MutableEvaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableEvaluation.swift; sourceTree = "<group>"; };
 		CA86836B1BE004A9003E87A4 /* Depressed?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Depressed?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA86836E1BE004A9003E87A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +141,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		CA6600471BED244C00042495 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA6600451BED244600042495 /* EvaluationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA66004A1BED454E00042495 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CA8683621BE004A8003E87A4 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +182,7 @@
 			children = (
 				CA66003E1BEC010500042495 /* Model */,
 				CA66003F1BEC012100042495 /* View */,
+				CA6600471BED244C00042495 /* ViewModel */,
 				CA86836E1BE004A9003E87A4 /* AppDelegate.swift */,
 				CA86837A1BE004A9003E87A4 /* Info.plist */,
 			);
@@ -172,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6600401BEC014200042495 /* Model */,
+				CA66004A1BED454E00042495 /* ViewModel */,
 				CA6580FF1BEBC93600DA66E2 /* Depressed?Tests-Bridging-Header.h */,
 				CA8683851BE004A9003E87A4 /* Info.plist */,
 			);
@@ -383,6 +405,7 @@
 				CA8683711BE004A9003E87A4 /* StartViewController.swift in Sources */,
 				CA6600421BEC09EF00042495 /* ResultViewController.swift in Sources */,
 				CA8683931BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift in Sources */,
+				CA6600461BED244600042495 /* EvaluationViewModel.swift in Sources */,
 				CA8683951BE1646B003E87A4 /* Evaluation.swift in Sources */,
 				CA86838F1BE00981003E87A4 /* SelfTestTask.swift in Sources */,
 				CA86836F1BE004A9003E87A4 /* AppDelegate.swift in Sources */,
@@ -395,6 +418,7 @@
 			files = (
 				CA66004C1BED490200042495 /* MutableEvaluation.swift in Sources */,
 				CA6581011BEBC93600DA66E2 /* EvaluationSpec.swift in Sources */,
+				CA6600491BED454A00042495 /* EvaluationViewModelSpec.swift in Sources */,
 				CA6581031BEBCF7C00DA66E2 /* QuestionIdentifierSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
