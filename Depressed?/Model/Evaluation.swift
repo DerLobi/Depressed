@@ -17,8 +17,14 @@ public enum Severity: String {
     case SevereDepression
 }
 
+public protocol EvaluationType {
+    var depressiveDisorderConsidered: Bool { get }
+    var score: Int { get }
+    var severity: Severity { get }
+    var suicidal: Bool { get }
+}
 
-public struct Evaluation {
+public struct Evaluation: EvaluationType {
     
     public private(set) var depressiveDisorderConsidered: Bool
     
