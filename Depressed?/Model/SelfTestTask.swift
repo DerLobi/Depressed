@@ -8,12 +8,12 @@
 
 import ResearchKit
 
-class SelfTestTask: NSObject, ORKTask {
+public class SelfTestTask: NSObject, ORKTask {
 
-    let identifier = "SelfTest"
+    public let identifier = "SelfTest"
     
 
-    func stepBeforeStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep? {
+    public func stepBeforeStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep? {
         if let step = step {
             // return appropiate step
             let index = steps().indexOf(step)
@@ -28,7 +28,7 @@ class SelfTestTask: NSObject, ORKTask {
         }
     }
 
-    func stepAfterStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep? {
+    public func stepAfterStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep? {
 
         if let step = step {
             // return appropiate step
@@ -45,7 +45,7 @@ class SelfTestTask: NSObject, ORKTask {
 
     }
     
-    func progressOfCurrentStep(step: ORKStep, withResult result: ORKTaskResult) -> ORKTaskProgress {
+    public func progressOfCurrentStep(step: ORKStep, withResult result: ORKTaskResult) -> ORKTaskProgress {
         let index = steps().indexOf(step)
         
         if let index = index {
@@ -55,7 +55,7 @@ class SelfTestTask: NSObject, ORKTask {
         return ORKTaskProgressMake(0, UInt(steps().count))
     }
     
-    func steps() -> [ORKStep] {
+    private func steps() -> [ORKStep] {
 
         let makeStep: (String, String, String) -> ORKQuestionStep = { identifier, title, text in
             let step = ORKQuestionStep(identifier: identifier, title: NSLocalizedString(title, comment: ""), answer: ORKTextChoiceAnswerFormat.phq9Format())
