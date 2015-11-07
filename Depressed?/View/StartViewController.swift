@@ -31,6 +31,8 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
             let resultViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("ResultViewController")
             
             navigationController?.pushViewController(resultViewController, animated: false)
+                let evaluationViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("EvaluationViewController") as! EvaluationViewController
+                navigationController?.pushViewController(evaluationViewController, animated: false)
         }
         
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)

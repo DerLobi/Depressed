@@ -1,5 +1,5 @@
 //
-//  ResultViewController.swift
+//  EvaluationViewController.swift
 //  Depressed?
 //
 //  Created by Christian Lobach on 05/11/15.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+class EvaluationViewController: UIViewController {
+    
+    var viewModel: EvaluationViewModel?
     
     @IBOutlet weak var resultLabel: UILabel!
     
