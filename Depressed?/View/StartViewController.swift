@@ -28,11 +28,16 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
         
         if reason == .Completed, let results = taskViewController.result.results as? [ORKStepResult]{
             
-            let resultViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("ResultViewController")
+            let evaluation = Evaluation(stepResults: results)
             
-            navigationController?.pushViewController(resultViewController, animated: false)
+            if let evaluation = evaluation {
+                let viewModel = EvaluationViewModel(evaluation: evaluation)
                 let evaluationViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("EvaluationViewController") as! EvaluationViewController
+                evaluationViewController.viewModel = viewModel
+                
                 navigationController?.pushViewController(evaluationViewController, animated: false)
+                
+            }
         }
         
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
