@@ -59,47 +59,47 @@ class SelfTestTask: NSObject, ORKTask {
 
         let makeStep: (String, String, String) -> ORKQuestionStep = { identifier, title, text in
             let step = ORKQuestionStep(identifier: identifier, title: NSLocalizedString(title, comment: ""), answer: ORKTextChoiceAnswerFormat.phq9Format())
-            step.text = text
+            step.text = NSLocalizedString(text, comment: "")
             step.optional = false
             return step
         }
         
         let pleasureInterestQuestion = makeStep(QuestionIdentifier.LosingInterest.rawValue,
-            "Little interest or pleasure in doing things",
-            "Over the last 2 weeks, how often have you been bothered by having little interest or pleasure in doing things?")
+            "question_title_losing_interest",
+            "question_text_losing_interest")
 
         let depressedQuestion = makeStep(QuestionIdentifier.FeelingDepressed.rawValue,
-            "Feeling down, depressed, or hopeless",
-            "Over the last 2 weeks, how often have you been bothered by feeling down, depressed, or hopeless?")
-
+            "question_title_feeling_depressed",
+            "question_text_feeling_depressed")
+        
         let sleepQuestion = makeStep(QuestionIdentifier.TroubleSleeping.rawValue,
-            "Trouble falling asleep, or sleeping too much",
-            "Over the last 2 weeks, how often have you been bothered by having trouble falling asleep, or sleeping too much?")
+            "question_title_trouble_sleeping",
+            "question_text_trouble_sleeping")
         
         let tiredQuestion = makeStep(QuestionIdentifier.FeelingTired.rawValue,
-            "Feeling tired or having little energy",
-            "Over the last 2 weeks, how often have you been bothered by feeling tired or having little energy?")
-
+            "question_title_feeling_tired",
+            "question_text_feeling_tired")
+        
         let appetiteQuestion = makeStep(QuestionIdentifier.PoorAppetite.rawValue,
-            "Poor appetite or overeating",
-            "Over the last 2 weeks, how often have you been bothered by having poor appetite or overeating?")
-
+            "question_title_poor_appetite",
+            "question_text_poor_appetite")
+        
         let selfEsteemQuestion = makeStep(QuestionIdentifier.LowSelfEsteem.rawValue,
-            "Feeling bad about yourself",
-            "Over the last 2 weeks, how often have you been bothered by feeling bad about yourself or that you are a failure or have let yourself or your family down?")
+            "question_title_low_self_esteem",
+            "question_text_low_self_esteem")
         
         let concentrationQuestion = makeStep(QuestionIdentifier.TroubleConcentrating.rawValue,
-            "Trouble concentrating",
-            "Over the last 2 weeks, how often have you been bothered by having trouble concentrating on things, such as reading the newspaper or watching television?")
-
+            "question_title_trouble_concentrating",
+            "question_text_trouble_concentrating")
+        
         let slowFastQuestion = makeStep(QuestionIdentifier.SlowOrFast.rawValue,
-            "Moving/speaking fast/slowly",
-            "Over the last 2 weeks, how often have you been bothered by moving or speaking so slowly that other people could have noticed, or being so figety or restless that you have been moving around a lot more than usual?")
-
+            "question_title_slow_or_fast",
+            "question_text_feeling_depressed")
+        
         let suicideQuestion = makeStep(QuestionIdentifier.FeelingSuicidal.rawValue,
-            "Self-harm or suicidal thoughts",
-            "Over the last 2 weeks, how often have you been bothered by thoughts that you would be better off dead, or of hurting yourself?")
-
+            "question_title_slow_or_fast",
+            "question_text_slow_or_fast")
+        
         return [
             pleasureInterestQuestion,
             depressedQuestion,
