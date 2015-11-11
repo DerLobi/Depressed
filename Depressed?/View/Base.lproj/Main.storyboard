@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qVl-5S-NWb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qVl-5S-NWb">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -15,10 +15,10 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAA-z1-YBH">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAA-z1-YBH">
                                 <rect key="frame" x="30" y="198" width="540" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -32,7 +32,7 @@
                                     <action selector="startTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x1E-NE-RC6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be asked 9 questions to determine if you are depressed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hi-nW-Wee">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You will be asked 9 questions to determine if you are depressed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hi-nW-Wee">
                                 <rect key="frame" x="30" y="115" width="540" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.87647435202570301" green="0.83250155745646692" blue="0.96670029264343438" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,12 +55,138 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Depressed?" id="zXf-eP-or7"/>
+                    <navigationItem key="navigationItem" title="Depressed?" id="zXf-eP-or7">
+                        <barButtonItem key="rightBarButtonItem" title="Info" style="plain" id="pX1-oG-vGA">
+                            <connections>
+                                <segue destination="TeC-IS-Kgz" kind="presentation" id="hyr-cY-Lqh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1248" y="359"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="DN5-Nu-ZZ2">
+            <objects>
+                <viewController id="ShF-Tn-2tZ" customClass="InfoViewController" customModule="Depressed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ANO-pf-ufe"/>
+                        <viewControllerLayoutGuide type="bottom" id="rU6-B4-CCg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G4B-qx-BkC">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Depressed?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g99-6h-7XJ">
+                                <rect key="frame" x="202" y="84" width="197" height="46"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKk-GO-lTr">
+                                <rect key="frame" x="222" y="174" width="156" height="41"/>
+                                <string key="text">Made with Love 
+by Christian Lobach</string>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bm-2Ge">
+                                <rect key="frame" x="182" y="285" width="236" height="30"/>
+                                <state key="normal" title="This app uses Apple's ResearchKit"/>
+                                <connections>
+                                    <segue destination="SvN-7U-Q8J" kind="show" id="M4L-6Y-ALK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fKk-GO-lTr" firstAttribute="centerX" secondItem="g99-6h-7XJ" secondAttribute="centerX" id="RnW-mn-O20"/>
+                            <constraint firstItem="fKk-GO-lTr" firstAttribute="top" secondItem="g99-6h-7XJ" secondAttribute="bottom" constant="44" id="TiH-z7-l6b"/>
+                            <constraint firstItem="g99-6h-7XJ" firstAttribute="top" secondItem="ANO-pf-ufe" secondAttribute="bottom" constant="20" id="cRC-DM-LwZ"/>
+                            <constraint firstItem="vtA-bm-2Ge" firstAttribute="top" secondItem="fKk-GO-lTr" secondAttribute="bottom" constant="70" id="nCw-Oc-WMS"/>
+                            <constraint firstItem="vtA-bm-2Ge" firstAttribute="centerX" secondItem="fKk-GO-lTr" secondAttribute="centerX" id="obW-fJ-iHv"/>
+                            <constraint firstItem="g99-6h-7XJ" firstAttribute="centerX" secondItem="G4B-qx-BkC" secondAttribute="centerX" id="yUa-Jp-ZYX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Q1a-mP-CXm">
+                        <barButtonItem key="rightBarButtonItem" title="Done" style="done" id="UhG-ka-592">
+                            <connections>
+                                <action selector="dismiss:" destination="ShF-Tn-2tZ" id="IFV-D3-1og"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LnQ-Gi-NDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2525" y="-467"/>
+        </scene>
+        <!--ResearchKit-->
+        <scene sceneID="XeJ-Fi-LlU">
+            <objects>
+                <viewController title="ResearchKit" extendedLayoutIncludesOpaqueBars="YES" id="SvN-7U-Q8J" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SqX-jm-ybY"/>
+                        <viewControllerLayoutGuide type="bottom" id="K9b-ui-fOc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rPn-l5-bGc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eX-9i-GX2">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                                <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">Copyright (c) 2015, Apple Inc. All rights reserved.
+ 
+ Redistribution and use in source and binary forms, with or without modification,
+ are permitted provided that the following conditions are met:
+ 
+ 1.  Redistributions of source code must retain the above copyright notice, this
+ list of conditions and the following disclaimer.
+ 
+ 2.  Redistributions in binary form must reproduce the above copyright notice,
+ this list of conditions and the following disclaimer in the documentation and/or
+ other materials provided with the distribution.
+ 
+ 3.  Neither the name of the copyright holder(s) nor the names of any contributors
+ may be used to endorse or promote products derived from this software without
+ specific prior written permission. No license is granted to the trademarks of
+ the copyright holders even if such marks are included in this software.
+ 
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</mutableString>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7eX-9i-GX2" firstAttribute="leading" secondItem="rPn-l5-bGc" secondAttribute="leadingMargin" id="X86-Fg-gZM"/>
+                            <constraint firstItem="K9b-ui-fOc" firstAttribute="top" secondItem="7eX-9i-GX2" secondAttribute="bottom" id="iLH-aV-aQ1"/>
+                            <constraint firstItem="7eX-9i-GX2" firstAttribute="top" secondItem="SqX-jm-ybY" secondAttribute="bottom" id="pTq-eW-or0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7eX-9i-GX2" secondAttribute="trailing" id="vkr-rM-F73"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="7eX-9i-GX2" id="jxU-CO-vTc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9c-4d-BK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3161" y="-467"/>
+        </scene>
+        <!--Evaluation View Controller-->
         <scene sceneID="fA5-Vd-lTf">
             <objects>
                 <viewController storyboardIdentifier="EvaluationViewController" id="2iT-wc-f4b" customClass="EvaluationViewController" customModule="Depressed" customModuleProvider="target" sceneMemberID="viewController">
@@ -109,7 +235,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qVl-5S-NWb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="php-E5-fmz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="php-E5-fmz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.33524699871830083" green="0.18226750344884193" blue="0.59980872067373747" alpha="1" colorSpace="calibratedRGB"/>
@@ -125,6 +251,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kpf-vK-qor" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="436" y="359"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eLL-MF-BOd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TeC-IS-Kgz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Cyl-Mu-GOh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.33524699870000002" green="0.1822675034" blue="0.59980872070000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ShF-Tn-2tZ" kind="relationship" relationship="rootViewController" id="wVt-XQ-ffl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEr-kP-7uG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="-467"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -11,10 +11,11 @@
 		BEC7B9F7B815DD16B0851742 /* Pods_Depressed_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC563640334882D7BF351E8E /* Pods_Depressed_.framework */; };
 		CA6581011BEBC93600DA66E2 /* EvaluationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6581001BEBC93600DA66E2 /* EvaluationSpec.swift */; };
 		CA6581031BEBCF7C00DA66E2 /* QuestionIdentifierSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6581021BEBCF7C00DA66E2 /* QuestionIdentifierSpec.swift */; };
-		CA6600421BEC09EF00042495 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600411BEC09EF00042495 /* EvaluationViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		CA6600461BED244600042495 /* EvaluationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600451BED244600042495 /* EvaluationViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		CA6600491BED454A00042495 /* EvaluationViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */; settings = {ASSET_TAGS = (); }; };
-		CA66004C1BED490200042495 /* MutableEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66004B1BED490200042495 /* MutableEvaluation.swift */; settings = {ASSET_TAGS = (); }; };
+		CA6600421BEC09EF00042495 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600411BEC09EF00042495 /* EvaluationViewController.swift */; };
+		CA6600441BED058C00042495 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600431BED058C00042495 /* InfoViewController.swift */; };
+		CA6600461BED244600042495 /* EvaluationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600451BED244600042495 /* EvaluationViewModel.swift */; };
+		CA6600491BED454A00042495 /* EvaluationViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */; };
+		CA66004C1BED490200042495 /* MutableEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66004B1BED490200042495 /* MutableEvaluation.swift */; };
 		CA86836F1BE004A9003E87A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA86836E1BE004A9003E87A4 /* AppDelegate.swift */; };
 		CA8683711BE004A9003E87A4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683701BE004A9003E87A4 /* StartViewController.swift */; };
 		CA8683741BE004A9003E87A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8683721BE004A9003E87A4 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		CA6581001BEBC93600DA66E2 /* EvaluationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationSpec.swift; sourceTree = "<group>"; };
 		CA6581021BEBCF7C00DA66E2 /* QuestionIdentifierSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIdentifierSpec.swift; sourceTree = "<group>"; };
 		CA6600411BEC09EF00042495 /* EvaluationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
+		CA6600431BED058C00042495 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		CA6600451BED244600042495 /* EvaluationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationViewModel.swift; sourceTree = "<group>"; };
 		CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationViewModelSpec.swift; sourceTree = "<group>"; };
 		CA66004B1BED490200042495 /* MutableEvaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableEvaluation.swift; sourceTree = "<group>"; };
@@ -123,9 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				CA8683751BE004A9003E87A4 /* Assets.xcassets */,
+				CA6600411BEC09EF00042495 /* EvaluationViewController.swift */,
+				CA6600431BED058C00042495 /* InfoViewController.swift */,
 				CA8683771BE004A9003E87A4 /* LaunchScreen.storyboard */,
 				CA8683721BE004A9003E87A4 /* Main.storyboard */,
-				CA6600411BEC09EF00042495 /* EvaluationViewController.swift */,
 				CA8683701BE004A9003E87A4 /* StartViewController.swift */,
 			);
 			path = View;
@@ -404,6 +407,7 @@
 				CA8683971BE16D0B003E87A4 /* QuestionIdentifier.swift in Sources */,
 				CA8683711BE004A9003E87A4 /* StartViewController.swift in Sources */,
 				CA6600421BEC09EF00042495 /* EvaluationViewController.swift in Sources */,
+				CA6600441BED058C00042495 /* InfoViewController.swift in Sources */,
 				CA8683931BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift in Sources */,
 				CA6600461BED244600042495 /* EvaluationViewModel.swift in Sources */,
 				CA8683951BE1646B003E87A4 /* Evaluation.swift in Sources */,
