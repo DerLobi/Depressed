@@ -94,11 +94,11 @@ public class SelfTestTask: NSObject, ORKTask {
         
         let slowFastQuestion = makeStep(QuestionIdentifier.SlowOrFast.rawValue,
             "question_title_slow_or_fast",
-            "question_text_feeling_depressed")
+            "question_text_slow_or_fast")
         
         let suicideQuestion = makeStep(QuestionIdentifier.FeelingSuicidal.rawValue,
-            "question_title_slow_or_fast",
-            "question_text_slow_or_fast")
+            "question_title_feeling_suicidal",
+            "question_text_feeling_suicidal")
         
         return [
             pleasureInterestQuestion,
