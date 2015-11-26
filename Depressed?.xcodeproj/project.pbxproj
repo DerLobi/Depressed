@@ -29,10 +29,19 @@
 		CA8683931BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683921BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift */; };
 		CA8683951BE1646B003E87A4 /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683941BE1646B003E87A4 /* Evaluation.swift */; };
 		CA8683971BE16D0B003E87A4 /* QuestionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */; };
+		CAEE7DC21C07499000DDAA5E /* Depressed_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */; };
+		CAEE7DCA1C074AA300DDAA5E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC91C074AA300DDAA5E /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		CA8683801BE004A9003E87A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA8683631BE004A8003E87A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA86836A1BE004A9003E87A4;
+			remoteInfo = "Depressed?";
+		};
+		CAEE7DC41C07499000DDAA5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CA8683631BE004A8003E87A4 /* Project object */;
 			proxyType = 1;
@@ -78,6 +87,10 @@
 		CA8683921BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORKTextChoiceAnswerFormatExtensions.swift; sourceTree = "<group>"; };
 		CA8683941BE1646B003E87A4 /* Evaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
 		CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIdentifier.swift; sourceTree = "<group>"; };
+		CAEE7DBF1C07499000DDAA5E /* Depressed?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Depressed?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depressed_UITests.swift; sourceTree = "<group>"; };
+		CAEE7DC31C07499000DDAA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAEE7DC91C074AA300DDAA5E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		CC563640334882D7BF351E8E /* Pods_Depressed_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Depressed_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +108,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ECC539489350285823CE339 /* Pods_Depressed_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAEE7DBC1C07499000DDAA5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +207,7 @@
 			children = (
 				CA86836D1BE004A9003E87A4 /* Depressed? */,
 				CA8683821BE004A9003E87A4 /* Depressed?Tests */,
+				CAEE7DC01C07499000DDAA5E /* Depressed?UITests */,
 				839CE90D369144C336130D3C /* Frameworks */,
 				107D929CEF42C488B204F4D9 /* Pods */,
 				CA86836C1BE004A9003E87A4 /* Products */,
@@ -198,6 +219,7 @@
 			children = (
 				CA86836B1BE004A9003E87A4 /* Depressed?.app */,
 				CA86837F1BE004A9003E87A4 /* Depressed?Tests.xctest */,
+				CAEE7DBF1C07499000DDAA5E /* Depressed?UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,6 +246,16 @@
 				CA8683851BE004A9003E87A4 /* Info.plist */,
 			);
 			path = "Depressed?Tests";
+			sourceTree = "<group>";
+		};
+		CAEE7DC01C07499000DDAA5E /* Depressed?UITests */ = {
+			isa = PBXGroup;
+			children = (
+				CAEE7DC91C074AA300DDAA5E /* SnapshotHelper.swift */,
+				CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */,
+				CAEE7DC31C07499000DDAA5E /* Info.plist */,
+			);
+			path = "Depressed?UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +302,24 @@
 			productReference = CA86837F1BE004A9003E87A4 /* Depressed?Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CAEE7DBE1C07499000DDAA5E /* Depressed?UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAEE7DC61C07499000DDAA5E /* Build configuration list for PBXNativeTarget "Depressed?UITests" */;
+			buildPhases = (
+				CAEE7DBB1C07499000DDAA5E /* Sources */,
+				CAEE7DBC1C07499000DDAA5E /* Frameworks */,
+				CAEE7DBD1C07499000DDAA5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAEE7DC51C07499000DDAA5E /* PBXTargetDependency */,
+			);
+			name = "Depressed?UITests";
+			productName = "Depressed?UITests";
+			productReference = CAEE7DBF1C07499000DDAA5E /* Depressed?UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -285,6 +335,10 @@
 					};
 					CA86837E1BE004A9003E87A4 = {
 						CreatedOnToolsVersion = 7.1;
+						TestTargetID = CA86836A1BE004A9003E87A4;
+					};
+					CAEE7DBE1C07499000DDAA5E = {
+						CreatedOnToolsVersion = 7.1.1;
 						TestTargetID = CA86836A1BE004A9003E87A4;
 					};
 				};
@@ -305,6 +359,7 @@
 			targets = (
 				CA86836A1BE004A9003E87A4 /* Depressed? */,
 				CA86837E1BE004A9003E87A4 /* Depressed?Tests */,
+				CAEE7DBE1C07499000DDAA5E /* Depressed?UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,6 +382,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4423EE1BF3F15500606895 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAEE7DBD1C07499000DDAA5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +516,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CAEE7DBB1C07499000DDAA5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAEE7DC21C07499000DDAA5E /* Depressed_UITests.swift in Sources */,
+				CAEE7DCA1C074AA300DDAA5E /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -461,6 +532,11 @@
 			isa = PBXTargetDependency;
 			target = CA86836A1BE004A9003E87A4 /* Depressed? */;
 			targetProxy = CA8683801BE004A9003E87A4 /* PBXContainerItemProxy */;
+		};
+		CAEE7DC51C07499000DDAA5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA86836A1BE004A9003E87A4 /* Depressed? */;
+			targetProxy = CAEE7DC41C07499000DDAA5E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -606,9 +682,10 @@
 				INFOPLIST_FILE = "Depressed?/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed-";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed";
 				PRODUCT_MODULE_NAME = Depressed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -621,9 +698,10 @@
 				INFOPLIST_FILE = "Depressed?/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed-";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed";
 				PRODUCT_MODULE_NAME = Depressed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -658,6 +736,30 @@
 			};
 			name = Release;
 		};
+		CAEE7DC71C07499000DDAA5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Depressed?UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Depressed?";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		CAEE7DC81C07499000DDAA5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Depressed?UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Depressed?";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -684,6 +786,15 @@
 			buildConfigurations = (
 				CA86838C1BE004A9003E87A4 /* Debug */,
 				CA86838D1BE004A9003E87A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAEE7DC61C07499000DDAA5E /* Build configuration list for PBXNativeTarget "Depressed?UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAEE7DC71C07499000DDAA5E /* Debug */,
+				CAEE7DC81C07499000DDAA5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

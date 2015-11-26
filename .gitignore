@@ -24,4 +24,4 @@ Pods/
 Carthage/Build
 
 fastlane/report.xml
-fastlane/screenshots
+screenshots/
