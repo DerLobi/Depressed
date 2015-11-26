@@ -15,12 +15,12 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
 
         let task = SelfTestTask()
         let taskController = ORKTaskViewController(task: task, taskRunUUID: nil)
-        
         taskController.delegate = self
+        taskController.modalPresentationStyle = .PageSheet
+        
         UIApplication.sharedApplication().setStatusBarStyle(.Default, animated: true)
         presentViewController(taskController, animated: true, completion: nil)
     }
-    
     
     //MARK: - ORKTaskViewControllerDelegate
     

@@ -25,3 +25,5 @@ Carthage/Build
 
 fastlane/report.xml
 screenshots/
+metadata/
+Preview.html
