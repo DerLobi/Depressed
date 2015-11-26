@@ -13,8 +13,7 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
     
     @IBAction func startTest(sender: AnyObject) {
 
-        let task = ORKOrderedTask(identifier: "SelfTestTask", steps: ORKStep.depressedSteps())
-        
+        let task = SelfTestTask()
         let taskController = ORKTaskViewController(task: task, taskRunUUID: nil)
         
         taskController.delegate = self
