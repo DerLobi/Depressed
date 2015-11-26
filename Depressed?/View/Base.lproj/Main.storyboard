@@ -56,7 +56,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Depressed?" id="zXf-eP-or7">
-                        <barButtonItem key="rightBarButtonItem" title="Info" style="plain" id="pX1-oG-vGA">
+                        <barButtonItem key="rightBarButtonItem" image="info" style="plain" id="pX1-oG-vGA">
                             <connections>
                                 <segue destination="TeC-IS-Kgz" kind="presentation" id="hyr-cY-Lqh"/>
                             </connections>
@@ -269,5 +269,8 @@ by Christian Lobach</string>
             <point key="canvasLocation" x="1713" y="-467"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="22" height="22"/>
+    </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
