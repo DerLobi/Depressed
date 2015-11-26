@@ -1,62 +1,17 @@
 //
-//  SelfTestTask.swift
+//  ORKStepExtensions.swift
 //  Depressed?
 //
-//  Created by Christian Lobach on 27/10/15.
+//  Created by Christian Lobach on 26/11/15.
 //  Copyright © 2015 Christian Lobach. All rights reserved.
 //
 
 import ResearchKit
 
-public class SelfTestTask: NSObject, ORKTask {
+public extension ORKStep {
 
-    public let identifier = "SelfTest"
-    
-
-    public func stepBeforeStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep? {
-        if let step = step {
-            // return appropiate step
-            let index = steps().indexOf(step)
-            if let index = index where index - 1 >= 0 {
-                return steps()[index - 1]
-            } else {
-                return nil
-            }
-        } else {
-            return nil
-            
-        }
-    }
-
-    public func stepAfterStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep? {
-
-        if let step = step {
-            // return appropiate step
-            let index = steps().indexOf(step)
-            if let index = index where index + 1 < steps().count {
-                return steps()[index + 1]
-            } else {
-                return nil
-            }
-        } else {
-            // return first step
-            return steps().first!
-        }
-
-    }
-    
-    public func progressOfCurrentStep(step: ORKStep, withResult result: ORKTaskResult) -> ORKTaskProgress {
-        let index = steps().indexOf(step)
+    public class func depressedSteps() -> [ORKStep] {
         
-        if let index = index {
-            return ORKTaskProgressMake(UInt(index), UInt(steps().count))
-        }
-        
-        return ORKTaskProgressMake(0, UInt(steps().count))
-    }
-    
-    private func steps() -> [ORKStep] {
-
         let makeStep: (String, String, String) -> ORKQuestionStep = { identifier, title, text in
             let step = ORKQuestionStep(identifier: identifier, title: NSLocalizedString(title, comment: ""), answer: ORKTextChoiceAnswerFormat.phq9Format())
             step.text = NSLocalizedString(text, comment: "")
@@ -67,7 +22,7 @@ public class SelfTestTask: NSObject, ORKTask {
         let pleasureInterestQuestion = makeStep(QuestionIdentifier.LosingInterest.rawValue,
             "question_title_losing_interest",
             "question_text_losing_interest")
-
+        
         let depressedQuestion = makeStep(QuestionIdentifier.FeelingDepressed.rawValue,
             "question_title_feeling_depressed",
             "question_text_feeling_depressed")

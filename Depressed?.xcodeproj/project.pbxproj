@@ -24,11 +24,11 @@
 		CA8683741BE004A9003E87A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8683721BE004A9003E87A4 /* Main.storyboard */; };
 		CA8683761BE004A9003E87A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA8683751BE004A9003E87A4 /* Assets.xcassets */; };
 		CA8683791BE004A9003E87A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8683771BE004A9003E87A4 /* LaunchScreen.storyboard */; };
-		CA86838F1BE00981003E87A4 /* SelfTestTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA86838E1BE00981003E87A4 /* SelfTestTask.swift */; };
 		CA8683911BE010B8003E87A4 /* ORKTextChoiceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683901BE010B8003E87A4 /* ORKTextChoiceExtensions.swift */; };
 		CA8683931BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683921BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift */; };
 		CA8683951BE1646B003E87A4 /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683941BE1646B003E87A4 /* Evaluation.swift */; };
 		CA8683971BE16D0B003E87A4 /* QuestionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */; };
+		CAEE7DBA1C0744F600DDAA5E /* ORKStepExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DB91C0744F600DDAA5E /* ORKStepExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,11 +73,11 @@
 		CA86837A1BE004A9003E87A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA86837F1BE004A9003E87A4 /* Depressed?Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Depressed?Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA8683851BE004A9003E87A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA86838E1BE00981003E87A4 /* SelfTestTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfTestTask.swift; sourceTree = "<group>"; };
 		CA8683901BE010B8003E87A4 /* ORKTextChoiceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORKTextChoiceExtensions.swift; sourceTree = "<group>"; };
 		CA8683921BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORKTextChoiceAnswerFormatExtensions.swift; sourceTree = "<group>"; };
 		CA8683941BE1646B003E87A4 /* Evaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
 		CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIdentifier.swift; sourceTree = "<group>"; };
+		CAEE7DB91C0744F600DDAA5E /* ORKStepExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORKStepExtensions.swift; sourceTree = "<group>"; };
 		CC563640334882D7BF351E8E /* Pods_Depressed_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Depressed_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,10 +135,10 @@
 			isa = PBXGroup;
 			children = (
 				CA8683941BE1646B003E87A4 /* Evaluation.swift */,
+				CAEE7DB91C0744F600DDAA5E /* ORKStepExtensions.swift */,
 				CA8683921BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift */,
 				CA8683901BE010B8003E87A4 /* ORKTextChoiceExtensions.swift */,
 				CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */,
-				CA86838E1BE00981003E87A4 /* SelfTestTask.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -434,11 +434,11 @@
 				CA8683971BE16D0B003E87A4 /* QuestionIdentifier.swift in Sources */,
 				CA8683711BE004A9003E87A4 /* StartViewController.swift in Sources */,
 				CA6600421BEC09EF00042495 /* EvaluationViewController.swift in Sources */,
+				CAEE7DBA1C0744F600DDAA5E /* ORKStepExtensions.swift in Sources */,
 				CA6600441BED058C00042495 /* InfoViewController.swift in Sources */,
 				CA8683931BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift in Sources */,
 				CA6600461BED244600042495 /* EvaluationViewModel.swift in Sources */,
 				CA8683951BE1646B003E87A4 /* Evaluation.swift in Sources */,
-				CA86838F1BE00981003E87A4 /* SelfTestTask.swift in Sources */,
 				CA86836F1BE004A9003E87A4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
