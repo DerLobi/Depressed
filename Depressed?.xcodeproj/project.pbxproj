@@ -73,7 +73,7 @@
 		CA6600451BED244600042495 /* EvaluationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationViewModel.swift; sourceTree = "<group>"; };
 		CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationViewModelSpec.swift; sourceTree = "<group>"; };
 		CA66004B1BED490200042495 /* MutableEvaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableEvaluation.swift; sourceTree = "<group>"; };
-		CA86836B1BE004A9003E87A4 /* Depressed?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Depressed?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA86836B1BE004A9003E87A4 /* Depressed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Depressed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA86836E1BE004A9003E87A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA8683701BE004A9003E87A4 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		CA8683731BE004A9003E87A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -217,7 +217,7 @@
 		CA86836C1BE004A9003E87A4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA86836B1BE004A9003E87A4 /* Depressed?.app */,
+				CA86836B1BE004A9003E87A4 /* Depressed.app */,
 				CA86837F1BE004A9003E87A4 /* Depressed?Tests.xctest */,
 				CAEE7DBF1C07499000DDAA5E /* Depressed?UITests.xctest */,
 			);
@@ -278,7 +278,7 @@
 			);
 			name = "Depressed?";
 			productName = "Depressed?";
-			productReference = CA86836B1BE004A9003E87A4 /* Depressed?.app */;
+			productReference = CA86836B1BE004A9003E87A4 /* Depressed.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CA86837E1BE004A9003E87A4 /* Depressed?Tests */ = {
@@ -684,7 +684,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed";
 				PRODUCT_MODULE_NAME = Depressed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Depressed;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -700,7 +700,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed";
 				PRODUCT_MODULE_NAME = Depressed;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Depressed;
 				PROVISIONING_PROFILE = "1e69a8bf-b6ae-4439-a494-b2d2748b0f4a";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
