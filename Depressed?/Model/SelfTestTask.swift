@@ -1,9 +1,9 @@
 import ResearchKit
 
+/// Task that contains the questions of the [PHQ-9](https://en.wikipedia.org/wiki/Patient_Health_Questionnaire#Versions) questionnaire.
 public class SelfTestTask: NSObject, ORKTask {
 
-    public let identifier = "SelfTest"
-    
+    public let identifier = "SelfTest"    
 
     public func stepBeforeStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep? {
         if let step = step {
@@ -39,7 +39,7 @@ public class SelfTestTask: NSObject, ORKTask {
     
     public func progressOfCurrentStep(step: ORKStep, withResult result: ORKTaskResult) -> ORKTaskProgress {
         let index = steps().indexOf(step)
-        
+
         if let index = index {
             return ORKTaskProgressMake(UInt(index), UInt(steps().count))
         }

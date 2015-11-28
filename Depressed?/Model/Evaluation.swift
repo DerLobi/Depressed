@@ -1,31 +1,63 @@
 import ResearchKit
 
+///  Severity of the depression.
 public enum Severity: String {
+
+    ///  No depression.
     case NoDepression
+    
+    ///  Minimal depression.
     case MinimalDepression
+    
+    ///  Mild depression.
     case MildDepression
+
+    ///  Moderate depression.
     case ModerateDepression
+    
+    ///  Moderately severe depression.
     case ModeratelySevereDepression
-    case SevereDepression
+
+    ///  Severe depression.
+    case SevereDepression    
 }
 
+///  Summed up results of taking the test.
 public protocol EvaluationType {
+    
+    /// Whether a depressive disorder should be considered.
     var depressiveDisorderConsidered: Bool { get }
+    
+    /// Total score based on the value of the given answers.
     var score: Int { get }
+    
+    /// Severity of the diagnosed depression.
     var severity: Severity { get }
+    
+    /// Whether the user answered that they would be better off dead at least some of the time.
     var suicidal: Bool { get }
 }
 
+///  Evaluation that presents the results based on `ORKStepResult`s.
 public struct Evaluation: EvaluationType {
     
+    /// Whether a depressive disorder should be considered.
     public private(set) var depressiveDisorderConsidered: Bool
     
+    /// Total score based on the value of the given answers.
     public let score: Int
     
+    /// Severity of the diagnosed depression.
     public let severity: Severity
     
+    /// Whether the user answered that they would be better off dead at least some of the time.
     public private(set) var suicidal: Bool
     
+    ///  Creates an `Evaluation` from `ORKStepResult`s.
+    ///
+    ///  - parameter stepResults: Results of the result of a completed `ORKTaskViewController`.
+    ///
+    ///  - returns: A newly initialized Evaluation or `nil`.
     public init?(stepResults: [ORKStepResult]) {
         
         guard stepResults.count == QuestionIdentifier.count else {

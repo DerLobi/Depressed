@@ -1,12 +1,23 @@
 import Foundation
 
+///  Viewmodel transforming `Evaluation` model data for presentation to the user.
 public struct EvaluationViewModel {
     
+    /// Diagnosis of how severe the depression is.
     public let diagnosis: String
+
+    /// Phrase describing the diagnosis.
     public let diagnosisText: String
     
+    /// Warning message in case the user answered that they had thoughts
+    /// about suicide or self harm.
     public let suicidalText: String?
     
+    ///  Creates a new view model from the given evaluation.
+    ///
+    ///  - parameter evaluation: An `Evaluation`
+    ///
+    ///  - returns: a newly initialized `EvaluationViewModel` instance
     public init(evaluation: EvaluationType) {
         
         if evaluation.depressiveDisorderConsidered {

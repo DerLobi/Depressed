@@ -1,6 +1,7 @@
 import Foundation
 import Depressed
 
+///  Struct with mutable properties implementing `EvaluationType` for use in tests.
 internal struct MutableEvaluation: EvaluationType {
     
     internal var depressiveDisorderConsidered: Bool = false
