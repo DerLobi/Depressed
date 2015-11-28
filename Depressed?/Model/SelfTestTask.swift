@@ -50,7 +50,7 @@ public class SelfTestTask: NSObject, ORKTask {
     private func steps() -> [ORKStep] {
 
         let makeStep: (String, String, String) -> ORKQuestionStep = { identifier, title, text in
-            let step = ORKQuestionStep(identifier: identifier, title: NSLocalizedString(title, comment: ""), answer: ORKTextChoiceAnswerFormat.phq9Format())
+            let step = ORKQuestionStep(identifier: identifier, title: NSLocalizedString(title, comment: ""), answer: ORKTextChoiceAnswerFormat.phq9Format)
             step.text = NSLocalizedString(text, comment: "")
             step.optional = false
             return step
