@@ -718,7 +718,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Depressed?Tests/Depressed?Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Depressed?.app/Depressed?";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Depressed.app/Depressed";
 			};
 			name = Debug;
 		};
@@ -733,7 +733,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Depressed?Tests/Depressed?Tests-Bridging-Header.h";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Depressed?.app/Depressed?";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Depressed.app/Depressed";
 			};
 			name = Release;
 		};
