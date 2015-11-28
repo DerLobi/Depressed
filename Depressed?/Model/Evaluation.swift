@@ -1,11 +1,3 @@
-//
-//  Evaluation.swift
-//  Depressed?
-//
-//  Created by Christian Lobach on 28/10/15.
-//  Copyright © 2015 Christian Lobach. All rights reserved.
-//
-
 import ResearchKit
 
 public enum Severity: String {

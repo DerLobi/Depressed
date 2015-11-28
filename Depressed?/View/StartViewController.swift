@@ -1,11 +1,3 @@
-//
-//  StartViewController.swift
-//  Depressed?
-//
-//  Created by Christian Lobach on 27/10/15.
-//  Copyright © 2015 Christian Lobach. All rights reserved.
-//
-
 import UIKit
 import ResearchKit
 

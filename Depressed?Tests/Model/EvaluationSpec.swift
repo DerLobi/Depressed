@@ -1,11 +1,3 @@
-//
-//  EvaluationSpec.swift
-//  Depressed?
-//
-//  Created by Christian Lobach on 05/11/15.
-//  Copyright © 2015 Christian Lobach. All rights reserved.
-//
-
 import Depressed
 import Foundation
 import Nimble

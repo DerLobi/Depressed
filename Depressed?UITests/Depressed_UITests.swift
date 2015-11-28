@@ -1,11 +1,3 @@
-//
-//  Depressed_UITests.swift
-//  Depressed?UITests
-//
-//  Created by Christian Lobach on 26/11/15.
-//  Copyright © 2015 Christian Lobach. All rights reserved.
-//
-
 import XCTest
 
 class Depressed_UITests: XCTestCase {
@@ -17,11 +9,6 @@ class Depressed_UITests: XCTestCase {
         setLanguage(app)
         app.launch()
         
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
     }
     
     func testScreenshots() {

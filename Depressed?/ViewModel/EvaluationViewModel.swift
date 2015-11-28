@@ -1,10 +1,3 @@
-//
-//  EvaluationViewModel.swift
-//  Depressed?
-//
-//  Created by Christian Lobach on 06/11/15.
-//  Copyright © 2015 Christian Lobach. All rights reserved.
-//
 import Foundation
 
 public struct EvaluationViewModel {
