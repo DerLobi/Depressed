@@ -1,0 +1,25 @@
+ORKTextChoiceExtensions.swift
+	case SeveralDays = 1
+	case MoreThanHalfTheDays = 2
+	case NearlyEveryDay = 3
+QuestionIdentifier.swift
+	case LosingInterest
+	case FeelingDepressed
+	case TroubleSleeping
+	case FeelingTired
+	case PoorAppetite
+	case LowSelfEsteem
+	case TroubleConcentrating
+	case SlowOrFast
+	case FeelingSuicidal
+EvaluationViewModel.swift
+	public struct EvaluationViewModel
+	public let diagnosis: String
+	public let diagnosisText: String
+	public let suicidalText: String?
+	public init(evaluation: EvaluationType)
+SelfTestTask.swift
+	public let identifier = "SelfTest"
+	public func stepBeforeStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep?
+	public func stepAfterStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep?
+	public func progressOfCurrentStep(step: ORKStep, withResult result: ORKTaskResult) -> ORKTaskProgress
