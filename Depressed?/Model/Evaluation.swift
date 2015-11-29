@@ -57,6 +57,16 @@ public struct Evaluation: EvaluationType {
     ///
     ///  - parameter stepResults: Results of the result of a completed `ORKTaskViewController`.
     ///
+    ///  ```swift
+    ///  //MARK: - ORKTaskViewControllerDelegate
+    ///
+    ///  func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
+    ///     if reason == .Completed, let results = taskViewController.result.results as? [ORKStepResult]{
+    ///         let evaluation = Evaluation(stepResults: results)
+    ///     }
+    ///  }
+    /// ```
+    ///
     ///  - returns: A newly initialized Evaluation or `nil`.
     public init?(stepResults: [ORKStepResult]) {
         
