@@ -1,4 +1,4 @@
-![Depressed?](https://photos-4.dropbox.com/t/2/AADQNAoJZdSx5P6a9Jf4TCXTNB43q9mAzOgGWw52qONibg/12/1022376/png/32x32/3/1448744400/0/2/logo.png/EMKrdRir54E2IAIoAg/a0NFvh2v0FAcbKNXZgJn_1LhdAjK8UVYof79lEfyix4?size_mode=5&size=32x32)
+![Depressed?](https://raw.githubusercontent.com/DerLobi/Depressed/master/logo.png)
 
 *Depressed?* is an app that asks you the nine questions from the [PHQ-9](https://en.wikipedia.org/wiki/Patient_Health_Questionnaire#Versions) questionnaire to determine if you are depressed.
 The questionnaire is implemented with Apple's [ResearchKit](https://github.com/ResearchKit/ResearchKit).
