@@ -1,8 +1,6 @@
 language: objective-c
 osx_image: xcode7.2
-xcode_workspace: Depressed?.xcworkspace
-xcode_scheme: Depressed?
 install:
-- pod install
+- bundle install
 script:
-- scan
+- bundle exec fastlane test
