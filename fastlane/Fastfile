@@ -17,6 +17,11 @@ platform :ios do
     scan
   end
 
+  desc "Generates documentation"
+  lane :documentation do
+    jazzy
+  end
+
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
