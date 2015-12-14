@@ -1,4 +1,4 @@
-[![Swift 2.1](https://img.shields.io/badge/Swift-2.1-orange.svg)](https://developer.apple.com/swift/) [![License](http://img.shields.io/:license-mit-blue.svg)](https://raw.githubusercontent.com/DerLobi/Depressed/master/LICENSE)
+[![Swift 2.1](https://img.shields.io/badge/Swift-2.1-orange.svg)](https://developer.apple.com/swift/) [![License](http://img.shields.io/:license-mit-blue.svg)](https://raw.githubusercontent.com/DerLobi/Depressed/master/LICENSE) ![CI](https://travis-ci.org/DerLobi/Depressed.svg)
 ---
 ![Depressed?](https://raw.githubusercontent.com/DerLobi/Depressed/master/logo.png)
 
