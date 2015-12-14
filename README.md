@@ -1,3 +1,5 @@
+[![Swift 2.1](https://img.shields.io/badge/Swift-2.1-orange.svg)](https://developer.apple.com/swift/) [![License](http://img.shields.io/:license-mit-blue.svg)](https://raw.githubusercontent.com/DerLobi/Depressed/master/LICENSE)
+---
 ![Depressed?](https://raw.githubusercontent.com/DerLobi/Depressed/master/logo.png)
 
 *Depressed?* is an app that asks you the nine questions from the [PHQ-9](https://en.wikipedia.org/wiki/Patient_Health_Questionnaire#Versions) questionnaire to determine if you are depressed.
