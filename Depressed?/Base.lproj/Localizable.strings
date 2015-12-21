@@ -32,4 +32,4 @@
 "diagnosis_text_moderately_severe_depression" = "Your answers indicate that you have a moderately severe depression.";
 "diagnosis_text_no_depression" = "Your answers indicate that you are not depressed.";
 "diagnosis_text_severe_depression" = "Your answers indicate that you have a severe depression.";
-"suicidal_text" = "You have stated that you felt to be better off dead on at least several days. Please talk to someone!";
+"suicidal_text" = "You have stated that you felt to be better off dead on at least several days.\nPlease talk to someone!";
