@@ -49,7 +49,6 @@ class EvaluationDetailsViewController: UITableViewController {
         }
         
         return cell!
-        
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -59,9 +58,7 @@ class EvaluationDetailsViewController: UITableViewController {
             } else {
                 return 1
             }
-
         }
-        
         return 0
     }
     
