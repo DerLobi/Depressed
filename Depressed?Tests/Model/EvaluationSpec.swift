@@ -332,6 +332,370 @@ class EvaluationSpec: QuickSpec {
         
         }
         
+        describe(".losingInterestCritical") {
+            
+            var evaluation: Evaluation!
+            
+            context("the question about losing interest is answered with 'not at all'") {
+                
+                beforeEach {
+                    let stepResults = [
+                        stepResult(.LosingInterest, value: .NotAtAll),
+                        stepResult(.FeelingDepressed, value: .NotAtAll),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .NotAtAll),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ]
+                    evaluation = Evaluation(stepResults: stepResults)
+                }
+                
+                it("is false") {
+                    expect(evaluation.losingInterestCritical).to(beFalse())
+                }
+                
+            }
+            
+            context("the question about losing interest is answered with 'several days'") {
+                
+                beforeEach {
+                    let stepResults = [
+                        stepResult(.LosingInterest, value: .SeveralDays),
+                        stepResult(.FeelingDepressed, value: .NotAtAll),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .NotAtAll),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ]
+                    evaluation = Evaluation(stepResults: stepResults)
+                }
+                
+                it("is false") {
+                    expect(evaluation.losingInterestCritical).to(beFalse())
+                }
+                
+            }
+            
+            context("the question about losing interest is answered with 'more than half the days'") {
+                
+                beforeEach {
+                    let stepResults = [
+                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        stepResult(.FeelingDepressed, value: .NotAtAll),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .NotAtAll),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ]
+                    evaluation = Evaluation(stepResults: stepResults)
+                }
+                
+                it("is true") {
+                    expect(evaluation.losingInterestCritical).to(beTrue())
+                }
+                
+            }
+            
+            context("the question about losing interest is answered with 'nearly every day'") {
+                
+                beforeEach {
+                    let stepResults = [
+                        stepResult(.LosingInterest, value: .NearlyEveryDay),
+                        stepResult(.FeelingDepressed, value: .NotAtAll),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .NotAtAll),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ]
+                    evaluation = Evaluation(stepResults: stepResults)
+                }
+                
+                it("is true") {
+                    expect(evaluation.losingInterestCritical).to(beTrue())
+                }
+                
+            }
+            
+        }
+        
+        describe(".feelingDepressedCritical") {
+            
+            var evaluation: Evaluation!
+            
+            context("the question about feeling depressed is answered with 'not at all'") {
+                
+                beforeEach {
+                    let stepResults = [
+                        stepResult(.LosingInterest, value: .NotAtAll),
+                        stepResult(.FeelingDepressed, value: .NotAtAll),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .NotAtAll),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ]
+                    evaluation = Evaluation(stepResults: stepResults)
+                }
+                
+                it("is false") {
+                    expect(evaluation.feelingDepressedCritical).to(beFalse())
+                }
+                
+            }
+            
+            context("the question about feeling depressed is answered with 'several days'") {
+                
+                beforeEach {
+                    let stepResults = [
+                        stepResult(.LosingInterest, value: .NotAtAll),
+                        stepResult(.FeelingDepressed, value: .SeveralDays),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .NotAtAll),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ]
+                    evaluation = Evaluation(stepResults: stepResults)
+                }
+                
+                it("is false") {
+                    expect(evaluation.feelingDepressedCritical).to(beFalse())
+                }
+                
+            }
+            
+            context("the question about feeling depressed is answered with 'more than half the days'") {
+                
+                beforeEach {
+                    let stepResults = [
+                        stepResult(.LosingInterest, value: .NotAtAll),
+                        stepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .NotAtAll),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ]
+                    evaluation = Evaluation(stepResults: stepResults)
+                }
+                
+                it("is true") {
+                    expect(evaluation.feelingDepressedCritical).to(beTrue())
+                }
+                
+            }
+            
+            context("the question about feeling depressed is answered with 'nearly every day'") {
+                
+                beforeEach {
+                    let stepResults = [
+                        stepResult(.LosingInterest, value: .NotAtAll),
+                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .NotAtAll),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ]
+                    evaluation = Evaluation(stepResults: stepResults)
+                }
+                
+                it("is true") {
+                    expect(evaluation.feelingDepressedCritical).to(beTrue())
+                }
+                
+            }
+            
+        }
+
+        describe(".numberOfAnswersCritical") {
+            
+            sharedExamples("returns whether four or more questions are answered critically") { (context: SharedExampleContext) in
+                let results = context()["results"] as! [ORKStepResult]
+                let critical = context()["critical"] as! Bool
+                
+                let evaluation = Evaluation(stepResults: results)
+                
+                it("returns the correct value") {
+                    expect(evaluation?.numberOfAnswersCritical).to(equal(critical))
+                }
+            }
+            
+            itBehavesLike("returns whether four or more questions are answered critically") {
+                return [
+                    "results": [
+                        stepResult(.LosingInterest, value: .NearlyEveryDay),
+                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        stepResult(.TroubleSleeping, value: .NearlyEveryDay),
+                        stepResult(.FeelingTired, value: .NearlyEveryDay),
+                        stepResult(.PoorAppetite, value: .NearlyEveryDay),
+                        stepResult(.LowSelfEsteem, value: .NearlyEveryDay),
+                        stepResult(.TroubleConcentrating, value: .NearlyEveryDay),
+                        stepResult(.SlowOrFast, value: .NearlyEveryDay),
+                        stepResult(.FeelingSuicidal, value: .NearlyEveryDay)
+                    ],
+                    "critical": true
+                ]
+            }
+            
+            itBehavesLike("returns whether four or more questions are answered critically") {
+                return [
+                    "results": [
+                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        stepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
+                        stepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
+                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ],
+                    "critical": true
+                ]
+            }
+        
+            itBehavesLike("returns whether four or more questions are answered critically") {
+                return [
+                    "results": [
+                        stepResult(.LosingInterest, value: .NotAtAll),
+                        stepResult(.FeelingDepressed, value: .NotAtAll),
+                        stepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
+                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        stepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ],
+                    "critical": true
+                ]
+            }
+
+            itBehavesLike("returns whether four or more questions are answered critically") {
+                return [
+                    "results": [
+                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        stepResult(.FeelingDepressed, value: .NotAtAll),
+                        stepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
+                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        stepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ],
+                    "critical": true
+                ]
+            }
+
+            itBehavesLike("returns whether four or more questions are answered critically") {
+                return [
+                    "results": [
+                        stepResult(.LosingInterest, value: .NotAtAll),
+                        stepResult(.FeelingDepressed, value: .NotAtAll),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        stepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
+                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        stepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .MoreThanHalfTheDays)
+                    ],
+                    "critical": true
+                ]
+            }
+
+            itBehavesLike("returns whether four or more questions are answered critically") {
+                return [
+                    "results": [
+                        stepResult(.LosingInterest, value: .NearlyEveryDay),
+                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .NotAtAll),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NearlyEveryDay)
+                    ],
+                    "critical": false
+                ]
+            }
+
+            itBehavesLike("returns whether four or more questions are answered critically") {
+                return [
+                    "results": [
+                        stepResult(.LosingInterest, value: .NotAtAll),
+                        stepResult(.FeelingDepressed, value: .NotAtAll),
+                        stepResult(.TroubleSleeping, value: .NotAtAll),
+                        stepResult(.FeelingTired, value: .NotAtAll),
+                        stepResult(.PoorAppetite, value: .NotAtAll),
+                        stepResult(.LowSelfEsteem, value: .NotAtAll),
+                        stepResult(.TroubleConcentrating, value: .NotAtAll),
+                        stepResult(.SlowOrFast, value: .NotAtAll),
+                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                    ],
+                    "critical": false
+                ]
+            }
+
+            itBehavesLike("returns whether four or more questions are answered critically") {
+                return [
+                    "results": [
+                        stepResult(.LosingInterest, value: .SeveralDays),
+                        stepResult(.FeelingDepressed, value: .SeveralDays),
+                        stepResult(.TroubleSleeping, value: .SeveralDays),
+                        stepResult(.FeelingTired, value: .SeveralDays),
+                        stepResult(.PoorAppetite, value: .SeveralDays),
+                        stepResult(.LowSelfEsteem, value: .SeveralDays),
+                        stepResult(.TroubleConcentrating, value: .SeveralDays),
+                        stepResult(.SlowOrFast, value: .SeveralDays),
+                        stepResult(.FeelingSuicidal, value: .SeveralDays)
+                    ],
+                    "critical": false
+                ]
+            }
+
+            itBehavesLike("returns whether four or more questions are answered critically") {
+                return [
+                    "results": [
+                        stepResult(.LosingInterest, value: .NearlyEveryDay),
+                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        stepResult(.TroubleSleeping, value: .SeveralDays),
+                        stepResult(.FeelingTired, value: .SeveralDays),
+                        stepResult(.PoorAppetite, value: .SeveralDays),
+                        stepResult(.LowSelfEsteem, value: .SeveralDays),
+                        stepResult(.TroubleConcentrating, value: .SeveralDays),
+                        stepResult(.SlowOrFast, value: .SeveralDays),
+                        stepResult(.FeelingSuicidal, value: .NearlyEveryDay)
+                    ],
+                    "critical": false
+                ]
+            }
+
+        }
+        
         describe(".score") {
         
             sharedExamples("calculates the correct score") { (context: SharedExampleContext) in
