@@ -33,4 +33,7 @@
 "diagnosis_text_no_depression" = "Deine Antworten deuten darauf hin, dass du nicht depressiv bist.";
 "diagnosis_text_severe_depression" = "Deine Antworten deuten darauf hin, dass du eine schwere Depression hast.";
 "suicidal_text" = "Du hast angegeben, dass du zumindest an einzelnen Tagen daran denkst, lieber tot zu sein.\nBitte sprich mit jemandem!";
+"explanation_no_depression_not_enough_answers_critical" = "Du hast weniger als vier Fragen mit mindestens \"an mehr als der Hälfte der Tage\" beantwortet. Daher wird eine depressive Erkrankung nicht in Betracht gezogen.";
+"explanation_no_depression_first_questions_not_critical" = "Du hast die erste oder zweite Frage nicht mit mindestens \"an mehr als der Hälfte der Tage\" beantwortet. Daher wird eine depressive Erkrankung nicht in Betracht gezogen.";
+"explanation_depression" = "Du hast vier oder mehr Fragen mit mindestens \"an mehr als der Hälfte der Tage\" beantwortet, darunter die erste oder zweite Frage. Daher wird eine depressive Erkrankung in Betracht gezogen.";
 
