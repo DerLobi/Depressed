@@ -53,8 +53,13 @@ class EvaluationDetailsViewController: UITableViewController {
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if let _ = viewModel {
-            return EvaluationDetailsSection.Count.rawValue
+        if let viewModel = viewModel {
+            if viewModel.shouldDisplayScore {
+                return EvaluationDetailsSection.Count.rawValue
+            } else {
+                return 1
+            }
+
         }
         
         return 0

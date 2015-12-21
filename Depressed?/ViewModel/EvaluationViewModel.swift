@@ -19,6 +19,10 @@ public struct EvaluationViewModel {
     /// The total score of the user's answers.
     public let score: String
     
+    /// Whether the score should be displayed. If a depressive disorder is not
+    /// considered, we don't want to display the score.
+    public let shouldDisplayScore: Bool
+    
     ///  Creates a new view model from the given evaluation.
     ///
     ///  - parameter evaluation: An `Evaluation`
@@ -66,6 +70,8 @@ public struct EvaluationViewModel {
         } else {
             suicidalText = nil
         }
+        
+        shouldDisplayScore = evaluation.depressiveDisorderConsidered
         
         score = String(evaluation.score)
     }

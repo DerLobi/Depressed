@@ -332,5 +332,34 @@ class EvaluationViewModelSpec: QuickSpec {
                 
             }
         }
+        
+        describe(".shouldDisplayScore") {
+
+            context("a depressive disorder is considered") {
+                
+                beforeEach {
+                    evaluation.depressiveDisorderConsidered = true
+                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                }
+                
+                it("returns true") {
+                    expect(viewModel.shouldDisplayScore).to(beTrue())
+                }
+                
+            }
+
+            context("a depressive disorder is not considered") {
+
+                beforeEach {
+                    evaluation.depressiveDisorderConsidered = false
+                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                }
+                
+                it("returns false") {
+                    expect(viewModel.shouldDisplayScore).to(beFalse())
+                }
+                
+            }
+        }
     }
 }
