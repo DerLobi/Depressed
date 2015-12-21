@@ -22,6 +22,13 @@ class EvaluationViewController: UIViewController {
         }
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if let detailsViewController = segue.destinationViewController as? EvaluationDetailsViewController {
+            detailsViewController.viewModel = viewModel
+        }
+    }
+    
     private func updateLabelsWithViewModel(viewModel: EvaluationViewModel) {
         guard isViewLoaded() else { return }
         
