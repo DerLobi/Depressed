@@ -20,13 +20,13 @@
 "choice_nearly_every_day" = "Beinahe jeden Tag";
 "choice_not_at_all" = "Überhaupt nicht";
 "choice_several_days" = "An einzelnen Tagen";
-"diagnosis_mild_depression" = "milde Depression";
+"diagnosis_mild_depression" = "schwache Depression";
 "diagnosis_minimal_depression" = "minimale Depression";
 "diagnosis_moderate_depression" = "mittelgradige Depression";
 "diagnosis_moderately_severe_depression" = "mittelschwere Depression";
 "diagnosis_no_depression" = "nicht depressiv";
 "diagnosis_severe_depression" = "schwere Depression";
-"diagnosis_text_mild_depression" = "Deine Antworten deuten darauf hin, dass du eine milde Depression hast.";
+"diagnosis_text_mild_depression" = "Deine Antworten deuten darauf hin, dass du eine schwache Depression hast.";
 "diagnosis_text_minimal_depression" = "Deine Antworten deuten darauf hin, dass du eine minimale Depression hast.";
 "diagnosis_text_moderate_depression" = "Deine Antworten deuten darauf hin, dass du eine mittelgradige Depression hast.";
 "diagnosis_text_moderately_severe_depression" = "Deine Antworten deuten darauf hin, dass du eine mittelschwere Depression hast.";
