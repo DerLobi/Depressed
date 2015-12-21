@@ -34,3 +34,24 @@
 
 /* Class = "UINavigationItem"; title = "Depressed?"; ObjectID = "zXf-eP-or7"; */
 "zXf-eP-or7.title" = "Depressed?";
+
+/* Class = "UILabel"; text = "View Details >"; ObjectID = "lN6-ZG-HW7"; */
+"lN6-ZG-HW7.normalTitle" = "View Details >";
+
+"tAu-al-zkL.text" = "YOUR SCORE";
+
+"nY1-iF-8h4.text" = "POSSIBLE SCORE";
+
+"1Q7-n5-2yo.text" = "DIAGNOSIS";
+
+"SNB-Zn-k2a.text" = "SCORE";
+
+"cSy-nE-IZQ.text" = "Minimal depression";
+
+"aBu-Gb-iFQ.text" = "Mild depression";
+
+"fIH-1G-A0a.text" = "Moderate depression";
+
+"Unb-XS-5AL.text" = "Moderately severe depression";
+
+"Ria-Ey-Ss8.text" = "Severe depression";

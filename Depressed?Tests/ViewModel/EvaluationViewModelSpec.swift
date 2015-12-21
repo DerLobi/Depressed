@@ -204,6 +204,94 @@ class EvaluationViewModelSpec: QuickSpec {
 
             }
         }
+        
+        describe(".explanationText") {
+            
+            context("a depressive order is considered") {
+                
+                beforeEach {
+                    evaluation.depressiveDisorderConsidered = true
+                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                }
+                
+                it("returns the localized string 'explanation_depression'") {
+                    expect(viewModel.explanationText).to(equal(NSLocalizedString("explanation_depression", comment: "")))
+                }
+                
+            }
+            
+            context("a depressive order is not considered") {
+                
+                beforeEach {
+                    evaluation.depressiveDisorderConsidered = false
+                }
+                
+                sharedExamples("returns the correct explanation") { (context: SharedExampleContext) in
+                    let numberCritical = context()["numberOfAnswersCritical"] as! Bool
+                    let losingInterestCritical = context()["losingInterestCritical"] as! Bool
+                    let feelingDepressedCritical = context()["feelingDepressedCritical"] as! Bool
+                    let expectedExplanation = context()["explanation"] as! String
+                    
+                
+                    evaluation.numberOfAnswersCritical = numberCritical
+                    evaluation.losingInterestCritical = losingInterestCritical
+                    evaluation.feelingDepressedCritical = feelingDepressedCritical
+                    
+                    let viewModel = EvaluationViewModel(evaluation: evaluation)
+                    
+                    it("decides correctly") {
+                        expect(viewModel.explanationText).to(equal(expectedExplanation))
+                    }
+                }
+                
+                itBehavesLike("returns the correct explanation") {
+                    return [
+                        "numberOfAnswersCritical": false,
+                        "losingInterestCritical": false,
+                        "feelingDepressedCritical": false,
+                        "explanation": NSLocalizedString("explanation_no_depression_not_enough_answers_critical", comment: "")
+                    ]
+                }
+
+                itBehavesLike("returns the correct explanation") {
+                    return [
+                        "numberOfAnswersCritical": false,
+                        "losingInterestCritical": true,
+                        "feelingDepressedCritical": false,
+                        "explanation": NSLocalizedString("explanation_no_depression_not_enough_answers_critical", comment: "")
+                    ]
+                }
+                
+                itBehavesLike("returns the correct explanation") {
+                    return [
+                        "numberOfAnswersCritical": false,
+                        "losingInterestCritical": false,
+                        "feelingDepressedCritical": true,
+                        "explanation": NSLocalizedString("explanation_no_depression_not_enough_answers_critical", comment: "")
+                    ]
+                }
+
+                itBehavesLike("returns the correct explanation") {
+                    return [
+                        "numberOfAnswersCritical": false,
+                        "losingInterestCritical": true,
+                        "feelingDepressedCritical": true,
+                        "explanation": NSLocalizedString("explanation_no_depression_not_enough_answers_critical", comment: "")
+                    ]
+                }
+
+                itBehavesLike("returns the correct explanation") {
+                    return [
+                        "numberOfAnswersCritical": true,
+                        "losingInterestCritical": false,
+                        "feelingDepressedCritical": false,
+                        "explanation": NSLocalizedString("explanation_no_depression_first_questions_not_critical", comment: "")
+                    ]
+                }
+
+                
+            }
+        }
 
         describe(".suicidalText") {
             
@@ -231,6 +319,47 @@ class EvaluationViewModelSpec: QuickSpec {
                 }
             }
         }
+    
+        describe(".score") {
+            
+            beforeEach {
+                evaluation.score = 23
+                viewModel = EvaluationViewModel(evaluation: evaluation)
+            }
+            
+            it("is equal to the evaluation's score") {
+                expect(viewModel.score).to(equal("23"))
+                
+            }
+        }
+        
+        describe(".shouldDisplayScore") {
+
+            context("a depressive disorder is considered") {
+                
+                beforeEach {
+                    evaluation.depressiveDisorderConsidered = true
+                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                }
+                
+                it("returns true") {
+                    expect(viewModel.shouldDisplayScore).to(beTrue())
+                }
+                
+            }
+
+            context("a depressive disorder is not considered") {
+
+                beforeEach {
+                    evaluation.depressiveDisorderConsidered = false
+                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                }
+                
+                it("returns false") {
+                    expect(viewModel.shouldDisplayScore).to(beFalse())
+                }
+                
+            }
+        }
     }
 }
- 

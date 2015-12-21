@@ -36,6 +36,15 @@ public protocol EvaluationType {
     
     /// Whether the user answered that they would be better off dead at least some of the time.
     var suicidal: Bool { get }
+    
+    /// Whether the user answered the question about losing interest with at least "more than half the days".
+    var losingInterestCritical: Bool { get }
+    
+    /// Whether the user answered the question about feeling depressed with at least "more than half the days".
+    var feelingDepressedCritical: Bool { get }
+    
+    /// Whether the user answered at least four questions with at least "more than half the days".
+    var numberOfAnswersCritical: Bool { get }
 }
 
 ///  Evaluation that presents the results based on `ORKStepResult`s.
@@ -52,7 +61,16 @@ public struct Evaluation: EvaluationType {
     
     /// Whether the user answered that they would be better off dead at least some of the time.
     public private(set) var suicidal: Bool
+
+    /// Whether the user answered the question about losing interest with at least "more than half the days".
+    public private(set) var losingInterestCritical: Bool
+
+    /// Whether the user answered the question about feeling depressed with at least "more than half the days".
+    public private(set) var feelingDepressedCritical: Bool
     
+    /// Whether the user answered at least four questions with at least "more than half the days".
+    public private(set) var numberOfAnswersCritical: Bool
+
     ///  Creates an `Evaluation` from `ORKStepResult`s.
     ///
     ///  - parameter stepResults: Results of the result of a completed `ORKTaskViewController`.
@@ -111,6 +129,10 @@ public struct Evaluation: EvaluationType {
             }
             
         }
+        
+        self.losingInterestCritical = losingInterestCritical
+        self.feelingDepressedCritical = feelingDepressedCritical
+        self.numberOfAnswersCritical = numberOfCriticalQuestions >= 4
         
         depressiveDisorderConsidered = (losingInterestCritical || feelingDepressedCritical) && (numberOfCriticalQuestions >= 4)
         
