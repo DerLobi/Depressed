@@ -19,6 +19,9 @@
 		CA6600461BED244600042495 /* EvaluationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600451BED244600042495 /* EvaluationViewModel.swift */; };
 		CA6600491BED454A00042495 /* EvaluationViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */; };
 		CA66004C1BED490200042495 /* MutableEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66004B1BED490200042495 /* MutableEvaluation.swift */; };
+		CA855A3E1C283C7D00C9376E /* EvaluationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA855A3D1C283C7D00C9376E /* EvaluationDetailsViewController.swift */; };
+		CA855A401C284E7300C9376E /* ExplanationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA855A3F1C284E7300C9376E /* ExplanationCell.swift */; };
+		CA855A421C284E8C00C9376E /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA855A411C284E8C00C9376E /* ScoreCell.swift */; };
 		CA86836F1BE004A9003E87A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA86836E1BE004A9003E87A4 /* AppDelegate.swift */; };
 		CA8683711BE004A9003E87A4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683701BE004A9003E87A4 /* StartViewController.swift */; };
 		CA8683741BE004A9003E87A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA8683721BE004A9003E87A4 /* Main.storyboard */; };
@@ -73,6 +76,9 @@
 		CA6600451BED244600042495 /* EvaluationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationViewModel.swift; sourceTree = "<group>"; };
 		CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationViewModelSpec.swift; sourceTree = "<group>"; };
 		CA66004B1BED490200042495 /* MutableEvaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableEvaluation.swift; sourceTree = "<group>"; };
+		CA855A3D1C283C7D00C9376E /* EvaluationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationDetailsViewController.swift; sourceTree = "<group>"; };
+		CA855A3F1C284E7300C9376E /* ExplanationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationCell.swift; sourceTree = "<group>"; };
+		CA855A411C284E8C00C9376E /* ScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
 		CA86836B1BE004A9003E87A4 /* Depressed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Depressed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA86836E1BE004A9003E87A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA8683701BE004A9003E87A4 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +178,9 @@
 				CA8683771BE004A9003E87A4 /* LaunchScreen.storyboard */,
 				CA8683721BE004A9003E87A4 /* Main.storyboard */,
 				CA8683701BE004A9003E87A4 /* StartViewController.swift */,
+				CA855A3D1C283C7D00C9376E /* EvaluationDetailsViewController.swift */,
+				CA855A3F1C284E7300C9376E /* ExplanationCell.swift */,
+				CA855A411C284E8C00C9376E /* ScoreCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -498,10 +507,13 @@
 				CA6600421BEC09EF00042495 /* EvaluationViewController.swift in Sources */,
 				CA6600441BED058C00042495 /* InfoViewController.swift in Sources */,
 				CA8683931BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift in Sources */,
+				CA855A421C284E8C00C9376E /* ScoreCell.swift in Sources */,
 				CA6600461BED244600042495 /* EvaluationViewModel.swift in Sources */,
 				CA8683951BE1646B003E87A4 /* Evaluation.swift in Sources */,
+				CA855A3E1C283C7D00C9376E /* EvaluationDetailsViewController.swift in Sources */,
 				CA86838F1BE00981003E87A4 /* SelfTestTask.swift in Sources */,
 				CA86836F1BE004A9003E87A4 /* AppDelegate.swift in Sources */,
+				CA855A401C284E7300C9376E /* ExplanationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

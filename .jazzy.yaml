@@ -1,3 +1,8 @@
 author_name: "Christian Lobach"
 author_url: "http://christian-lobach.de"
 module_name: "Depressed?"
+xcodebuild_arguments:
+  - -workspace
+  - Depressed?.xcworkspace
+  - -scheme
+  - Depressed?

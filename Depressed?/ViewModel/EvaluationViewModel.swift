@@ -9,9 +9,19 @@ public struct EvaluationViewModel {
     /// Phrase describing the diagnosis.
     public let diagnosisText: String
     
+    /// Explanation that relates the users answers to the diagnosis.
+    public let explanationText: String
+    
     /// Warning message in case the user answered that they had thoughts
     /// about suicide or self harm.
     public let suicidalText: String?
+    
+    /// The total score of the user's answers.
+    public let score: String
+    
+    /// Whether the score should be displayed. If a depressive disorder is not
+    /// considered, we don't want to display the score.
+    public let shouldDisplayScore: Bool
     
     ///  Creates a new view model from the given evaluation.
     ///
@@ -21,6 +31,8 @@ public struct EvaluationViewModel {
     public init(evaluation: EvaluationType) {
         
         if evaluation.depressiveDisorderConsidered {
+            
+            explanationText = NSLocalizedString("explanation_depression", comment: "")
             
             switch evaluation.severity {
             case .NoDepression:
@@ -45,6 +57,12 @@ public struct EvaluationViewModel {
         } else {
             diagnosis = NSLocalizedString("diagnosis_no_depression", comment: "")
             diagnosisText = NSLocalizedString("diagnosis_text_no_depression", comment: "")
+            
+            if evaluation.numberOfAnswersCritical {
+                explanationText = NSLocalizedString("explanation_no_depression_first_questions_not_critical", comment: "")
+            } else {
+                explanationText = NSLocalizedString("explanation_no_depression_not_enough_answers_critical", comment: "")
+            }
         }
         
         if evaluation.suicidal {
@@ -53,6 +71,9 @@ public struct EvaluationViewModel {
             suicidalText = nil
         }
         
+        shouldDisplayScore = evaluation.depressiveDisorderConsidered
+        
+        score = String(evaluation.score)
     }
     
 }

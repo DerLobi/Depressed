@@ -12,4 +12,10 @@ internal struct MutableEvaluation: EvaluationType {
     
     internal var suicidal: Bool = false
     
+    internal var losingInterestCritical: Bool = false
+    
+    internal var feelingDepressedCritical: Bool = false
+    
+    internal var numberOfAnswersCritical: Bool = false
+    
 }
