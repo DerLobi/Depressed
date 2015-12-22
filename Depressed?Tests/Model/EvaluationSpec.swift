@@ -950,6 +950,68 @@ class EvaluationSpec: QuickSpec {
 
         }
         
+        describe(".answers") {
+        
+            var evaluation: Evaluation!
+            
+            beforeEach {
+                let stepResults = [
+                    stepResult(.LosingInterest, value: .NearlyEveryDay),
+                    stepResult(.FeelingDepressed, value: .SeveralDays),
+                    stepResult(.TroubleSleeping, value: .NearlyEveryDay),
+                    stepResult(.FeelingTired, value: .SeveralDays),
+                    stepResult(.PoorAppetite, value: .NotAtAll),
+                    stepResult(.LowSelfEsteem, value: .NearlyEveryDay),
+                    stepResult(.TroubleConcentrating, value: .SeveralDays),
+                    stepResult(.SlowOrFast, value: .MoreThanHalfTheDays),
+                    stepResult(.FeelingSuicidal, value: .NotAtAll)
+                ]
+                
+                evaluation = Evaluation(stepResults: stepResults)
+            }
+            
+            it("contains nine answers") {
+                expect(evaluation.answers).to(haveCount(9))
+            }
+        
+            it("has questions with the correct identifiers") {
+                let identifiers: [QuestionIdentifier] = [
+                    .LosingInterest,
+                    .FeelingDepressed,
+                    .TroubleSleeping,
+                    .FeelingTired,
+                    .PoorAppetite,
+                    .LowSelfEsteem,
+                    .TroubleConcentrating,
+                    .SlowOrFast,
+                    .FeelingSuicidal
+                ]
+                
+                for (idx, answer) in evaluation.answers.enumerate() {
+                    expect(answer.question.identifier).to(equal(identifiers[idx]))
+                }
+            }
+
+            it("has questions with the correct answer scores") {
+                let values: [PHQ9ChoiceValue] = [
+                    .NearlyEveryDay,
+                    .SeveralDays,
+                    .NearlyEveryDay,
+                    .SeveralDays,
+                    .NotAtAll,
+                    .NearlyEveryDay,
+                    .SeveralDays,
+                    .MoreThanHalfTheDays,
+                    .NotAtAll
+                ]
+                
+                for (idx, answer) in evaluation.answers.enumerate() {
+                    expect(answer.answerScore).to(equal(values[idx]))
+                }
+                
+            }
+
+        }
     }
     
 }

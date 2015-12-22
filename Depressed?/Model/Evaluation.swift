@@ -71,7 +71,10 @@ public struct Evaluation: EvaluationType {
     public private(set) var feelingDepressedCritical: Bool
     
     /// Whether the user answered at least four questions with at least "more than half the days".
-    public private(set) var numberOfAnswersCritical: Bool
+    public let numberOfAnswersCritical: Bool
+    
+    /// The answers a user has given to all questions.
+    public let answers: [Answer]
 
     ///  Creates an `Evaluation` from `ORKStepResult`s.
     ///
@@ -100,7 +103,7 @@ public struct Evaluation: EvaluationType {
         feelingDepressedCritical = false
         var numberOfCriticalQuestions = 0
         
-        let answers: [Answer] = stepResults.map { Answer(stepResult: $0) }
+        answers = stepResults.map { Answer(stepResult: $0) }
             .filter { $0 != nil }
             .map { $0! }
                 
