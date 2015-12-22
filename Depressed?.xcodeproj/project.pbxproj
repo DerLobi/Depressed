@@ -36,6 +36,8 @@
 		CAEE7DC21C07499000DDAA5E /* Depressed_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */; };
 		CAEE7DCA1C074AA300DDAA5E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC91C074AA300DDAA5E /* SnapshotHelper.swift */; };
 		CAF8A5591C29E44400E30E90 /* AnswerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8A5581C29E44400E30E90 /* AnswerSpec.swift */; };
+		CAF8A55B1C29EB4800E30E90 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8A55A1C29EB4800E30E90 /* Question.swift */; };
+		CAF8A55D1C29F0E600E30E90 /* QuestionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8A55C1C29F0E600E30E90 /* QuestionSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		CAEE7DC31C07499000DDAA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAEE7DC91C074AA300DDAA5E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		CAF8A5581C29E44400E30E90 /* AnswerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerSpec.swift; sourceTree = "<group>"; };
+		CAF8A55A1C29EB4800E30E90 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		CAF8A55C1C29F0E600E30E90 /* QuestionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionSpec.swift; sourceTree = "<group>"; };
 		CC563640334882D7BF351E8E /* Pods_Depressed_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Depressed_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,6 +172,7 @@
 				CA8683941BE1646B003E87A4 /* Evaluation.swift */,
 				CA8683921BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift */,
 				CA8683901BE010B8003E87A4 /* ORKTextChoiceExtensions.swift */,
+				CAF8A55A1C29EB4800E30E90 /* Question.swift */,
 				CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */,
 				CA86838E1BE00981003E87A4 /* SelfTestTask.swift */,
 			);
@@ -197,6 +202,7 @@
 				CA6581001BEBC93600DA66E2 /* EvaluationSpec.swift */,
 				CA66004B1BED490200042495 /* MutableEvaluation.swift */,
 				CA6581021BEBCF7C00DA66E2 /* QuestionIdentifierSpec.swift */,
+				CAF8A55C1C29F0E600E30E90 /* QuestionSpec.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF8A55B1C29EB4800E30E90 /* Question.swift in Sources */,
 				CA8683911BE010B8003E87A4 /* ORKTextChoiceExtensions.swift in Sources */,
 				CA8683971BE16D0B003E87A4 /* QuestionIdentifier.swift in Sources */,
 				CA8683711BE004A9003E87A4 /* StartViewController.swift in Sources */,
@@ -528,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAF8A55D1C29F0E600E30E90 /* QuestionSpec.swift in Sources */,
 				CA66004C1BED490200042495 /* MutableEvaluation.swift in Sources */,
 				CAF8A5591C29E44400E30E90 /* AnswerSpec.swift in Sources */,
 				CA6581011BEBC93600DA66E2 /* EvaluationSpec.swift in Sources */,
