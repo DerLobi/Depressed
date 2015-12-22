@@ -416,7 +416,7 @@ by Christian Lobach</string>
                                         <constraint firstAttribute="bottom" secondItem="dt2-MX-ERs" secondAttribute="bottom" constant="11" id="167-qt-kFO"/>
                                         <constraint firstItem="6TP-Ac-wbj" firstAttribute="top" secondItem="dt2-MX-ERs" secondAttribute="top" id="4jy-16-ILA"/>
                                         <constraint firstAttribute="trailing" secondItem="6TP-Ac-wbj" secondAttribute="trailing" constant="45" id="DP3-zh-VW1"/>
-                                        <constraint firstItem="6TP-Ac-wbj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dt2-MX-ERs" secondAttribute="trailing" constant="8" id="X46-I4-vnm"/>
+                                        <constraint firstItem="6TP-Ac-wbj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dt2-MX-ERs" secondAttribute="trailing" constant="16" id="X46-I4-vnm"/>
                                         <constraint firstItem="dt2-MX-ERs" firstAttribute="top" secondItem="UI8-3a-uLU" secondAttribute="top" constant="12" id="fw2-vO-7pe"/>
                                         <constraint firstItem="6TP-Ac-wbj" firstAttribute="top" secondItem="UI8-3a-uLU" secondAttribute="top" constant="12" id="iu4-01-PVk"/>
                                         <constraint firstItem="dt2-MX-ERs" firstAttribute="leading" secondItem="UI8-3a-uLU" secondAttribute="leading" constant="30" id="rKx-8Z-7sK"/>
