@@ -18,4 +18,5 @@ internal struct MutableEvaluation: EvaluationType {
     
     internal var numberOfAnswersCritical: Bool = false
     
+    internal var answers: [Answer] = []
 }

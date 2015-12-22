@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PHQ9ChoiceValue Enum Reference</title>
+    <title>Answer Struct Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -9,8 +9,8 @@
     <script src="../js/jazzy.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/PHQ9ChoiceValue" class="dashAnchor"></a>
-    <a title="PHQ9ChoiceValue Enum Reference"></a>
+    <a name="//apple_ref/swift/Struct/Answer" class="dashAnchor"></a>
+    <a title="Answer Struct Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Depressed? Docs</a> (100% documented)</p>
@@ -20,7 +20,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Depressed? Reference</a>
         <img id="carat" src="../img/carat.png" />
-        PHQ9ChoiceValue Enum Reference
+        Answer Struct Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -86,15 +86,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>PHQ9ChoiceValue</h1>
+            <h1>Answer</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PHQ9ChoiceValue</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Answer</span></code></pre>
 
                 </div>
               </div>
-            <p>Answer choice and the associated value.
-The values are used to calculate the overall score.</p>
+            <p>An answer the user has give to a particular question.</p>
 
           </section>
           <section class="section task-group-section">
@@ -103,9 +102,9 @@ The values are used to calculate the overall score.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9Depressed15PHQ9ChoiceValue8NotAtAllFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/NotAtAll" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9Depressed15PHQ9ChoiceValue8NotAtAllFMS0_S0_">NotAtAll</a>
+                    <a name="/s:vV9Depressed6Answer8questionVS_8Question"></a>
+                    <a name="//apple_ref/swift/Property/question" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV9Depressed6Answer8questionVS_8Question">question</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -113,30 +112,26 @@ The values are used to calculate the overall score.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Not at all.</p>
+                        <p>The answered question.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">NotAtAll</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">question</span><span class="p">:</span> <span class="kt">Question</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9Depressed15PHQ9ChoiceValue11SeveralDaysFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/SeveralDays" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9Depressed15PHQ9ChoiceValue11SeveralDaysFMS0_S0_">SeveralDays</a>
+                    <a name="/s:vV9Depressed6Answer11answerScoreOS_15PHQ9ChoiceValue"></a>
+                    <a name="//apple_ref/swift/Property/answerScore" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV9Depressed6Answer11answerScoreOS_15PHQ9ChoiceValue">answerScore</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -144,30 +139,26 @@ The values are used to calculate the overall score.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Several days.</p>
+                        <p>The answer the user has chosen to the question.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">SeveralDays</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">answerScore</span><span class="p">:</span> <span class="kt">PHQ9ChoiceValue</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO9Depressed15PHQ9ChoiceValue19MoreThanHalfTheDaysFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/MoreThanHalfTheDays" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9Depressed15PHQ9ChoiceValue19MoreThanHalfTheDaysFMS0_S0_">MoreThanHalfTheDays</a>
+                    <a name="/s:FV9Depressed6AnswercFMS0_FT10stepResultCSo13ORKStepResult_GSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/init(stepResult:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV9Depressed6AnswercFMS0_FT10stepResultCSo13ORKStepResult_GSqS0__">init(stepResult:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -175,47 +166,41 @@ The values are used to calculate the overall score.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>More than half the days.</p>
+                        <p>Creates an <code><a href="../Structs/Answer.html">Answer</a></code> from an <code>ORKStepResult</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">MoreThanHalfTheDays</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">stepResult</span><span class="p">:</span> <span class="kt">ORKStepResult</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FO9Depressed15PHQ9ChoiceValue14NearlyEveryDayFMS0_S0_"></a>
-                    <a name="//apple_ref/swift/Element/NearlyEveryDay" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO9Depressed15PHQ9ChoiceValue14NearlyEveryDayFMS0_S0_">NearlyEveryDay</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Nearly every day.</p>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stepResult</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>a <code>ORKStepResult</code> obtained from a <code>ORKTaskViewController</code>.</p>
 
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">NearlyEveryDay</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A newly initialized Answer or <code>nil</code>.</p>
 
-                        </div>
                       </div>
                     </section>
                   </div>

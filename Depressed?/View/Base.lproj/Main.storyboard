@@ -360,8 +360,75 @@ by Christian Lobach</string>
                                     <outlet property="label" destination="6td-z7-f5L" id="dkm-nz-hqZ"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="answersHeader" rowHeight="42" id="0K2-2p-gUg">
+                                <rect key="frame" x="0.0" y="98" width="600" height="42"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0K2-2p-gUg" id="9Bw-hN-vdf">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="42"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="QUESTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35X-YK-Xi6">
+                                            <rect key="frame" x="30" y="12" width="64" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oo3-HR-aZX">
+                                            <rect key="frame" x="530" y="12" width="40" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="Oo3-HR-aZX" firstAttribute="top" secondItem="9Bw-hN-vdf" secondAttribute="top" constant="12" id="8YZ-qD-Qop"/>
+                                        <constraint firstAttribute="bottom" secondItem="Oo3-HR-aZX" secondAttribute="bottom" constant="15" id="F5j-3W-ILu"/>
+                                        <constraint firstItem="35X-YK-Xi6" firstAttribute="leading" secondItem="9Bw-hN-vdf" secondAttribute="leading" constant="30" id="XLU-NO-WM1"/>
+                                        <constraint firstItem="35X-YK-Xi6" firstAttribute="top" secondItem="9Bw-hN-vdf" secondAttribute="top" constant="12" id="YTI-UQ-2sN"/>
+                                        <constraint firstAttribute="trailing" secondItem="Oo3-HR-aZX" secondAttribute="trailing" constant="30" id="afG-jd-Nza"/>
+                                        <constraint firstAttribute="bottom" secondItem="35X-YK-Xi6" secondAttribute="bottom" constant="14" id="hE4-Si-oC7"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="answer" rowHeight="44" id="VPH-VQ-PbV" customClass="AnswerCell" customModule="Depressed" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="140" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VPH-VQ-PbV" id="UI8-3a-uLU">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling tired" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dt2-MX-ERs">
+                                            <rect key="frame" x="30" y="12" width="95" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TP-Ac-wbj">
+                                            <rect key="frame" x="560" y="12" width="10" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="dt2-MX-ERs" secondAttribute="bottom" constant="11" id="167-qt-kFO"/>
+                                        <constraint firstItem="6TP-Ac-wbj" firstAttribute="top" secondItem="dt2-MX-ERs" secondAttribute="top" id="4jy-16-ILA"/>
+                                        <constraint firstAttribute="trailing" secondItem="6TP-Ac-wbj" secondAttribute="trailing" constant="30" id="DP3-zh-VW1"/>
+                                        <constraint firstItem="6TP-Ac-wbj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dt2-MX-ERs" secondAttribute="trailing" constant="16" id="X46-I4-vnm"/>
+                                        <constraint firstItem="dt2-MX-ERs" firstAttribute="top" secondItem="UI8-3a-uLU" secondAttribute="top" constant="12" id="fw2-vO-7pe"/>
+                                        <constraint firstItem="6TP-Ac-wbj" firstAttribute="top" secondItem="UI8-3a-uLU" secondAttribute="top" constant="12" id="iu4-01-PVk"/>
+                                        <constraint firstItem="dt2-MX-ERs" firstAttribute="leading" secondItem="UI8-3a-uLU" secondAttribute="leading" constant="30" id="rKx-8Z-7sK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="questionLabel" destination="dt2-MX-ERs" id="dFs-hn-L2a"/>
+                                    <outlet property="scoreLabel" destination="6TP-Ac-wbj" id="I2m-hs-heL"/>
+                                </connections>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="score" rowHeight="145" id="kCe-Ih-bJ5" customClass="ScoreCell" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="98" width="600" height="145"/>
+                                <rect key="frame" x="0.0" y="184" width="600" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kCe-Ih-bJ5" id="vdJ-Nz-LBB">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="145"/>
@@ -430,7 +497,7 @@ by Christian Lobach</string>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapping" rowHeight="217" id="1sh-EF-2CL">
-                                <rect key="frame" x="0.0" y="243" width="600" height="217"/>
+                                <rect key="frame" x="0.0" y="329" width="600" height="217"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1sh-EF-2CL" id="H20-RE-fAd">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="217"/>

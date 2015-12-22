@@ -2,6 +2,8 @@ import UIKit
 
 private enum EvaluationDetailsSection: Int {
     case Explanation
+    case AnswersHeader
+    case Answers
     case Score
     case ScoreMapping
     case Count
@@ -34,7 +36,15 @@ class EvaluationDetailsViewController: UITableViewController {
             if let cell = cell as? ExplanationCell, viewModel = viewModel {
                 cell.label.text = viewModel.explanationText
             }
-
+        case EvaluationDetailsSection.AnswersHeader.rawValue:
+            cell = tableView.dequeueReusableCellWithIdentifier("answersHeader", forIndexPath: indexPath)
+        case EvaluationDetailsSection.Answers.rawValue:
+            cell = tableView.dequeueReusableCellWithIdentifier("answer", forIndexPath: indexPath)
+            if let cell = cell as? AnswerCell, viewModel = viewModel {
+                let (question, score) = viewModel.answers[indexPath.row]
+                cell.questionLabel.text = question
+                cell.scoreLabel.text = score
+            }
         case EvaluationDetailsSection.Score.rawValue:
             cell = tableView.dequeueReusableCellWithIdentifier("score", forIndexPath: indexPath)
             if let cell = cell as? ScoreCell, viewModel = viewModel {
@@ -63,6 +73,10 @@ class EvaluationDetailsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == EvaluationDetailsSection.Answers.rawValue {
+            return viewModel?.answers.count ?? 0
+        }
+        
         return 1
     }
 }
