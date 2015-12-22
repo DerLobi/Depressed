@@ -1,5 +1,0 @@
-SelfTestTask.swift
-	public let identifier = "SelfTest"
-	public func stepBeforeStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep?
-	public func stepAfterStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep?
-	public func progressOfCurrentStep(step: ORKStep, withResult result: ORKTaskResult) -> ORKTaskProgress

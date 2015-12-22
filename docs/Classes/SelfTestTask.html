@@ -13,7 +13,7 @@
     <a title="SelfTestTask Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Depressed? Docs</a> (92% documented)</p>
+        <p><a href="../index.html">Depressed? Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -49,6 +49,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF9Depressedoi1lFTOS_15PHQ9ChoiceValueS0__Sb">&lt;(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -60,10 +68,16 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/Answer.html">Answer</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/Evaluation.html">Evaluation</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/EvaluationViewModel.html">EvaluationViewModel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Question.html">Question</a>
               </li>
             </ul>
           </li>
@@ -98,16 +112,48 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The identifier of the task.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SelfTestTask</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">ORKTask</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">identifier</span> <span class="o">=</span> <span class="s">"SelfTest"</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Depressed12SelfTestTaskcFMS0_FT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Depressed12SelfTestTaskcFMS0_FT_S0_">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new self test task</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a newly initialized <code><a href="../Classes/SelfTestTask.html">SelfTestTask</a></code> instance</p>
+
                       </div>
                     </section>
                   </div>
@@ -125,16 +171,54 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns the step before the given step.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SelfTestTask</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">ORKTask</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stepBeforeStep</span><span class="p">(</span><span class="nv">step</span><span class="p">:</span> <span class="kt">ORKStep</span><span class="p">?,</span> <span class="n">withResult</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">ORKTaskResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ORKStep</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>step</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current step.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current task result.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The step before the given step.</p>
+
                       </div>
                     </section>
                   </div>
@@ -152,16 +236,54 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns the step after the given step.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SelfTestTask</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">ORKTask</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stepAfterStep</span><span class="p">(</span><span class="nv">step</span><span class="p">:</span> <span class="kt">ORKStep</span><span class="p">?,</span> <span class="n">withResult</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">ORKTaskResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ORKStep</span><span class="p">?</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>step</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current step.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current task result.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The step after the given step.</p>
+
                       </div>
                     </section>
                   </div>
@@ -179,16 +301,54 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Returns the progress of the current step.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SelfTestTask</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">ORKTask</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">progressOfCurrentStep</span><span class="p">(</span><span class="nv">step</span><span class="p">:</span> <span class="kt">ORKStep</span><span class="p">,</span> <span class="n">withResult</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">ORKTaskResult</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ORKTaskProgress</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>step</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current step.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current task result.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The progress of the current step.</p>
+
                       </div>
                     </section>
                   </div>
@@ -198,7 +358,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2015 <a class="link" href="http://christian-lobach.de" target="_blank" rel="external">Christian Lobach</a>. All rights reserved. (Last updated: 2015-12-21)</p>
+          <p>&copy; 2015 <a class="link" href="http://christian-lobach.de" target="_blank" rel="external">Christian Lobach</a>. All rights reserved. (Last updated: 2015-12-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.4.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
