@@ -17,6 +17,12 @@ public enum PHQ9ChoiceValue: Int {
     case NearlyEveryDay = 3    
 }
 
+extension PHQ9ChoiceValue: Comparable { }
+
+public func <(lhs: PHQ9ChoiceValue, rhs: PHQ9ChoiceValue) -> Bool {
+    return lhs.rawValue < rhs.rawValue
+}
+
 extension ORKTextChoice {
 
     /// Choices the user can choose from, expressing the frequency.
