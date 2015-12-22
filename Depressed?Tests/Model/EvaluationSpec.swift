@@ -8,7 +8,7 @@ class EvaluationSpec: QuickSpec {
 
     override func spec() {
      
-        describe("init?(results:)") {
+        describe("-init?(stepResults:)") {
 
             var evaluation: Evaluation?
             
