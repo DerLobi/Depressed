@@ -1,5 +1,6 @@
 import ResearchKit
 
+///  A question the user answers.
 public struct Question {
  
     /// The identifier of the question.

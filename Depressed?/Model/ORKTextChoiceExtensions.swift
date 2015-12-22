@@ -19,6 +19,12 @@ public enum PHQ9ChoiceValue: Int {
 
 extension PHQ9ChoiceValue: Comparable { }
 
+///  Compares two PHQ-9 choice values.
+///
+///  - parameter lhs: A choice value.
+///  - parameter rhs: A choice value.
+///
+///  - returns: `true` if the value of the left choice is lower than the right.
 public func <(lhs: PHQ9ChoiceValue, rhs: PHQ9ChoiceValue) -> Bool {
     return lhs.rawValue < rhs.rawValue
 }

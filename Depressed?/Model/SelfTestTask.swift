@@ -5,8 +5,12 @@ public class SelfTestTask: NSObject, ORKTask {
 
     private let steps: [ORKStep]
     
+    /// The identifier of the task.
     public let identifier = "SelfTest"    
 
+    ///  Creates a new self test task
+    ///
+    ///  - returns: a newly initialized `SelfTestTask` instance
     public override init() {
         let pleasureInterestQuestion = Question(identifier: .LosingInterest)
         let depressedQuestion = Question(identifier: .FeelingDepressed)
@@ -31,6 +35,12 @@ public class SelfTestTask: NSObject, ORKTask {
         ]
     }
 
+    ///  Returns the step before the given step.
+    ///
+    ///  - parameter step:   The current step.
+    ///  - parameter result: The current task result.
+    ///
+    ///  - returns: The step before the given step.
     public func stepBeforeStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep? {
         if let step = step {
             // return appropiate step
@@ -45,6 +55,12 @@ public class SelfTestTask: NSObject, ORKTask {
         }
     }
 
+    ///  Returns the step after the given step.
+    ///
+    ///  - parameter step:   The current step.
+    ///  - parameter result: The current task result.
+    ///
+    ///  - returns: The step after the given step.
     public func stepAfterStep(step: ORKStep?, withResult result: ORKTaskResult) -> ORKStep? {
 
         if let step = step {
@@ -62,6 +78,12 @@ public class SelfTestTask: NSObject, ORKTask {
 
     }
     
+    ///  Returns the progress of the current step.
+    ///
+    ///  - parameter step:   The current step.
+    ///  - parameter result: The current task result.
+    ///
+    ///  - returns: The progress of the current step.
     public func progressOfCurrentStep(step: ORKStep, withResult result: ORKTaskResult) -> ORKTaskProgress {
         let index = steps.indexOf(step)
 
