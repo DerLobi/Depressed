@@ -23,6 +23,9 @@ public struct EvaluationViewModel {
     /// considered, we don't want to display the score.
     public let shouldDisplayScore: Bool
     
+    /// The titles of the questions the user has answered and the corresponding score.
+    public let answers: [(String, String)]
+    
     ///  Creates a new view model from the given evaluation.
     ///
     ///  - parameter evaluation: An `Evaluation`
@@ -74,6 +77,8 @@ public struct EvaluationViewModel {
         shouldDisplayScore = evaluation.depressiveDisorderConsidered
         
         score = String(evaluation.score)
+        
+        answers = evaluation.answers.map { ($0.question.title, String($0.answerScore.rawValue)) }
     }
     
 }
