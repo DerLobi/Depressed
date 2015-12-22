@@ -45,6 +45,9 @@ public protocol EvaluationType {
     
     /// Whether the user answered at least four questions with at least "more than half the days".
     var numberOfAnswersCritical: Bool { get }
+
+    /// The answers a user has given to all questions.
+    var answers: [Answer] { get }
 }
 
 ///  Evaluation that presents the results based on `ORKStepResult`s.
