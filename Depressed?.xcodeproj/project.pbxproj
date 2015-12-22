@@ -689,7 +689,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4187A7979C812DB0D85D3B0C /* Pods-Depressed?.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon$(BUNDLE_ID_SUFFIX)";
+				BUNDLE_ID_SUFFIX = .debug;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Depressed?/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -705,7 +706,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5E4B495E381A8720D960C166 /* Pods-Depressed?.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon$(BUNDLE_ID_SUFFIX)";
+				BUNDLE_ID_SUFFIX = "";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Depressed?/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
