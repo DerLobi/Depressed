@@ -3,17 +3,17 @@ import ResearchKit
 ///  An answer the user has give to a particular question.
 public struct Answer {
  
-    /// The identifier of the answered question.
-    public let questionIdentifier: QuestionIdentifier
+    /// The answered question.
+    public let question: Question
 
     /// The answer the user has chosen to the question.
     public let answerScore: PHQ9ChoiceValue
     
-    ///  Creates an `Answer` from an `ORKStepResult`
+    ///  Creates an `Answer` from an `ORKStepResult`.
     ///
-    ///  - parameter stepResult: a `ORKStepResult` obtained from a `ORKTaskViewController`
+    ///  - parameter stepResult: a `ORKStepResult` obtained from a `ORKTaskViewController`.
     ///
-    ///  - returns: A newly initialized Answer or `nil`
+    ///  - returns: A newly initialized Answer or `nil`.
     public init?(stepResult: ORKStepResult) {
         guard let result = stepResult.firstResult as? ORKChoiceQuestionResult,
             value = result.choiceAnswers?.first as? NSNumber,
@@ -22,6 +22,6 @@ public struct Answer {
 
         answerScore = score
         
-        questionIdentifier = identifier
+        question = Question(identifier: identifier)
     }
 }

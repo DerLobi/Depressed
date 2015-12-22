@@ -105,13 +105,13 @@ public struct Evaluation: EvaluationType {
             .map { $0! }
                 
             
-        for answer in answers where (answer.questionIdentifier == .FeelingSuicidal
+        for answer in answers where (answer.question.identifier == .FeelingSuicidal
             && answer.answerScore >= .SeveralDays)
             || answer.answerScore >= .MoreThanHalfTheDays {
                 
                 numberOfCriticalQuestions++
                 
-                switch answer.questionIdentifier {
+                switch answer.question.identifier {
                 case .LosingInterest:
                     losingInterestCritical = true
                 case .FeelingDepressed:

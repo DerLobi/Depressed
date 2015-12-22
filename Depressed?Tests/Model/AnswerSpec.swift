@@ -1,5 +1,4 @@
 import Depressed
-import Foundation
 import Nimble
 import Quick
 import ResearchKit
@@ -66,7 +65,7 @@ class AnswerSpec: QuickSpec {
             }
         }
         
-        describe(".questionIdentifier") {
+        describe(".question") {
 
             var answer: Answer!
             
@@ -77,8 +76,8 @@ class AnswerSpec: QuickSpec {
                 answer = Answer(stepResult: stepResult)
             }
             
-            it("is the same identifier as that of the stepResult") {
-                expect(answer.questionIdentifier).to(equal(QuestionIdentifier.FeelingTired))
+            it("has the same identifier as that of the stepResult") {
+                expect(answer.question.identifier).to(equal(QuestionIdentifier.FeelingTired))
             }
         }
         
