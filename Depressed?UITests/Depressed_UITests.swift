@@ -68,14 +68,18 @@ class Depressed_UITests: XCTestCase {
         notAtAllCell.tap()
 
         sleep(1)
-        snapshot("03LastQuestion")
         notAtAllCell.tap()
                 
-        snapshot("04Result")
+        snapshot("03Result")
 
         sleep(1)
         viewDetailsButton.tap()
-        snapshot("05ResultDetails")
+        snapshot("04ResultDetails")
+        
+        sleep(1)
+        app.tables.element.swipeUp()
+        snapshot("05ResultDetailsBottom")
     }
+    
     
 }
