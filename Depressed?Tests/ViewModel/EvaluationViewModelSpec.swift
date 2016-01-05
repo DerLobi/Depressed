@@ -361,5 +361,23 @@ class EvaluationViewModelSpec: QuickSpec {
                 
             }
         }
+        
+        describe(".answers") {
+            
+            beforeEach {
+                let stepResult = makeStepResult(.FeelingTired, value: .MoreThanHalfTheDays)
+                
+                let answer = Answer(stepResult: stepResult)!
+
+                evaluation.answers = [answer]
+                viewModel = EvaluationViewModel(evaluation: evaluation)
+            }
+            
+            it("is equal to the evaluation's score") {
+                let answerTuple = viewModel.answers.first!
+                expect(answerTuple.0).to(equal(NSLocalizedString("question_title_feeling_tired", comment: "")))
+                expect(answerTuple.1).to(equal("2"))
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ class EvaluationSpec: QuickSpec {
 
     override func spec() {
      
-        describe("init?(results:)") {
+        describe("-init?(stepResults:)") {
 
             var evaluation: Evaluation?
             
@@ -16,14 +16,14 @@ class EvaluationSpec: QuickSpec {
 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -38,16 +38,16 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -62,15 +62,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -100,15 +100,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct decision") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NearlyEveryDay),
-                        stepResult(.FeelingTired, value: .NearlyEveryDay),
-                        stepResult(.PoorAppetite, value: .NearlyEveryDay),
-                        stepResult(.LowSelfEsteem, value: .NearlyEveryDay),
-                        stepResult(.TroubleConcentrating, value: .NearlyEveryDay),
-                        stepResult(.SlowOrFast, value: .NearlyEveryDay),
-                        stepResult(.FeelingSuicidal, value: .NearlyEveryDay)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingTired, value: .NearlyEveryDay),
+                        makeStepResult(.PoorAppetite, value: .NearlyEveryDay),
+                        makeStepResult(.LowSelfEsteem, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleConcentrating, value: .NearlyEveryDay),
+                        makeStepResult(.SlowOrFast, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingSuicidal, value: .NearlyEveryDay)
                     ],
                     "considered": false
                 ]
@@ -117,15 +117,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct decision") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NearlyEveryDay),
-                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "considered": false
                 ]
@@ -134,15 +134,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct decision") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
-                        stepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        makeStepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "considered": true
                 ]
@@ -151,15 +151,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct decision") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
-                        stepResult(.SlowOrFast, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
+                        makeStepResult(.SlowOrFast, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "considered": true
                 ]
@@ -168,15 +168,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct decision") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
-                        stepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        makeStepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "considered": true
                 ]
@@ -185,15 +185,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct decision") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
-                        stepResult(.SlowOrFast, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
+                        makeStepResult(.SlowOrFast, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "considered": true
                 ]
@@ -202,15 +202,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct decision") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
-                        stepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .SeveralDays)
+                        makeStepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        makeStepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .SeveralDays)
                     ],
                     "considered": true
                 ]
@@ -219,15 +219,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct decision") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
-                        stepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .SeveralDays)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        makeStepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .SeveralDays)
                     ],
                     "considered": true
                 ]
@@ -242,15 +242,15 @@ class EvaluationSpec: QuickSpec {
 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -265,15 +265,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .SeveralDays)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .SeveralDays)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -288,15 +288,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .MoreThanHalfTheDays)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .MoreThanHalfTheDays)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -311,15 +311,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NearlyEveryDay)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NearlyEveryDay)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -340,15 +340,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -363,15 +363,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .SeveralDays),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .SeveralDays),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -386,15 +386,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -409,15 +409,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NearlyEveryDay),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -438,15 +438,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -461,15 +461,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .SeveralDays),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .SeveralDays),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -484,15 +484,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -507,15 +507,15 @@ class EvaluationSpec: QuickSpec {
                 
                 beforeEach {
                     let stepResults = [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ]
                     evaluation = Evaluation(stepResults: stepResults)
                 }
@@ -544,15 +544,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns whether four or more questions are answered critically") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NearlyEveryDay),
-                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
-                        stepResult(.TroubleSleeping, value: .NearlyEveryDay),
-                        stepResult(.FeelingTired, value: .NearlyEveryDay),
-                        stepResult(.PoorAppetite, value: .NearlyEveryDay),
-                        stepResult(.LowSelfEsteem, value: .NearlyEveryDay),
-                        stepResult(.TroubleConcentrating, value: .NearlyEveryDay),
-                        stepResult(.SlowOrFast, value: .NearlyEveryDay),
-                        stepResult(.FeelingSuicidal, value: .NearlyEveryDay)
+                        makeStepResult(.LosingInterest, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleSleeping, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingTired, value: .NearlyEveryDay),
+                        makeStepResult(.PoorAppetite, value: .NearlyEveryDay),
+                        makeStepResult(.LowSelfEsteem, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleConcentrating, value: .NearlyEveryDay),
+                        makeStepResult(.SlowOrFast, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingSuicidal, value: .NearlyEveryDay)
                     ],
                     "critical": true
                 ]
@@ -561,15 +561,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns whether four or more questions are answered critically") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "critical": true
                 ]
@@ -578,15 +578,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns whether four or more questions are answered critically") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "critical": true
                 ]
@@ -595,15 +595,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns whether four or more questions are answered critically") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "critical": true
                 ]
@@ -612,15 +612,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns whether four or more questions are answered critically") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .MoreThanHalfTheDays),
-                        stepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .MoreThanHalfTheDays)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .MoreThanHalfTheDays),
+                        makeStepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .MoreThanHalfTheDays),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .MoreThanHalfTheDays)
                     ],
                     "critical": true
                 ]
@@ -629,15 +629,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns whether four or more questions are answered critically") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NearlyEveryDay),
-                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NearlyEveryDay)
+                        makeStepResult(.LosingInterest, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NearlyEveryDay)
                     ],
                     "critical": false
                 ]
@@ -646,15 +646,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns whether four or more questions are answered critically") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "critical": false
                 ]
@@ -663,15 +663,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns whether four or more questions are answered critically") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .SeveralDays),
-                        stepResult(.FeelingDepressed, value: .SeveralDays),
-                        stepResult(.TroubleSleeping, value: .SeveralDays),
-                        stepResult(.FeelingTired, value: .SeveralDays),
-                        stepResult(.PoorAppetite, value: .SeveralDays),
-                        stepResult(.LowSelfEsteem, value: .SeveralDays),
-                        stepResult(.TroubleConcentrating, value: .SeveralDays),
-                        stepResult(.SlowOrFast, value: .SeveralDays),
-                        stepResult(.FeelingSuicidal, value: .SeveralDays)
+                        makeStepResult(.LosingInterest, value: .SeveralDays),
+                        makeStepResult(.FeelingDepressed, value: .SeveralDays),
+                        makeStepResult(.TroubleSleeping, value: .SeveralDays),
+                        makeStepResult(.FeelingTired, value: .SeveralDays),
+                        makeStepResult(.PoorAppetite, value: .SeveralDays),
+                        makeStepResult(.LowSelfEsteem, value: .SeveralDays),
+                        makeStepResult(.TroubleConcentrating, value: .SeveralDays),
+                        makeStepResult(.SlowOrFast, value: .SeveralDays),
+                        makeStepResult(.FeelingSuicidal, value: .SeveralDays)
                     ],
                     "critical": false
                 ]
@@ -680,15 +680,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns whether four or more questions are answered critically") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NearlyEveryDay),
-                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
-                        stepResult(.TroubleSleeping, value: .SeveralDays),
-                        stepResult(.FeelingTired, value: .SeveralDays),
-                        stepResult(.PoorAppetite, value: .SeveralDays),
-                        stepResult(.LowSelfEsteem, value: .SeveralDays),
-                        stepResult(.TroubleConcentrating, value: .SeveralDays),
-                        stepResult(.SlowOrFast, value: .SeveralDays),
-                        stepResult(.FeelingSuicidal, value: .NearlyEveryDay)
+                        makeStepResult(.LosingInterest, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleSleeping, value: .SeveralDays),
+                        makeStepResult(.FeelingTired, value: .SeveralDays),
+                        makeStepResult(.PoorAppetite, value: .SeveralDays),
+                        makeStepResult(.LowSelfEsteem, value: .SeveralDays),
+                        makeStepResult(.TroubleConcentrating, value: .SeveralDays),
+                        makeStepResult(.SlowOrFast, value: .SeveralDays),
+                        makeStepResult(.FeelingSuicidal, value: .NearlyEveryDay)
                     ],
                     "critical": false
                 ]
@@ -713,15 +713,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("calculates the correct score") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NearlyEveryDay),
-                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
-                        stepResult(.TroubleSleeping, value: .NearlyEveryDay),
-                        stepResult(.FeelingTired, value: .NearlyEveryDay),
-                        stepResult(.PoorAppetite, value: .NearlyEveryDay),
-                        stepResult(.LowSelfEsteem, value: .NearlyEveryDay),
-                        stepResult(.TroubleConcentrating, value: .NearlyEveryDay),
-                        stepResult(.SlowOrFast, value: .NearlyEveryDay),
-                        stepResult(.FeelingSuicidal, value: .NearlyEveryDay)
+                        makeStepResult(.LosingInterest, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleSleeping, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingTired, value: .NearlyEveryDay),
+                        makeStepResult(.PoorAppetite, value: .NearlyEveryDay),
+                        makeStepResult(.LowSelfEsteem, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleConcentrating, value: .NearlyEveryDay),
+                        makeStepResult(.SlowOrFast, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingSuicidal, value: .NearlyEveryDay)
                     ],
                     "score": 27
                 ]
@@ -730,15 +730,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("calculates the correct score") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "score": 0
                 ]
@@ -747,15 +747,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("calculates the correct score") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .SeveralDays),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .SeveralDays),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "score": 1
                 ]
@@ -764,15 +764,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("calculates the correct score") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .SeveralDays),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .SeveralDays),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .SeveralDays),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .SeveralDays),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "score": 2
                 ]
@@ -781,15 +781,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("calculates the correct score") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NearlyEveryDay),
-                        stepResult(.LowSelfEsteem, value: .SeveralDays),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .SeveralDays),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NearlyEveryDay),
+                        makeStepResult(.LowSelfEsteem, value: .SeveralDays),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .SeveralDays),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "score": 8
                 ]
@@ -798,15 +798,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("calculates the correct score") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NearlyEveryDay),
-                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
-                        stepResult(.TroubleSleeping, value: .SeveralDays),
-                        stepResult(.FeelingTired, value: .SeveralDays),
-                        stepResult(.PoorAppetite, value: .NearlyEveryDay),
-                        stepResult(.LowSelfEsteem, value: .SeveralDays),
-                        stepResult(.TroubleConcentrating, value: .SeveralDays),
-                        stepResult(.SlowOrFast, value: .SeveralDays),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleSleeping, value: .SeveralDays),
+                        makeStepResult(.FeelingTired, value: .SeveralDays),
+                        makeStepResult(.PoorAppetite, value: .NearlyEveryDay),
+                        makeStepResult(.LowSelfEsteem, value: .SeveralDays),
+                        makeStepResult(.TroubleConcentrating, value: .SeveralDays),
+                        makeStepResult(.SlowOrFast, value: .SeveralDays),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "score": 14
                 ]
@@ -832,15 +832,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct severity") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .NotAtAll),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .NotAtAll),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "severity": Severity.NoDepression.rawValue
                 ]
@@ -849,15 +849,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct severity") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .SeveralDays),
-                        stepResult(.TroubleSleeping, value: .NotAtAll),
-                        stepResult(.FeelingTired, value: .NotAtAll),
-                        stepResult(.PoorAppetite, value: .NotAtAll),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .SeveralDays),
+                        makeStepResult(.TroubleSleeping, value: .NotAtAll),
+                        makeStepResult(.FeelingTired, value: .NotAtAll),
+                        makeStepResult(.PoorAppetite, value: .NotAtAll),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "severity": Severity.MinimalDepression.rawValue
                 ]
@@ -866,15 +866,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct severity") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleSleeping, value: .SeveralDays),
-                        stepResult(.FeelingTired, value: .SeveralDays),
-                        stepResult(.PoorAppetite, value: .SeveralDays),
-                        stepResult(.LowSelfEsteem, value: .NotAtAll),
-                        stepResult(.TroubleConcentrating, value: .NotAtAll),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleSleeping, value: .SeveralDays),
+                        makeStepResult(.FeelingTired, value: .SeveralDays),
+                        makeStepResult(.PoorAppetite, value: .SeveralDays),
+                        makeStepResult(.LowSelfEsteem, value: .NotAtAll),
+                        makeStepResult(.TroubleConcentrating, value: .NotAtAll),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "severity": Severity.MildDepression.rawValue
                 ]
@@ -883,15 +883,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct severity") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NotAtAll),
-                        stepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleSleeping, value: .SeveralDays),
-                        stepResult(.FeelingTired, value: .SeveralDays),
-                        stepResult(.PoorAppetite, value: .SeveralDays),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .NearlyEveryDay),
-                        stepResult(.SlowOrFast, value: .NotAtAll),
-                        stepResult(.FeelingSuicidal, value: .NotAtAll)
+                        makeStepResult(.LosingInterest, value: .NotAtAll),
+                        makeStepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleSleeping, value: .SeveralDays),
+                        makeStepResult(.FeelingTired, value: .SeveralDays),
+                        makeStepResult(.PoorAppetite, value: .SeveralDays),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .NearlyEveryDay),
+                        makeStepResult(.SlowOrFast, value: .NotAtAll),
+                        makeStepResult(.FeelingSuicidal, value: .NotAtAll)
                     ],
                     "severity": Severity.ModerateDepression.rawValue
                 ]
@@ -900,15 +900,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct severity") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleSleeping, value: .SeveralDays),
-                        stepResult(.FeelingTired, value: .SeveralDays),
-                        stepResult(.PoorAppetite, value: .SeveralDays),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .NearlyEveryDay),
-                        stepResult(.SlowOrFast, value: .SeveralDays),
-                        stepResult(.FeelingSuicidal, value: .MoreThanHalfTheDays)
+                        makeStepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingDepressed, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleSleeping, value: .SeveralDays),
+                        makeStepResult(.FeelingTired, value: .SeveralDays),
+                        makeStepResult(.PoorAppetite, value: .SeveralDays),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .NearlyEveryDay),
+                        makeStepResult(.SlowOrFast, value: .SeveralDays),
+                        makeStepResult(.FeelingSuicidal, value: .MoreThanHalfTheDays)
                     ],
                     "severity": Severity.ModeratelySevereDepression.rawValue
                 ]
@@ -917,15 +917,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct severity") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
-                        stepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
-                        stepResult(.FeelingTired, value: .NearlyEveryDay),
-                        stepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
-                        stepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
-                        stepResult(.TroubleConcentrating, value: .NearlyEveryDay),
-                        stepResult(.SlowOrFast, value: .SeveralDays),
-                        stepResult(.FeelingSuicidal, value: .MoreThanHalfTheDays)
+                        makeStepResult(.LosingInterest, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleSleeping, value: .MoreThanHalfTheDays),
+                        makeStepResult(.FeelingTired, value: .NearlyEveryDay),
+                        makeStepResult(.PoorAppetite, value: .MoreThanHalfTheDays),
+                        makeStepResult(.LowSelfEsteem, value: .MoreThanHalfTheDays),
+                        makeStepResult(.TroubleConcentrating, value: .NearlyEveryDay),
+                        makeStepResult(.SlowOrFast, value: .SeveralDays),
+                        makeStepResult(.FeelingSuicidal, value: .MoreThanHalfTheDays)
                     ],
                     "severity": Severity.SevereDepression.rawValue
                 ]
@@ -934,15 +934,15 @@ class EvaluationSpec: QuickSpec {
             itBehavesLike("returns the correct severity") {
                 return [
                     "results": [
-                        stepResult(.LosingInterest, value: .NearlyEveryDay),
-                        stepResult(.FeelingDepressed, value: .NearlyEveryDay),
-                        stepResult(.TroubleSleeping, value: .NearlyEveryDay),
-                        stepResult(.FeelingTired, value: .NearlyEveryDay),
-                        stepResult(.PoorAppetite, value: .NearlyEveryDay),
-                        stepResult(.LowSelfEsteem, value: .NearlyEveryDay),
-                        stepResult(.TroubleConcentrating, value: .NearlyEveryDay),
-                        stepResult(.SlowOrFast, value: .NearlyEveryDay),
-                        stepResult(.FeelingSuicidal, value: .NearlyEveryDay)
+                        makeStepResult(.LosingInterest, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingDepressed, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleSleeping, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingTired, value: .NearlyEveryDay),
+                        makeStepResult(.PoorAppetite, value: .NearlyEveryDay),
+                        makeStepResult(.LowSelfEsteem, value: .NearlyEveryDay),
+                        makeStepResult(.TroubleConcentrating, value: .NearlyEveryDay),
+                        makeStepResult(.SlowOrFast, value: .NearlyEveryDay),
+                        makeStepResult(.FeelingSuicidal, value: .NearlyEveryDay)
                     ],
                     "severity": Severity.SevereDepression.rawValue
                 ]
@@ -950,13 +950,75 @@ class EvaluationSpec: QuickSpec {
 
         }
         
+        describe(".answers") {
+        
+            var evaluation: Evaluation!
+            
+            beforeEach {
+                let stepResults = [
+                    makeStepResult(.LosingInterest, value: .NearlyEveryDay),
+                    makeStepResult(.FeelingDepressed, value: .SeveralDays),
+                    makeStepResult(.TroubleSleeping, value: .NearlyEveryDay),
+                    makeStepResult(.FeelingTired, value: .SeveralDays),
+                    makeStepResult(.PoorAppetite, value: .NotAtAll),
+                    makeStepResult(.LowSelfEsteem, value: .NearlyEveryDay),
+                    makeStepResult(.TroubleConcentrating, value: .SeveralDays),
+                    makeStepResult(.SlowOrFast, value: .MoreThanHalfTheDays),
+                    makeStepResult(.FeelingSuicidal, value: .NotAtAll)
+                ]
+                
+                evaluation = Evaluation(stepResults: stepResults)
+            }
+            
+            it("contains nine answers") {
+                expect(evaluation.answers).to(haveCount(9))
+            }
+        
+            it("has questions with the correct identifiers") {
+                let identifiers: [QuestionIdentifier] = [
+                    .LosingInterest,
+                    .FeelingDepressed,
+                    .TroubleSleeping,
+                    .FeelingTired,
+                    .PoorAppetite,
+                    .LowSelfEsteem,
+                    .TroubleConcentrating,
+                    .SlowOrFast,
+                    .FeelingSuicidal
+                ]
+                
+                for (idx, answer) in evaluation.answers.enumerate() {
+                    expect(answer.question.identifier).to(equal(identifiers[idx]))
+                }
+            }
+
+            it("has questions with the correct answer scores") {
+                let values: [PHQ9ChoiceValue] = [
+                    .NearlyEveryDay,
+                    .SeveralDays,
+                    .NearlyEveryDay,
+                    .SeveralDays,
+                    .NotAtAll,
+                    .NearlyEveryDay,
+                    .SeveralDays,
+                    .MoreThanHalfTheDays,
+                    .NotAtAll
+                ]
+                
+                for (idx, answer) in evaluation.answers.enumerate() {
+                    expect(answer.answerScore).to(equal(values[idx]))
+                }
+                
+            }
+
+        }
     }
     
 }
 
 //MARK: Helpers
 
-private func stepResult(identifier: QuestionIdentifier, value: PHQ9ChoiceValue) -> ORKStepResult {
+internal func makeStepResult(identifier: QuestionIdentifier, value: PHQ9ChoiceValue) -> ORKStepResult {
     let result = ORKStepResult()
     result.identifier = identifier.rawValue
     result.results = [choiceResult(value)]

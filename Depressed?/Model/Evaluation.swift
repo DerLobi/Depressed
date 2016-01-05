@@ -45,13 +45,18 @@ public protocol EvaluationType {
     
     /// Whether the user answered at least four questions with at least "more than half the days".
     var numberOfAnswersCritical: Bool { get }
+
+    /// The answers a user has given to all questions.
+    var answers: [Answer] { get }
 }
 
 ///  Evaluation that presents the results based on `ORKStepResult`s.
 public struct Evaluation: EvaluationType {
     
     /// Whether a depressive disorder should be considered.
-    public private(set) var depressiveDisorderConsidered: Bool
+    public var depressiveDisorderConsidered: Bool {
+        return (losingInterestCritical || feelingDepressedCritical) && numberOfAnswersCritical
+    }
     
     /// Total score based on the value of the given answers.
     public let score: Int
@@ -69,7 +74,10 @@ public struct Evaluation: EvaluationType {
     public private(set) var feelingDepressedCritical: Bool
     
     /// Whether the user answered at least four questions with at least "more than half the days".
-    public private(set) var numberOfAnswersCritical: Bool
+    public let numberOfAnswersCritical: Bool
+    
+    /// The answers a user has given to all questions.
+    public let answers: [Answer]
 
     ///  Creates an `Evaluation` from `ORKStepResult`s.
     ///
@@ -92,51 +100,40 @@ public struct Evaluation: EvaluationType {
             return nil
         }
         
-        var accumulatedScore = 0
         suicidal = false
         
-        var losingInterestCritical = false
-        var feelingDepressedCritical = false
+        losingInterestCritical = false
+        feelingDepressedCritical = false
         var numberOfCriticalQuestions = 0
         
-        for stepResult in stepResults {
-            if let result = stepResult.firstResult as? ORKChoiceQuestionResult,
-                value = result.choiceAnswers?.first as? NSNumber {
-
-                    let score = value.integerValue
-                    
-                    if (score >= PHQ9ChoiceValue.MoreThanHalfTheDays.rawValue)
-                        || (stepResult.identifier == QuestionIdentifier.FeelingSuicidal.rawValue
-                            && score >= PHQ9ChoiceValue.SeveralDays.rawValue) {
-                                numberOfCriticalQuestions++
-                    }
-                    
-                    accumulatedScore += score
-                    
-                    switch stepResult.identifier {
-                    case QuestionIdentifier.LosingInterest.rawValue:
-                        losingInterestCritical = score >= PHQ9ChoiceValue.MoreThanHalfTheDays.rawValue
-                    case QuestionIdentifier.FeelingDepressed.rawValue:
-                        feelingDepressedCritical = score >= PHQ9ChoiceValue.MoreThanHalfTheDays.rawValue
-                    case QuestionIdentifier.FeelingSuicidal.rawValue:
-                        suicidal = score >= PHQ9ChoiceValue.SeveralDays.rawValue
-                    default:
-                        break
-                    }
-                    
-            } else {
-                return nil
-            }
+        answers = stepResults.map { Answer(stepResult: $0) }
+            .filter { $0 != nil }
+            .map { $0! }
+                
             
+        for answer in answers where (answer.question.identifier == .FeelingSuicidal
+            && answer.answerScore >= .SeveralDays)
+            || answer.answerScore >= .MoreThanHalfTheDays {
+                
+                numberOfCriticalQuestions++
+                
+                switch answer.question.identifier {
+                case .LosingInterest:
+                    losingInterestCritical = true
+                case .FeelingDepressed:
+                    feelingDepressedCritical = true
+                case .FeelingSuicidal:
+                    suicidal = true
+                default:
+                    break
+                }
         }
         
-        self.losingInterestCritical = losingInterestCritical
-        self.feelingDepressedCritical = feelingDepressedCritical
+        score = answers.reduce(0) { sum, answer in
+            return sum + answer.answerScore.rawValue
+        }
+        
         self.numberOfAnswersCritical = numberOfCriticalQuestions >= 4
-        
-        depressiveDisorderConsidered = (losingInterestCritical || feelingDepressedCritical) && (numberOfCriticalQuestions >= 4)
-        
-        score = accumulatedScore
         
         switch score {
         case 0:
