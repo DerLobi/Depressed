@@ -33,6 +33,8 @@
 		CA8683931BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683921BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift */; };
 		CA8683951BE1646B003E87A4 /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683941BE1646B003E87A4 /* Evaluation.swift */; };
 		CA8683971BE16D0B003E87A4 /* QuestionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */; };
+		CAAB26D51C3C711A00A7B943 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26D41C3C711A00A7B943 /* InfoViewModel.swift */; };
+		CAAB26D71C3C727700A7B943 /* InfoViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26D61C3C727700A7B943 /* InfoViewModelSpec.swift */; };
 		CAEE7DC21C07499000DDAA5E /* Depressed_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */; };
 		CAEE7DCA1C074AA300DDAA5E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC91C074AA300DDAA5E /* SnapshotHelper.swift */; };
 		CAF8A5591C29E44400E30E90 /* AnswerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8A5581C29E44400E30E90 /* AnswerSpec.swift */; };
@@ -99,6 +101,8 @@
 		CA8683921BE012D0003E87A4 /* ORKTextChoiceAnswerFormatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ORKTextChoiceAnswerFormatExtensions.swift; sourceTree = "<group>"; };
 		CA8683941BE1646B003E87A4 /* Evaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
 		CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIdentifier.swift; sourceTree = "<group>"; };
+		CAAB26D41C3C711A00A7B943 /* InfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
+		CAAB26D61C3C727700A7B943 /* InfoViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewModelSpec.swift; sourceTree = "<group>"; };
 		CAEE7DBF1C07499000DDAA5E /* Depressed?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Depressed?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depressed_UITests.swift; sourceTree = "<group>"; };
 		CAEE7DC31C07499000DDAA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6600451BED244600042495 /* EvaluationViewModel.swift */,
+				CAAB26D41C3C711A00A7B943 /* InfoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */,
+				CAAB26D61C3C727700A7B943 /* InfoViewModelSpec.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -527,6 +533,7 @@
 				CA855A421C284E8C00C9376E /* ScoreCell.swift in Sources */,
 				CA6600461BED244600042495 /* EvaluationViewModel.swift in Sources */,
 				CA8683951BE1646B003E87A4 /* Evaluation.swift in Sources */,
+				CAAB26D51C3C711A00A7B943 /* InfoViewModel.swift in Sources */,
 				CAF8A5611C2A023200E30E90 /* AnswerCell.swift in Sources */,
 				CA855A3E1C283C7D00C9376E /* EvaluationDetailsViewController.swift in Sources */,
 				CA86838F1BE00981003E87A4 /* SelfTestTask.swift in Sources */,
@@ -542,6 +549,7 @@
 				CAF8A55D1C29F0E600E30E90 /* QuestionSpec.swift in Sources */,
 				CA66004C1BED490200042495 /* MutableEvaluation.swift in Sources */,
 				CAF8A5591C29E44400E30E90 /* AnswerSpec.swift in Sources */,
+				CAAB26D71C3C727700A7B943 /* InfoViewModelSpec.swift in Sources */,
 				CA6581011BEBC93600DA66E2 /* EvaluationSpec.swift in Sources */,
 				CA6600491BED454A00042495 /* EvaluationViewModelSpec.swift in Sources */,
 				CA6581031BEBCF7C00DA66E2 /* QuestionIdentifierSpec.swift in Sources */,
