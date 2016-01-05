@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qVl-5S-NWb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qVl-5S-NWb">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -113,24 +113,30 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKk-GO-lTr">
-                                <rect key="frame" x="222" y="110" width="156" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKk-GO-lTr">
+                                <rect key="frame" x="222" y="140" width="156" height="41"/>
                                 <string key="text">Made with Love 
 by Christian Lobach</string>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bm-2Ge">
-                                <rect key="frame" x="182" y="221" width="236" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bm-2Ge">
+                                <rect key="frame" x="182" y="251" width="236" height="30"/>
                                 <state key="normal" title="This app uses Apple's ResearchKit"/>
                                 <connections>
                                     <segue destination="SvN-7U-Q8J" kind="show" id="M4L-6Y-ALK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Depressed?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g99-6h-7XJ">
-                                <rect key="frame" x="202" y="20" width="197" height="46"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depressed?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g99-6h-7XJ">
+                                <rect key="frame" x="202" y="30" width="197" height="46"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.2 (777)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Por-rP-7MP">
+                                <rect key="frame" x="268" y="84" width="64" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -140,9 +146,12 @@ by Christian Lobach</string>
                             <constraint firstItem="g99-6h-7XJ" firstAttribute="top" secondItem="ANO-pf-ufe" secondAttribute="bottom" constant="20" id="FKU-mM-YF7"/>
                             <constraint firstItem="g99-6h-7XJ" firstAttribute="centerY" secondItem="G4B-qx-BkC" secondAttribute="centerY" constant="-64" id="Re6-AC-L8w"/>
                             <constraint firstItem="fKk-GO-lTr" firstAttribute="centerX" secondItem="g99-6h-7XJ" secondAttribute="centerX" id="RnW-mn-O20"/>
-                            <constraint firstItem="fKk-GO-lTr" firstAttribute="top" secondItem="g99-6h-7XJ" secondAttribute="bottom" constant="44" id="TiH-z7-l6b"/>
+                            <constraint firstItem="Por-rP-7MP" firstAttribute="centerX" secondItem="g99-6h-7XJ" secondAttribute="centerX" id="eom-N5-Ilf"/>
+                            <constraint firstItem="fKk-GO-lTr" firstAttribute="top" secondItem="Por-rP-7MP" secondAttribute="bottom" constant="35" id="gJd-bM-4TM"/>
+                            <constraint firstItem="g99-6h-7XJ" firstAttribute="top" secondItem="ANO-pf-ufe" secondAttribute="bottom" constant="30" id="n59-2d-1S7"/>
                             <constraint firstItem="vtA-bm-2Ge" firstAttribute="top" secondItem="fKk-GO-lTr" secondAttribute="bottom" constant="70" id="nCw-Oc-WMS"/>
                             <constraint firstItem="vtA-bm-2Ge" firstAttribute="centerX" secondItem="fKk-GO-lTr" secondAttribute="centerX" id="obW-fJ-iHv"/>
+                            <constraint firstItem="Por-rP-7MP" firstAttribute="top" secondItem="g99-6h-7XJ" secondAttribute="bottom" constant="8" id="q3M-a1-FRh"/>
                             <constraint firstItem="g99-6h-7XJ" firstAttribute="centerX" secondItem="G4B-qx-BkC" secondAttribute="centerX" id="yUa-Jp-ZYX"/>
                         </constraints>
                         <variation key="default">
@@ -169,6 +178,9 @@ by Christian Lobach</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="versionLabel" destination="Por-rP-7MP" id="1pI-MB-Hja"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LnQ-Gi-NDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
