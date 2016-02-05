@@ -26,12 +26,27 @@ public struct EvaluationViewModel {
     /// The titles of the questions the user has answered and the corresponding score.
     public let answers: [(String, String)]
     
+    /// The viewmodel for the 'Find Help' information.
+    public let findingHelpViewModel: FindingHelpViewModel?
+    
+    /// Whether or not to display the 'Find Help' information.
+    public var shouldDisplayFindingHelpInformation: Bool {
+        return findingHelpViewModel != nil
+    }
+    
     ///  Creates a new view model from the given evaluation.
     ///
-    ///  - parameter evaluation: An `Evaluation`
+    ///  - parameter evaluation:             An `Evaluation`.
+    ///  - parameter findingHelpInformation: A `FindingHelpInformation` or `nil` if none is available.
     ///
     ///  - returns: a newly initialized `EvaluationViewModel` instance
-    public init(evaluation: EvaluationType) {
+    public init(evaluation: EvaluationType, findingHelpInformation: FindingHelpInformation?) {
+        
+        if let findingHelpInformation = findingHelpInformation {
+            findingHelpViewModel = FindingHelpViewModel(info: findingHelpInformation)
+        } else {
+            findingHelpViewModel = nil
+        }
         
         if evaluation.depressiveDisorderConsidered {
             

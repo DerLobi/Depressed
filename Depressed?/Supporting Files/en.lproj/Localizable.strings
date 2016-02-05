@@ -36,3 +36,4 @@
 "explanation_no_depression_not_enough_answers_critical" = "You have answered fewer than four questions with at least \"more than half the days\". Therefore a depressive disorder is not considered.";
 "explanation_no_depression_first_questions_not_critical" = "You have not answered the first or second questions with at least \"more than half the days\". Therefore a depressive disorder is not considered.";
 "explanation_depression" = "You have answered four or more questions with at least \"more than half the days\", including the first or second question. Therefore a depressive disorder has to be considered.";
+"find_help_credits_format" = "The 'Find Help' link is provided by the %@";
