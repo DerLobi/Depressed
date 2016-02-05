@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		8ECC539489350285823CE339 /* Pods_Depressed_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 877F262B8FC61E2606A1CE9E /* Pods_Depressed_Tests.framework */; };
 		BEC7B9F7B815DD16B0851742 /* Pods_Depressed_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC563640334882D7BF351E8E /* Pods_Depressed_.framework */; };
+		CA3269EF1C65319000AE4E14 /* FindingHelpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3269EE1C65319000AE4E14 /* FindingHelpViewModel.swift */; };
 		CA3269F11C65407D00AE4E14 /* FindingHelpInformationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3269F01C65407D00AE4E14 /* FindingHelpInformationSpec.swift */; };
+		CA3269F41C654CBE00AE4E14 /* FindingHelpViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3269F31C654CBE00AE4E14 /* FindingHelpViewModelSpec.swift */; };
 		CA4423E91BF3F15400606895 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA4423EB1BF3F15400606895 /* InfoPlist.strings */; };
 		CA4423EE1BF3F15500606895 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA4423F01BF3F15500606895 /* InfoPlist.strings */; };
 		CA4423F31BF3F15600606895 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA4423F51BF3F15600606895 /* Localizable.strings */; };
@@ -68,7 +70,9 @@
 		877F262B8FC61E2606A1CE9E /* Pods_Depressed_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Depressed_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98663B74B0061A52A046C3E /* Pods-Depressed?Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Depressed?Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Depressed?Tests/Pods-Depressed?Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BAE19AE988BA9994D72B4F2E /* Pods-Depressed?Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Depressed?Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Depressed?Tests/Pods-Depressed?Tests.release.xcconfig"; sourceTree = "<group>"; };
+		CA3269EE1C65319000AE4E14 /* FindingHelpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindingHelpViewModel.swift; sourceTree = "<group>"; };
 		CA3269F01C65407D00AE4E14 /* FindingHelpInformationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindingHelpInformationSpec.swift; sourceTree = "<group>"; };
+		CA3269F31C654CBE00AE4E14 /* FindingHelpViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindingHelpViewModelSpec.swift; sourceTree = "<group>"; };
 		CA4423EA1BF3F15400606895 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA4423EF1BF3F15500606895 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA4423F61BF3F15600606895 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				CA6600451BED244600042495 /* EvaluationViewModel.swift */,
+				CA3269EE1C65319000AE4E14 /* FindingHelpViewModel.swift */,
 				CAAB26D41C3C711A00A7B943 /* InfoViewModel.swift */,
 			);
 			path = ViewModel;
@@ -244,6 +249,7 @@
 			children = (
 				CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */,
 				CAAB26D61C3C727700A7B943 /* InfoViewModelSpec.swift */,
+				CA3269F31C654CBE00AE4E14 /* FindingHelpViewModelSpec.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -550,6 +556,7 @@
 				CAAB26D51C3C711A00A7B943 /* InfoViewModel.swift in Sources */,
 				CAF8A5611C2A023200E30E90 /* AnswerCell.swift in Sources */,
 				CA855A3E1C283C7D00C9376E /* EvaluationDetailsViewController.swift in Sources */,
+				CA3269EF1C65319000AE4E14 /* FindingHelpViewModel.swift in Sources */,
 				CA86838F1BE00981003E87A4 /* SelfTestTask.swift in Sources */,
 				CA86836F1BE004A9003E87A4 /* AppDelegate.swift in Sources */,
 				CA4F98E81C4ECA9D004E070A /* FindingHelpInformation.swift in Sources */,
@@ -565,6 +572,7 @@
 				CAF8A55D1C29F0E600E30E90 /* QuestionSpec.swift in Sources */,
 				CA66004C1BED490200042495 /* MutableEvaluation.swift in Sources */,
 				CAF8A5591C29E44400E30E90 /* AnswerSpec.swift in Sources */,
+				CA3269F41C654CBE00AE4E14 /* FindingHelpViewModelSpec.swift in Sources */,
 				CAAB26D71C3C727700A7B943 /* InfoViewModelSpec.swift in Sources */,
 				CA6581011BEBC93600DA66E2 /* EvaluationSpec.swift in Sources */,
 				CA6600491BED454A00042495 /* EvaluationViewModelSpec.swift in Sources */,
