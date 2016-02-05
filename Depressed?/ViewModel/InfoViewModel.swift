@@ -14,6 +14,9 @@ public struct InfoViewModel {
         return ""
     }()
     
+    ///  Creates a new `InfoViewModel`.
+    ///
+    ///  - returns: a new `InfoViewModel` instance.
     public init() {}
     
 }
