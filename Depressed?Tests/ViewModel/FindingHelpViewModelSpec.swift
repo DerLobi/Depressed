@@ -4,13 +4,6 @@ import Nimble
 import Quick
 import ResearchKit
 
-private extension FindingHelpInformation {
-    init(url: NSURL, organizationName: String) {
-        self.url = url
-        self.organizationName = organizationName
-    }
-}
-
 class FindingHelpViewModelSpec: QuickSpec {
     
     override func spec() {
