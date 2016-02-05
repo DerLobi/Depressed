@@ -36,4 +36,5 @@
 "explanation_no_depression_not_enough_answers_critical" = "Du hast weniger als vier Fragen mit mindestens \"an mehr als der Hälfte der Tage\" beantwortet. Daher wird eine depressive Erkrankung nicht in Betracht gezogen.";
 "explanation_no_depression_first_questions_not_critical" = "Du hast die erste oder zweite Frage nicht mit mindestens \"an mehr als der Hälfte der Tage\" beantwortet. Daher wird eine depressive Erkrankung nicht in Betracht gezogen.";
 "explanation_depression" = "Du hast vier oder mehr Fragen mit mindestens \"an mehr als der Hälfte der Tage\" beantwortet, darunter die erste oder zweite Frage. Daher wird eine depressive Erkrankung in Betracht gezogen.";
-
+"find_help_button" = "Hilfe finden";
+"find_help_credits_format" = "Der 'Hilfe finden' Link führt zu einem Angebot der %@";
