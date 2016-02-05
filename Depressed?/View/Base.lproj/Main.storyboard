@@ -113,7 +113,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKk-GO-lTr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKk-GO-lTr">
                                 <rect key="frame" x="222" y="140" width="156" height="41"/>
                                 <string key="text">Made with Love 
 by Christian Lobach</string>
@@ -121,20 +121,20 @@ by Christian Lobach</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bm-2Ge">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bm-2Ge">
                                 <rect key="frame" x="182" y="251" width="236" height="30"/>
                                 <state key="normal" title="This app uses Apple's ResearchKit"/>
                                 <connections>
                                     <segue destination="SvN-7U-Q8J" kind="show" id="M4L-6Y-ALK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depressed?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g99-6h-7XJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Depressed?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g99-6h-7XJ">
                                 <rect key="frame" x="202" y="30" width="197" height="46"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.2 (777)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Por-rP-7MP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1.2 (777)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Por-rP-7MP">
                                 <rect key="frame" x="268" y="84" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -148,7 +148,6 @@ by Christian Lobach</string>
                             <constraint firstItem="fKk-GO-lTr" firstAttribute="centerX" secondItem="g99-6h-7XJ" secondAttribute="centerX" id="RnW-mn-O20"/>
                             <constraint firstItem="Por-rP-7MP" firstAttribute="centerX" secondItem="g99-6h-7XJ" secondAttribute="centerX" id="eom-N5-Ilf"/>
                             <constraint firstItem="fKk-GO-lTr" firstAttribute="top" secondItem="Por-rP-7MP" secondAttribute="bottom" constant="35" id="gJd-bM-4TM"/>
-                            <constraint firstItem="g99-6h-7XJ" firstAttribute="top" secondItem="ANO-pf-ufe" secondAttribute="bottom" constant="30" id="n59-2d-1S7"/>
                             <constraint firstItem="vtA-bm-2Ge" firstAttribute="top" secondItem="fKk-GO-lTr" secondAttribute="bottom" constant="70" id="nCw-Oc-WMS"/>
                             <constraint firstItem="vtA-bm-2Ge" firstAttribute="centerX" secondItem="fKk-GO-lTr" secondAttribute="centerX" id="obW-fJ-iHv"/>
                             <constraint firstItem="Por-rP-7MP" firstAttribute="top" secondItem="g99-6h-7XJ" secondAttribute="bottom" constant="8" id="q3M-a1-FRh"/>
@@ -258,7 +257,7 @@ by Christian Lobach</string>
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your answers indicate that you have a severe depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvL-49-Ptb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your answers indicate that you have a severe depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvL-49-Ptb">
                                 <rect key="frame" x="84" y="224" width="432" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -270,7 +269,7 @@ by Christian Lobach</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-ZG-HW7">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-ZG-HW7">
                                 <rect key="frame" x="250" y="253" width="100" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="View Details &gt;"/>
@@ -278,21 +277,52 @@ by Christian Lobach</string>
                                     <segue destination="HHJ-Sh-ieB" kind="show" id="P5Y-y9-3la"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19Z-vg-aia">
+                                <rect key="frame" x="30" y="395" width="540" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Aio-Hw-cyn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Find Help">
+                                    <color key="titleColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findHelpTapped:" destination="2iT-wc-f4b" eventType="touchUpInside" id="oai-ZJ-wxV"/>
+                                    <action selector="startTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dbu-DD-6mh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="'Find Help' link provided by Organization" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuG-8i-WLh">
+                                <rect key="frame" x="30" y="462" width="540" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="YuG-8i-WLh" firstAttribute="top" secondItem="19Z-vg-aia" secondAttribute="bottom" constant="17" id="3Ts-zE-SMb"/>
+                            <constraint firstItem="19Z-vg-aia" firstAttribute="width" secondItem="I2E-Nh-YXO" secondAttribute="width" id="5DU-ci-O8U"/>
                             <constraint firstItem="I2E-Nh-YXO" firstAttribute="width" secondItem="XvL-49-Ptb" secondAttribute="width" id="6Tp-ws-hrA"/>
                             <constraint firstItem="I2E-Nh-YXO" firstAttribute="top" secondItem="lN6-ZG-HW7" secondAttribute="bottom" constant="29" id="CF8-YV-LEY"/>
+                            <constraint firstItem="YuG-8i-WLh" firstAttribute="centerX" secondItem="19Z-vg-aia" secondAttribute="centerX" id="GeN-0t-eUj"/>
+                            <constraint firstItem="19Z-vg-aia" firstAttribute="top" secondItem="I2E-Nh-YXO" secondAttribute="bottom" constant="42" id="K2N-DX-D7O">
+                                <variation key="widthClass=regular" constant="80"/>
+                            </constraint>
                             <constraint firstItem="XvL-49-Ptb" firstAttribute="width" secondItem="zd9-yr-bKF" secondAttribute="width" multiplier="0.5" id="NYO-we-MBX"/>
                             <constraint firstItem="I2E-Nh-YXO" firstAttribute="width" secondItem="XvL-49-Ptb" secondAttribute="width" id="Ndn-Ua-1cL"/>
                             <constraint firstItem="XvL-49-Ptb" firstAttribute="centerX" secondItem="zd9-yr-bKF" secondAttribute="centerX" id="QYo-qX-lmr"/>
+                            <constraint firstItem="19Z-vg-aia" firstAttribute="centerX" secondItem="I2E-Nh-YXO" secondAttribute="centerX" id="TrP-Vk-vxW"/>
                             <constraint firstItem="lN6-ZG-HW7" firstAttribute="top" secondItem="XvL-49-Ptb" secondAttribute="bottom" constant="8" id="Zfu-ZC-piY"/>
                             <constraint firstItem="I2E-Nh-YXO" firstAttribute="centerX" secondItem="XvL-49-Ptb" secondAttribute="centerX" id="aMU-ZK-oKI"/>
                             <constraint firstItem="XvL-49-Ptb" firstAttribute="leading" secondItem="zd9-yr-bKF" secondAttribute="leading" constant="20" id="cE3-45-HwE"/>
                             <constraint firstItem="XvL-49-Ptb" firstAttribute="centerX" secondItem="zd9-yr-bKF" secondAttribute="centerX" id="dJv-XD-b0h"/>
+                            <constraint firstItem="XvL-49-Ptb" firstAttribute="top" secondItem="Tkn-dn-4kq" secondAttribute="bottom" constant="40" id="eAL-xr-6cc"/>
                             <constraint firstItem="lN6-ZG-HW7" firstAttribute="centerX" secondItem="XvL-49-Ptb" secondAttribute="centerX" id="gA5-bB-mNL"/>
-                            <constraint firstItem="XvL-49-Ptb" firstAttribute="centerY" secondItem="zd9-yr-bKF" secondAttribute="centerY" constant="-65.5" id="gFg-gJ-nbD"/>
+                            <constraint firstItem="XvL-49-Ptb" firstAttribute="centerY" secondItem="zd9-yr-bKF" secondAttribute="centerY" multiplier="0.5" id="gFg-gJ-nbD"/>
+                            <constraint firstItem="Wf9-BC-EKz" firstAttribute="top" secondItem="YuG-8i-WLh" secondAttribute="bottom" constant="40" id="nyg-ye-LU9"/>
                             <constraint firstAttribute="trailing" secondItem="XvL-49-Ptb" secondAttribute="trailing" constant="20" id="pR2-RQ-gvG"/>
+                            <constraint firstItem="YuG-8i-WLh" firstAttribute="width" secondItem="19Z-vg-aia" secondAttribute="width" id="qkm-vm-bEA"/>
                             <constraint firstItem="XvL-49-Ptb" firstAttribute="centerX" secondItem="zd9-yr-bKF" secondAttribute="centerX" id="tgw-iC-uI3"/>
                             <constraint firstItem="I2E-Nh-YXO" firstAttribute="centerX" secondItem="XvL-49-Ptb" secondAttribute="centerX" id="umF-sV-qBo"/>
                         </constraints>
@@ -301,21 +331,27 @@ by Christian Lobach</string>
                                 <exclude reference="NYO-we-MBX"/>
                                 <exclude reference="cE3-45-HwE"/>
                                 <exclude reference="dJv-XD-b0h"/>
+                                <exclude reference="eAL-xr-6cc"/>
                                 <exclude reference="pR2-RQ-gvG"/>
                                 <exclude reference="tgw-iC-uI3"/>
                                 <exclude reference="6Tp-ws-hrA"/>
                                 <exclude reference="Ndn-Ua-1cL"/>
                                 <exclude reference="aMU-ZK-oKI"/>
                                 <exclude reference="umF-sV-qBo"/>
+                                <exclude reference="nyg-ye-LU9"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
                                 <include reference="cE3-45-HwE"/>
+                                <include reference="eAL-xr-6cc"/>
+                                <exclude reference="gFg-gJ-nbD"/>
                                 <include reference="pR2-RQ-gvG"/>
                                 <include reference="tgw-iC-uI3"/>
                                 <include reference="Ndn-Ua-1cL"/>
                                 <include reference="umF-sV-qBo"/>
+                                <exclude reference="K2N-DX-D7O"/>
+                                <include reference="nyg-ye-LU9"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -329,6 +365,8 @@ by Christian Lobach</string>
                     </view>
                     <connections>
                         <outlet property="additionalLabel" destination="I2E-Nh-YXO" id="eL4-I5-Cpj"/>
+                        <outlet property="findHelpButton" destination="19Z-vg-aia" id="cQZ-CX-VEj"/>
+                        <outlet property="findHelpLabel" destination="YuG-8i-WLh" id="ld5-9T-p5h"/>
                         <outlet property="resultLabel" destination="XvL-49-Ptb" id="hIj-wS-DxI"/>
                     </connections>
                 </viewController>
