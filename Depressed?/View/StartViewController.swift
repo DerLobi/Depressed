@@ -23,7 +23,9 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
             let evaluation = Evaluation(stepResults: results)
             
             if let evaluation = evaluation {
-                let viewModel = EvaluationViewModel(evaluation: evaluation)
+                
+                let findingHelpInformation = FindingHelpInformation(locale: NSLocale.currentLocale())
+                let viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: findingHelpInformation)
                 let evaluationViewController = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()).instantiateViewControllerWithIdentifier("EvaluationViewController") as! EvaluationViewController
                 evaluationViewController.viewModel = viewModel
                 

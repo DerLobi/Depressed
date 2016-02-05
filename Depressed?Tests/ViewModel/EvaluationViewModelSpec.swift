@@ -19,7 +19,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = false
                     evaluation.severity = .MildDepression
-                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                 }
                 
                 it("is the localized string diagnosis_no_depression") {
@@ -37,7 +37,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .NoDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
 
                     it("is the localized string diagnosis_no_depression") {
@@ -49,7 +49,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .MinimalDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_minimal_depression") {
@@ -61,7 +61,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .MildDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_mild_depression") {
@@ -73,7 +73,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .ModerateDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_moderate_depression") {
@@ -85,7 +85,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .ModeratelySevereDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_moderately_severe_depression") {
@@ -97,7 +97,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .SevereDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_severe_depression") {
@@ -116,7 +116,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = false
                     evaluation.severity = .MildDepression
-                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                 }
                 
                 it("is the localized string diagnosis_text_no_depression") {
@@ -134,7 +134,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .NoDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_text_no_depression") {
@@ -146,7 +146,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .MinimalDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_text_minimal_depression") {
@@ -158,7 +158,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .MildDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_text_mild_depression") {
@@ -170,7 +170,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .ModerateDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_text_moderate_depression") {
@@ -182,7 +182,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .ModeratelySevereDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_text_moderately_severe_depression") {
@@ -194,7 +194,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .SevereDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
                     it("is the localized string diagnosis_text_severe_depression") {
@@ -211,7 +211,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = true
-                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                 }
                 
                 it("returns the localized string 'explanation_depression'") {
@@ -237,7 +237,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     evaluation.losingInterestCritical = losingInterestCritical
                     evaluation.feelingDepressedCritical = feelingDepressedCritical
                     
-                    let viewModel = EvaluationViewModel(evaluation: evaluation)
+                    let viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     
                     it("decides correctly") {
                         expect(viewModel.explanationText).to(equal(expectedExplanation))
@@ -299,7 +299,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 
                 beforeEach {
                     evaluation.suicidal = false
-                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                 }
 
                 it("is nil") {
@@ -311,7 +311,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 
                 beforeEach {
                     evaluation.suicidal = true
-                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                 }
                 
                 it("is the localized string suicidal_text") {
@@ -324,7 +324,7 @@ class EvaluationViewModelSpec: QuickSpec {
             
             beforeEach {
                 evaluation.score = 23
-                viewModel = EvaluationViewModel(evaluation: evaluation)
+                viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
             }
             
             it("is equal to the evaluation's score") {
@@ -339,7 +339,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = true
-                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                 }
                 
                 it("returns true") {
@@ -352,7 +352,7 @@ class EvaluationViewModelSpec: QuickSpec {
 
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = false
-                    viewModel = EvaluationViewModel(evaluation: evaluation)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                 }
                 
                 it("returns false") {
@@ -370,13 +370,65 @@ class EvaluationViewModelSpec: QuickSpec {
                 let answer = Answer(stepResult: stepResult)!
 
                 evaluation.answers = [answer]
-                viewModel = EvaluationViewModel(evaluation: evaluation)
+                viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
             }
             
             it("is equal to the evaluation's score") {
                 let answerTuple = viewModel.answers.first!
                 expect(answerTuple.0).to(equal(NSLocalizedString("question_title_feeling_tired", comment: "")))
                 expect(answerTuple.1).to(equal("2"))
+            }
+        }
+        
+        describe(".shouldDisplayFindingHelpInformation") {
+            
+            context("it gets initialized with a FindingHelpInformation") {
+
+                beforeEach {
+                    let info = FindingHelpInformation(url: NSURL(string: "http://example.com")!, organizationName: "Example Alliance Against Depression")
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: info)
+                }
+                
+                it("returns false") {
+                    expect(viewModel.shouldDisplayFindingHelpInformation).to(beTrue())
+                }
+            }
+            
+            context("it gets initialized without a FindingHelpInformation") {
+
+                beforeEach {
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                }
+                
+                it("returns false") {
+                    expect(viewModel.shouldDisplayFindingHelpInformation).to(beFalse())
+                }
+            }
+        }
+        
+        describe(".findingHelpViewModel") {
+            
+            context("it gets initialized with a FindingHelpInformation") {
+                
+                beforeEach {
+                    let info = FindingHelpInformation(url: NSURL(string: "http://example.com")!, organizationName: "Example Alliance Against Depression")
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: info)
+                }
+                
+                it("is not nil") {
+                    expect(viewModel.findingHelpViewModel).toNot(beNil())
+                }
+            }
+            
+            context("it gets initialized without a FindingHelpInformation") {
+                
+                beforeEach {
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                }
+                
+                it("is nil") {
+                    expect(viewModel.findingHelpViewModel).to(beNil())
+                }
             }
         }
     }
