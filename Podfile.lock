@@ -1,16 +1,16 @@
 PODS:
   - Nimble (3.0.0)
   - Quick (0.8.0)
-  - ResearchKit (1.2.1)
+  - ResearchKit (1.3.0)
 
 DEPENDENCIES:
   - Nimble (~> 3.0)
   - Quick (~> 0.8)
-  - ResearchKit (~> 1.2)
+  - ResearchKit (~> 1.3)
 
 SPEC CHECKSUMS:
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
-  ResearchKit: 606d20301e576157fb0accc57f63aba5e1f3a15f
+  ResearchKit: 934a1efefed1a3a9150002a1e4b123d0c86c3f2e
 
 COCOAPODS: 0.39.0

@@ -2,7 +2,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'Depressed?' do
-  pod 'ResearchKit', '~> 1.2'
+  pod 'ResearchKit', '~> 1.3'
 end
 
 target 'Depressed?Tests' do
