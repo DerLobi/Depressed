@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qVl-5S-NWb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qVl-5S-NWb">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -113,8 +113,8 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKk-GO-lTr">
-                                <rect key="frame" x="222" y="140" width="156" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKk-GO-lTr">
+                                <rect key="frame" x="222" y="130" width="156" height="105"/>
                                 <string key="text">Made with Love 
 by Christian Lobach</string>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -147,8 +147,8 @@ by Christian Lobach</string>
                             <constraint firstItem="g99-6h-7XJ" firstAttribute="centerY" secondItem="G4B-qx-BkC" secondAttribute="centerY" constant="-64" id="Re6-AC-L8w"/>
                             <constraint firstItem="fKk-GO-lTr" firstAttribute="centerX" secondItem="g99-6h-7XJ" secondAttribute="centerX" id="RnW-mn-O20"/>
                             <constraint firstItem="Por-rP-7MP" firstAttribute="centerX" secondItem="g99-6h-7XJ" secondAttribute="centerX" id="eom-N5-Ilf"/>
-                            <constraint firstItem="fKk-GO-lTr" firstAttribute="top" secondItem="Por-rP-7MP" secondAttribute="bottom" constant="35" id="gJd-bM-4TM"/>
-                            <constraint firstItem="vtA-bm-2Ge" firstAttribute="top" secondItem="fKk-GO-lTr" secondAttribute="bottom" constant="70" id="nCw-Oc-WMS"/>
+                            <constraint firstItem="fKk-GO-lTr" firstAttribute="top" secondItem="Por-rP-7MP" secondAttribute="bottom" constant="25" id="gJd-bM-4TM"/>
+                            <constraint firstItem="vtA-bm-2Ge" firstAttribute="top" secondItem="fKk-GO-lTr" secondAttribute="bottom" constant="16" id="nCw-Oc-WMS"/>
                             <constraint firstItem="vtA-bm-2Ge" firstAttribute="centerX" secondItem="fKk-GO-lTr" secondAttribute="centerX" id="obW-fJ-iHv"/>
                             <constraint firstItem="Por-rP-7MP" firstAttribute="top" secondItem="g99-6h-7XJ" secondAttribute="bottom" constant="8" id="q3M-a1-FRh"/>
                             <constraint firstItem="g99-6h-7XJ" firstAttribute="centerX" secondItem="G4B-qx-BkC" secondAttribute="centerX" id="yUa-Jp-ZYX"/>

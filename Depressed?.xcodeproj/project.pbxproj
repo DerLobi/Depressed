@@ -66,6 +66,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13164B591C722BB500434654 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		13164B5A1C722BB500434654 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		13164B5B1C722BB600434654 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		13164B5C1C722D1100434654 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4187A7979C812DB0D85D3B0C /* Pods-Depressed?.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Depressed?.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Depressed?/Pods-Depressed?.debug.xcconfig"; sourceTree = "<group>"; };
 		5E4B495E381A8720D960C166 /* Pods-Depressed?.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Depressed?.release.xcconfig"; path = "Pods/Target Support Files/Pods-Depressed?/Pods-Depressed?.release.xcconfig"; sourceTree = "<group>"; };
 		877F262B8FC61E2606A1CE9E /* Pods_Depressed_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Depressed_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -412,6 +416,7 @@
 				en,
 				Base,
 				de,
+				fr,
 			);
 			mainGroup = CA8683621BE004A8003E87A4;
 			productRefGroup = CA86836C1BE004A9003E87A4 /* Products */;
@@ -622,6 +627,7 @@
 			children = (
 				CA4423FE1BF3F33F00606895 /* de */,
 				CA4423EA1BF3F15400606895 /* en */,
+				13164B5C1C722D1100434654 /* fr */,
 			);
 			name = InfoPlist.strings;
 			path = .;
@@ -642,6 +648,7 @@
 				CA4423F81BF3F22F00606895 /* Base */,
 				CA4423FD1BF3F33F00606895 /* de */,
 				CA4423FB1BF3F2C400606895 /* en */,
+				13164B5B1C722BB600434654 /* fr */,
 			);
 			name = Localizable.strings;
 			path = .;
@@ -653,6 +660,7 @@
 				CA8683731BE004A9003E87A4 /* Base */,
 				CA4423FC1BF3F33F00606895 /* de */,
 				CA4423FA1BF3F2B500606895 /* en */,
+				13164B5A1C722BB500434654 /* fr */,
 			);
 			name = Main.storyboard;
 			path = .;
@@ -663,6 +671,7 @@
 			children = (
 				CA8683781BE004A9003E87A4 /* Base */,
 				CA4423F61BF3F15600606895 /* en */,
+				13164B591C722BB500434654 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			path = .;

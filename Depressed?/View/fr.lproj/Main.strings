@@ -1,0 +1,111 @@
+
+/* Class = "UIButton"; normalTitle = "Find Help"; ObjectID = "19Z-vg-aia"; */
+"19Z-vg-aia.normalTitle" = "Trouver de l'aide";
+
+/* Class = "UILabel"; text = "DIAGNOSIS"; ObjectID = "1Q7-n5-2yo"; */
+"1Q7-n5-2yo.text" = "DIAGNOSTIC";
+
+/* Class = "UILabel"; text = "QUESTION"; ObjectID = "35X-YK-Xi6"; */
+"35X-YK-Xi6.text" = "QUESTION";
+
+/* Class = "UILabel"; text = "27"; ObjectID = "3iu-zm-zvi"; */
+"3iu-zm-zvi.text" = "27";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "6TP-Ac-wbj"; */
+"6TP-Ac-wbj.text" = "2";
+
+/* Class = "UILabel"; text = "You have answered the first and second questions with at least \"more than half the days\". Thus a depressive disorder has to be considered."; ObjectID = "6td-z7-f5L"; */
+"6td-z7-f5L.text" = "Vous avez répondu aux deux premières questions en utilisant au moins \"Plus d'un jour sur deux\". Il est probable que vous soyez sujet à un syndrome dépressif.";
+
+/* Class = "UITextView"; text = "Copyright (c) 2015, Apple Inc. All rights reserved.\n \n Redistribution and use in source and binary forms, with or without modification,\n are permitted provided that the following conditions are met:\n \n 1.  Redistributions of source code must retain the above copyright notice, this\n list of conditions and the following disclaimer.\n \n 2.  Redistributions in binary form must reproduce the above copyright notice,\n this list of conditions and the following disclaimer in the documentation and/or\n other materials provided with the distribution.\n \n 3.  Neither the name of the copyright holder(s) nor the names of any contributors\n may be used to endorse or promote products derived from this software without\n specific prior written permission. No license is granted to the trademarks of\n the copyright holders even if such marks are included in this software.\n \n THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE\n FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\n OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."; ObjectID = "7eX-9i-GX2"; */
+"7eX-9i-GX2.text" = "Copyright (c) 2015, Apple Inc. All rights reserved.\n \n Redistribution and use in source and binary forms, with or without modification,\n are permitted provided that the following conditions are met:\n \n 1.  Redistributions of source code must retain the above copyright notice, this\n list of conditions and the following disclaimer.\n \n 2.  Redistributions in binary form must reproduce the above copyright notice,\n this list of conditions and the following disclaimer in the documentation and/or\n other materials provided with the distribution.\n \n 3.  Neither the name of the copyright holder(s) nor the names of any contributors\n may be used to endorse or promote products derived from this software without\n specific prior written permission. No license is granted to the trademarks of\n the copyright holders even if such marks are included in this software.\n \n THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\n AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE\n FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\n OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\n OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.";
+
+/* Class = "UILabel"; text = "You will be asked 9 questions to determine if you are depressed."; ObjectID = "8Hi-nW-Wee"; */
+"8Hi-nW-Wee.text" = "Veuillez répondre aux questions suivantes afin de déterminer si vous êtes sujet à un syndrome dépressif.";
+
+/* Class = "UILabel"; text = "20"; ObjectID = "8y6-5u-kcL"; */
+"8y6-5u-kcL.text" = "20";
+
+/* Class = "UILabel"; text = "You said that you had thoughts about being better of dead, please talk to your doctor"; ObjectID = "I2E-Nh-YXO"; */
+"I2E-Nh-YXO.text" = "Vous avez indiqué avoir songé à votre mort, s'il vous plait consultez votre médecin.";
+
+/* Class = "UILabel"; text = "10-14"; ObjectID = "I7v-x8-E3l"; */
+"I7v-x8-E3l.text" = "10-14";
+
+/* Class = "UILabel"; text = "1-4"; ObjectID = "MCM-zn-hWT"; */
+"MCM-zn-hWT.text" = "1-4";
+
+/* Class = "UILabel"; text = "SCORE"; ObjectID = "Oo3-HR-aZX"; */
+"Oo3-HR-aZX.text" = "SCORE";
+
+/* Class = "UILabel"; text = "1.2 (777)"; ObjectID = "Por-rP-7MP"; */
+"Por-rP-7MP.text" = "1.2 (777)";
+
+/* Class = "UILabel"; text = "Severe depression"; ObjectID = "Ria-Ey-Ss8"; */
+"Ria-Ey-Ss8.text" = "Dépression sévère";
+
+/* Class = "UILabel"; text = "SCORE"; ObjectID = "SNB-Zn-k2a"; */
+"SNB-Zn-k2a.text" = "SCORE";
+
+/* Class = "UIViewController"; title = "ResearchKit"; ObjectID = "SvN-7U-Q8J"; */
+"SvN-7U-Q8J.title" = "ResearchKit";
+
+/* Class = "UILabel"; text = "Minimal depression"; ObjectID = "TRl-kJ-s57"; */
+"TRl-kJ-s57.text" = "Dépression minime";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "UhG-ka-592"; */
+"UhG-ka-592.title" = "Ok";
+
+/* Class = "UILabel"; text = "Moderately severe depression"; ObjectID = "Unb-XS-5AL"; */
+"Unb-XS-5AL.text" = "Dépression moyenne à sévère";
+
+/* Class = "UILabel"; text = "Your answers indicate that you have a severe depression"; ObjectID = "XvL-49-Ptb"; */
+"XvL-49-Ptb.text" = "Vos réponses indiquent une dépression sévère";
+
+/* Class = "UILabel"; text = "'Find Help' link provided by Organization"; ObjectID = "YuG-8i-WLh"; */
+"YuG-8i-WLh.text" = "'Trouver de l'aide' est fournit par Organization";
+
+/* Class = "UILabel"; text = "Mild depression"; ObjectID = "aBu-Gb-iFQ"; */
+"aBu-Gb-iFQ.text" = "Légère dépression";
+
+/* Class = "UILabel"; text = "20-27"; ObjectID = "adl-DY-CTr"; */
+"adl-DY-CTr.text" = "20-27";
+
+/* Class = "UILabel"; text = "15-19"; ObjectID = "cIu-YK-LHN"; */
+"cIu-YK-LHN.text" = "15-19";
+
+/* Class = "UILabel"; text = "Minimal depression"; ObjectID = "cSy-nE-IZQ"; */
+"cSy-nE-IZQ.text" = "Dépression minime";
+
+/* Class = "UILabel"; text = "Feeling tired"; ObjectID = "dt2-MX-ERs"; */
+"dt2-MX-ERs.text" = "Sensation de fatigue";
+
+/* Class = "UILabel"; text = "Moderate depression"; ObjectID = "fIH-1G-A0a"; */
+"fIH-1G-A0a.text" = "Dépression modérée";
+
+/* Class = "UILabel"; text = "Made with Love \nby Christian Lobach"; ObjectID = "fKk-GO-lTr"; */
+"fKk-GO-lTr.text" = "Créée avec amour \npar Christian Lobach\n\nTraduit avec passion\npar Guitool";
+
+/* Class = "UILabel"; text = "5-9"; ObjectID = "fb3-uy-UcU"; */
+"fb3-uy-UcU.text" = "5-9";
+
+/* Class = "UILabel"; text = "Depressed?"; ObjectID = "g99-6h-7XJ"; */
+"g99-6h-7XJ.text" = "Dépressif?";
+
+/* Class = "UIButton"; normalTitle = "View Details >"; ObjectID = "lN6-ZG-HW7"; */
+"lN6-ZG-HW7.normalTitle" = "Voir les Details >";
+
+/* Class = "UILabel"; text = "POSSIBLE SCORE"; ObjectID = "nY1-iF-8h4"; */
+"nY1-iF-8h4.text" = "SCORE POSSIBLE";
+
+/* Class = "UIButton"; normalTitle = "Start the Test"; ObjectID = "qAA-z1-YBH"; */
+"qAA-z1-YBH.normalTitle" = "Démarrer le Test";
+
+/* Class = "UILabel"; text = "YOUR SCORE"; ObjectID = "tAu-al-zkL"; */
+"tAu-al-zkL.text" = "VOTRE SCORE";
+
+/* Class = "UIButton"; normalTitle = "This app uses Apple's ResearchKit"; ObjectID = "vtA-bm-2Ge"; */
+"vtA-bm-2Ge.normalTitle" = "Cette application utilise ResearchKit d'Apple";
+
+/* Class = "UINavigationItem"; title = "Depressed?"; ObjectID = "zXf-eP-or7"; */
+"zXf-eP-or7.title" = "Dépressif?";
