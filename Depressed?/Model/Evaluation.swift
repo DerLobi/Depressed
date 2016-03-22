@@ -135,23 +135,26 @@ public struct Evaluation: EvaluationType {
 
         self.numberOfAnswersCritical = numberOfCriticalQuestions >= 4
 
-        switch score {
-        case 0:
-            severity = .NoDepression
-        case 1...4:
-            severity = .MinimalDepression
-        case 5...9:
-            severity = .MildDepression
-        case 10...14:
-            severity = .ModerateDepression
-        case 15...19:
-            severity = .ModeratelySevereDepression
-        case 20...27:
-            severity = .SevereDepression
-        default:
-            severity = .NoDepression
-        }
-
+        severity = severityForScore(score)
     }
 
+}
+
+private func severityForScore(score: Int) -> Severity {
+    switch score {
+    case 0:
+        return .NoDepression
+    case 1...4:
+        return .MinimalDepression
+    case 5...9:
+        return .MildDepression
+    case 10...14:
+        return .ModerateDepression
+    case 15...19:
+        return .ModeratelySevereDepression
+    case 20...27:
+        return .SevereDepression
+    default:
+        return .NoDepression
+    }
 }
