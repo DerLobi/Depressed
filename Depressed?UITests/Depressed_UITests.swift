@@ -24,13 +24,20 @@ class Depressed_UITests: XCTestCase {
         var notAtAllCell: XCUIElement!
         var viewDetailsButton: XCUIElement!
         
-        if deviceLanguage == "de" {
+        if deviceLanguage == "de-DE" {
             startButton = app.buttons["Test starten"]
             viewDetailsButton = app.buttons["Details anzeigen >"]
             nearlyEveryDayCell = app.tables.staticTexts["Beinahe jeden Tag"]
             severalDaysCell = app.tables.staticTexts["An einzelnen Tagen"]
             moreThanHalfTheDaysCell = app.tables.staticTexts["An mehr als der Hälfte der Tage"]
             notAtAllCell = app.tables.staticTexts["Überhaupt nicht"]
+        } else if deviceLanguage == "fr-FR" {
+            startButton = app.buttons["Démarrer le Test"]
+            viewDetailsButton = app.buttons["Voir les Details >"]
+            nearlyEveryDayCell = app.tables.staticTexts["Quasiment tous les jours"]
+            severalDaysCell = app.tables.staticTexts["Parfois"]
+            moreThanHalfTheDaysCell = app.tables.staticTexts["Régulièrement, au moins un jour sur deux"]
+            notAtAllCell = app.tables.staticTexts["Jamais"]
         } else {
             startButton = app.buttons["Start the Test"]
             viewDetailsButton = app.buttons["View Details >"]
