@@ -9,7 +9,8 @@ devices([
 
 languages([
   "en-US",
-  "de-DE"
+  "de-DE",
+  "fr-FR"
 ])
 
 scheme "Depressed?UITests"
