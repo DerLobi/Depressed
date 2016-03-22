@@ -6,7 +6,8 @@ class Depressed_UITests: XCTestCase {
         super.setUp()
 
         let app = XCUIApplication()
-        setLanguage(app)
+        
+        setupSnapshot(app)
         app.launch()
         
     }
