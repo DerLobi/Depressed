@@ -1,6 +1,7 @@
 language: objective-c
 osx_image: xcode7.3
 install:
+- brew update && brew install swiftlint
 - bundle install
 script:
 - bundle exec fastlane test
