@@ -25,7 +25,7 @@ extension PHQ9ChoiceValue: Comparable { }
 ///  - parameter rhs: A choice value.
 ///
 ///  - returns: `true` if the value of the left choice is lower than the right.
-public func <(lhs: PHQ9ChoiceValue, rhs: PHQ9ChoiceValue) -> Bool {
+public func < (lhs: PHQ9ChoiceValue, rhs: PHQ9ChoiceValue) -> Bool {
     return lhs.rawValue < rhs.rawValue
 }
 

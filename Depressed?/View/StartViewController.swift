@@ -18,7 +18,7 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
 
     func taskViewController(taskViewController: ORKTaskViewController, didFinishWithReason reason: ORKTaskViewControllerFinishReason, error: NSError?) {
 
-        if reason == .Completed, let results = taskViewController.result.results as? [ORKStepResult]{
+        if reason == .Completed, let results = taskViewController.result.results as? [ORKStepResult] {
 
             let evaluation = Evaluation(stepResults: results)
 
@@ -37,5 +37,5 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: false)
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
+
 }

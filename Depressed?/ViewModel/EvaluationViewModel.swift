@@ -33,7 +33,7 @@ public struct EvaluationViewModel {
     public var shouldDisplayFindingHelpInformation: Bool {
         return findingHelpViewModel != nil
     }
-    
+
     ///  Creates a new view model from the given evaluation.
     ///
     ///  - parameter evaluation:             An `Evaluation`.

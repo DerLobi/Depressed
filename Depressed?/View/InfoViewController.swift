@@ -15,5 +15,5 @@ class InfoViewController: UIViewController {
 
         versionLabel.text = viewModel.versionInformation
     }
-    
+
 }

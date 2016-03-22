@@ -93,5 +93,5 @@ public class SelfTestTask: NSObject, ORKTask {
 
         return ORKTaskProgressMake(0, UInt(steps.count))
     }
-    
+
 }

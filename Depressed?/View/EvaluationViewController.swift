@@ -73,6 +73,5 @@ class EvaluationViewController: UIViewController {
 extension EvaluationViewController: SFSafariViewControllerDelegate {
     func safariViewControllerDidFinish(controller: SFSafariViewController) {
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
-        
     }
 }
