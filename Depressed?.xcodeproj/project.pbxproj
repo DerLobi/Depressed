@@ -332,6 +332,7 @@
 				CA8683691BE004A9003E87A4 /* Resources */,
 				5491250F240E7D7E884FC16F /* Copy Pods Resources */,
 				BBA02CC847F5C8EB3519C522 /* Embed Pods Frameworks */,
+				CA80EB201CA1D9EB0079CFBF /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -530,6 +531,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Depressed?/Pods-Depressed?-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CA80EB201CA1D9EB0079CFBF /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		E7795130FC93BD004DC10B4A /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
