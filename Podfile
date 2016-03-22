@@ -6,8 +6,8 @@ target 'Depressed?' do
 end
 
 target 'Depressed?Tests' do
-  pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0'
+  pod 'Quick', '~> 0.9'
+  pod 'Nimble', '~> 3.2'
 end
 
 post_install do |installer|
