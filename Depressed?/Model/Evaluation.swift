@@ -115,7 +115,7 @@ public struct Evaluation: EvaluationType {
             && answer.answerScore >= .SeveralDays)
             || answer.answerScore >= .MoreThanHalfTheDays {
                 
-                numberOfCriticalQuestions++
+                numberOfCriticalQuestions += 1
                 
                 switch answer.question.identifier {
                 case .LosingInterest:
