@@ -14,22 +14,22 @@ class EvaluationDetailsViewController: UITableViewController {
     var viewModel: EvaluationViewModel? {
         didSet {
             if let _ = viewModel {
-            tableView.reloadData()
+                tableView.reloadData()
             }
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 96
     }
-    
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
+
         var cell: UITableViewCell?
-        
+
         switch indexPath.section {
         case EvaluationDetailsSection.Explanation.rawValue:
             cell = tableView.dequeueReusableCellWithIdentifier("explanation", forIndexPath: indexPath)
@@ -57,10 +57,10 @@ class EvaluationDetailsViewController: UITableViewController {
         default:
             break
         }
-        
+
         return cell!
     }
-    
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if let viewModel = viewModel {
             if viewModel.shouldDisplayScore {
@@ -71,12 +71,12 @@ class EvaluationDetailsViewController: UITableViewController {
         }
         return 0
     }
-    
+
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == EvaluationDetailsSection.Answers.rawValue {
             return viewModel?.answers.count ?? 0
         }
-        
+
         return 1
     }
 }

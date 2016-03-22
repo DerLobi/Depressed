@@ -6,15 +6,15 @@ public enum PHQ9ChoiceValue: Int {
 
     ///  Not at all.
     case NotAtAll = 0
-    
+
     ///  Several days.
     case SeveralDays = 1
-    
+
     ///  More than half the days.
     case MoreThanHalfTheDays = 2
-    
+
     ///  Nearly every day.
-    case NearlyEveryDay = 3    
+    case NearlyEveryDay = 3
 }
 
 extension PHQ9ChoiceValue: Comparable { }

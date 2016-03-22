@@ -4,9 +4,9 @@ import ResearchKit
 public class SelfTestTask: NSObject, ORKTask {
 
     private let steps: [ORKStep]
-    
+
     /// The identifier of the task.
-    public let identifier = "SelfTest"    
+    public let identifier = "SelfTest"
 
     ///  Creates a new self test task
     ///
@@ -21,7 +21,7 @@ public class SelfTestTask: NSObject, ORKTask {
         let concentrationQuestion = Question(identifier: .TroubleConcentrating)
         let slowFastQuestion = Question(identifier: .SlowOrFast)
         let suicideQuestion = Question(identifier: .FeelingSuicidal)
-        
+
         steps = [
             pleasureInterestQuestion.step,
             depressedQuestion.step,
@@ -77,7 +77,7 @@ public class SelfTestTask: NSObject, ORKTask {
         }
 
     }
-    
+
     ///  Returns the progress of the current step.
     ///
     ///  - parameter step:   The current step.
@@ -90,8 +90,8 @@ public class SelfTestTask: NSObject, ORKTask {
         if let index = index {
             return ORKTaskProgressMake(UInt(index), UInt(steps.count))
         }
-        
+
         return ORKTaskProgressMake(0, UInt(steps.count))
     }
-
+    
 }

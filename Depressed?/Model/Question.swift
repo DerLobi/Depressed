@@ -2,16 +2,16 @@ import ResearchKit
 
 ///  A question the user answers.
 public struct Question {
- 
+
     /// The identifier of the question.
     public let identifier: QuestionIdentifier
-    
+
     /// A headline summing up the question.
     public let title: String
-    
+
     /// the complete text of the question.
     public let text: String
-    
+
     /// An `ORKStep` representation, suitable to use with a `ORKTask`.
     public var step: ORKQuestionStep {
         let step = ORKQuestionStep(identifier: identifier.rawValue, title: title, answer: ORKTextChoiceAnswerFormat.phq9Format)
@@ -19,16 +19,16 @@ public struct Question {
         step.optional = false
         return step
     }
-    
+
     ///  Creates a new `Question` from a `QuestionIdentifier`.
     ///
     ///  - parameter identifier: a question identifier.
     ///
     ///  - returns: A newly initialized Question.
     public init(identifier: QuestionIdentifier) {
-        
+
         self.identifier = identifier
-        
+
         switch identifier {
         case .LosingInterest:
             title = NSLocalizedString("question_title_losing_interest", comment: "")
@@ -58,7 +58,7 @@ public struct Question {
             title = NSLocalizedString("question_title_feeling_suicidal", comment: "")
             text = NSLocalizedString("question_text_feeling_suicidal", comment: "")
         }
-        
+
     }
-    
+
 }

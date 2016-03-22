@@ -2,13 +2,13 @@ import Foundation
 
 ///  Information about where the user can get help, based on their locale.
 public struct FindingHelpInformation {
-    
+
     /// A URL where the user can find help.
     public let url: NSURL
-    
+
     /// The name of the organization that we link to.
     public let organizationName: String
-    
+
     ///  Creates a new `FindingHelpInformation` if information is available
     ///  for the given locale.
     ///
@@ -16,7 +16,7 @@ public struct FindingHelpInformation {
     ///
     ///  - returns: A newly initialized `FindingHelpInformation` or `nil`.
     public init?(locale: NSLocale) {
-        
+
         guard let language = locale.objectForKey(NSLocaleLanguageCode) as? String,
             country = locale.objectForKey(NSLocaleCountryCode) as? String else { return nil }
 
@@ -31,5 +31,5 @@ public struct FindingHelpInformation {
             return nil
         }
     }
-    
+
 }
