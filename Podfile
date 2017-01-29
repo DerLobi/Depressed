@@ -6,8 +6,8 @@ target 'Depressed?' do
 end
 
 target 'Depressed?Tests' do
-  pod 'Quick', '~> 0.9'
-  pod 'Nimble', '~> 3.2'
+  pod 'Quick', '~> 1.0'
+  pod 'Nimble', '~> 6.0'
 end
 
 post_install do |installer|
@@ -15,6 +15,7 @@ post_install do |installer|
     if target.name == "ResearchKit"
       target.build_configurations.each do |config|
           config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)', 'ORK_LOG_LEVEL_NONE=1']
+          config.build_settings['GCC_NO_COMMON_BLOCKS'] = 'NO'
       end
     end
   end
