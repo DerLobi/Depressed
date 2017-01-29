@@ -8,6 +8,7 @@ end
 target 'Depressed?Tests' do
   pod 'Quick', '~> 1.0'
   pod 'Nimble', '~> 6.0'
+  pod 'ResearchKit', '~> 1.3'
 end
 
 post_install do |installer|
