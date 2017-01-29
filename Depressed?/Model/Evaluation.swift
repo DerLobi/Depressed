@@ -110,7 +110,6 @@ public struct Evaluation: EvaluationType {
             .filter { $0 != nil }
             .map { $0! }
 
-
         for answer in answers where (answer.question.identifier == .FeelingSuicidal
             && answer.answerScore >= .severalDays)
             || answer.answerScore >= .moreThanHalfTheDays {
