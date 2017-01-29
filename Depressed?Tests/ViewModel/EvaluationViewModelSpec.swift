@@ -365,7 +365,7 @@ class EvaluationViewModelSpec: QuickSpec {
         describe(".answers") {
             
             beforeEach {
-                let stepResult = makeStepResult(.FeelingTired, value: .MoreThanHalfTheDays)
+                let stepResult = makeStepResult(.FeelingTired, value: .moreThanHalfTheDays)
                 
                 let answer = Answer(stepResult: stepResult)!
 
@@ -385,7 +385,7 @@ class EvaluationViewModelSpec: QuickSpec {
             context("it gets initialized with a FindingHelpInformation") {
 
                 beforeEach {
-                    let info = FindingHelpInformation(url: NSURL(string: "http://example.com")!, organizationName: "Example Alliance Against Depression")
+                    let info = FindingHelpInformation(url: URL(string: "http://example.com")!, organizationName: "Example Alliance Against Depression")
                     viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: info)
                 }
                 
@@ -411,7 +411,7 @@ class EvaluationViewModelSpec: QuickSpec {
             context("it gets initialized with a FindingHelpInformation") {
                 
                 beforeEach {
-                    let info = FindingHelpInformation(url: NSURL(string: "http://example.com")!, organizationName: "Example Alliance Against Depression")
+                    let info = FindingHelpInformation(url: URL(string: "http://example.com")!, organizationName: "Example Alliance Against Depression")
                     viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: info)
                 }
                 
