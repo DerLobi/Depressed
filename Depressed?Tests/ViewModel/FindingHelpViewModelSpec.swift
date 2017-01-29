@@ -10,7 +10,7 @@ class FindingHelpViewModelSpec: QuickSpec {
         
         var viewModel: FindingHelpViewModel!
         
-        let infoModel = FindingHelpInformation(url: NSURL(string: "http://example.com")!, organizationName: "Example Alliance Against Depression")
+        let infoModel = FindingHelpInformation(url: URL(string: "http://example.com")!, organizationName: "Example Alliance Against Depression")
 
         beforeEach {
             viewModel = FindingHelpViewModel(info: infoModel)

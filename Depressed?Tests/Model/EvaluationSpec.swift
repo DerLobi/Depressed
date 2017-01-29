@@ -1018,7 +1018,7 @@ class EvaluationSpec: QuickSpec {
 
 //MARK: Helpers
 
-internal func makeStepResult(identifier: QuestionIdentifier, value: PHQ9ChoiceValue) -> ORKStepResult {
+internal func makeStepResult(_ identifier: QuestionIdentifier, value: PHQ9ChoiceValue) -> ORKStepResult {
     let result = ORKStepResult()
     result.identifier = identifier.rawValue
     result.results = [choiceResult(value)]
@@ -1026,7 +1026,7 @@ internal func makeStepResult(identifier: QuestionIdentifier, value: PHQ9ChoiceVa
     return result
 }
 
-private func choiceResult(value: PHQ9ChoiceValue) -> ORKChoiceQuestionResult {
+private func choiceResult(_ value: PHQ9ChoiceValue) -> ORKChoiceQuestionResult {
     let result = ORKChoiceQuestionResult()
     
     result.choiceAnswers = [value.rawValue]

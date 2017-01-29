@@ -1,12 +1,12 @@
 import UIKit
 
 private enum EvaluationDetailsSection: Int {
-    case Explanation
-    case AnswersHeader
-    case Answers
-    case Score
-    case ScoreMapping
-    case Count
+    case explanation
+    case answersHeader
+    case answers
+    case score
+    case scoreMapping
+    case count
 }
 
 class EvaluationDetailsViewController: UITableViewController {
@@ -26,34 +26,34 @@ class EvaluationDetailsViewController: UITableViewController {
         tableView.estimatedRowHeight = 96
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         var cell: UITableViewCell?
 
         switch indexPath.section {
-        case EvaluationDetailsSection.Explanation.rawValue:
-            cell = tableView.dequeueReusableCellWithIdentifier("explanation", forIndexPath: indexPath)
-            if let cell = cell as? ExplanationCell, viewModel = viewModel {
+        case EvaluationDetailsSection.explanation.rawValue:
+            cell = tableView.dequeueReusableCell(withIdentifier: "explanation", for: indexPath)
+            if let cell = cell as? ExplanationCell, let viewModel = viewModel {
                 cell.label.text = viewModel.explanationText
             }
-        case EvaluationDetailsSection.AnswersHeader.rawValue:
-            cell = tableView.dequeueReusableCellWithIdentifier("answersHeader", forIndexPath: indexPath)
-        case EvaluationDetailsSection.Answers.rawValue:
-            cell = tableView.dequeueReusableCellWithIdentifier("answer", forIndexPath: indexPath)
-            if let cell = cell as? AnswerCell, viewModel = viewModel {
+        case EvaluationDetailsSection.answersHeader.rawValue:
+            cell = tableView.dequeueReusableCell(withIdentifier: "answersHeader", for: indexPath)
+        case EvaluationDetailsSection.answers.rawValue:
+            cell = tableView.dequeueReusableCell(withIdentifier: "answer", for: indexPath)
+            if let cell = cell as? AnswerCell, let viewModel = viewModel {
                 let (question, score) = viewModel.answers[indexPath.row]
                 cell.questionLabel.text = question
                 cell.scoreLabel.text = score
             }
-        case EvaluationDetailsSection.Score.rawValue:
-            cell = tableView.dequeueReusableCellWithIdentifier("score", forIndexPath: indexPath)
-            if let cell = cell as? ScoreCell, viewModel = viewModel {
+        case EvaluationDetailsSection.score.rawValue:
+            cell = tableView.dequeueReusableCell(withIdentifier: "score", for: indexPath)
+            if let cell = cell as? ScoreCell, let viewModel = viewModel {
                 cell.scoreLabel.text = viewModel.score
                 cell.diagnosisLabel.text = viewModel.diagnosis
             }
 
-        case EvaluationDetailsSection.ScoreMapping.rawValue:
-            cell = tableView.dequeueReusableCellWithIdentifier("mapping", forIndexPath: indexPath)
+        case EvaluationDetailsSection.scoreMapping.rawValue:
+            cell = tableView.dequeueReusableCell(withIdentifier: "mapping", for: indexPath)
         default:
             break
         }
@@ -61,10 +61,10 @@ class EvaluationDetailsViewController: UITableViewController {
         return cell!
     }
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         if let viewModel = viewModel {
             if viewModel.shouldDisplayScore {
-                return EvaluationDetailsSection.Count.rawValue
+                return EvaluationDetailsSection.count.rawValue
             } else {
                 return 1
             }
@@ -72,8 +72,8 @@ class EvaluationDetailsViewController: UITableViewController {
         return 0
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == EvaluationDetailsSection.Answers.rawValue {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == EvaluationDetailsSection.answers.rawValue {
             return viewModel?.answers.count ?? 0
         }
 

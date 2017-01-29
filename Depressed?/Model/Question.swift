@@ -16,7 +16,7 @@ public struct Question {
     public var step: ORKQuestionStep {
         let step = ORKQuestionStep(identifier: identifier.rawValue, title: title, answer: ORKTextChoiceAnswerFormat.phq9Format)
         step.text = text
-        step.optional = false
+        step.isOptional = false
         return step
     }
 

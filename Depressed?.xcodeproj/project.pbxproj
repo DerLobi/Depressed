@@ -398,13 +398,16 @@
 				TargetAttributes = {
 					CA86836A1BE004A9003E87A4 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0820;
 					};
 					CA86837E1BE004A9003E87A4 = {
 						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = CA86836A1BE004A9003E87A4;
 					};
 					CAEE7DBE1C07499000DDAA5E = {
 						CreatedOnToolsVersion = 7.1.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = CA86836A1BE004A9003E87A4;
 					};
 				};
@@ -789,6 +792,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed";
 				PRODUCT_MODULE_NAME = Depressed;
 				PRODUCT_NAME = Depressed;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -807,6 +811,7 @@
 				PRODUCT_MODULE_NAME = Depressed;
 				PRODUCT_NAME = Depressed;
 				PROVISIONING_PROFILE = "1e69a8bf-b6ae-4439-a494-b2d2748b0f4a";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -823,6 +828,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Depressed?Tests/Supporting Files/Depressed?Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Depressed.app/Depressed";
 			};
 			name = Debug;
@@ -838,6 +844,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Depressed?Tests/Supporting Files/Depressed?Tests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Depressed.app/Depressed";
 			};
 			name = Release;
@@ -849,6 +856,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Depressed?";
 				USES_XCTRUNNER = YES;
 			};
@@ -861,6 +869,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed-UITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Depressed?";
 				USES_XCTRUNNER = YES;
 			};

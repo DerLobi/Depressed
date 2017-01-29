@@ -65,13 +65,13 @@ public struct Evaluation: EvaluationType {
     public let severity: Severity
 
     /// Whether the user answered that they would be better off dead at least some of the time.
-    public private(set) var suicidal: Bool
+    public fileprivate(set) var suicidal: Bool
 
     /// Whether the user answered the question about losing interest with at least "more than half the days".
-    public private(set) var losingInterestCritical: Bool
+    public fileprivate(set) var losingInterestCritical: Bool
 
     /// Whether the user answered the question about feeling depressed with at least "more than half the days".
-    public private(set) var feelingDepressedCritical: Bool
+    public fileprivate(set) var feelingDepressedCritical: Bool
 
     /// Whether the user answered at least four questions with at least "more than half the days".
     public let numberOfAnswersCritical: Bool
@@ -112,8 +112,8 @@ public struct Evaluation: EvaluationType {
 
 
         for answer in answers where (answer.question.identifier == .FeelingSuicidal
-            && answer.answerScore >= .SeveralDays)
-            || answer.answerScore >= .MoreThanHalfTheDays {
+            && answer.answerScore >= .severalDays)
+            || answer.answerScore >= .moreThanHalfTheDays {
 
                 numberOfCriticalQuestions += 1
 
@@ -140,7 +140,7 @@ public struct Evaluation: EvaluationType {
 
 }
 
-private func severityForScore(score: Int) -> Severity {
+private func severityForScore(_ score: Int) -> Severity {
     switch score {
     case 0:
         return .NoDepression
