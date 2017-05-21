@@ -36,7 +36,7 @@ class Depressed_UITests: XCTestCase {
             viewDetailsButton = app.buttons["Voir les Details >"]
             nearlyEveryDayCell = app.tables.staticTexts["Quasiment tous les jours"]
             severalDaysCell = app.tables.staticTexts["Parfois"]
-            moreThanHalfTheDaysCell = app.tables.staticTexts["More than half the days"]
+            moreThanHalfTheDaysCell = app.tables.staticTexts["Régulièrement, au moins un jour sur deux"]
             notAtAllCell = app.tables.staticTexts["Jamais"]
         } else {
             startButton = app.buttons["Start the Test"]
