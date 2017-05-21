@@ -18,7 +18,7 @@ class EvaluationViewModelSpec: QuickSpec {
 
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = false
-                    evaluation.severity = .MildDepression
+                    evaluation.severity = .mildDepression
                     viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                 }
                 
@@ -36,7 +36,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is NoDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .NoDepression
+                        evaluation.severity = .noDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
 
@@ -48,7 +48,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is MinimalDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .MinimalDepression
+                        evaluation.severity = .minimalDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -60,7 +60,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is MildDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .MildDepression
+                        evaluation.severity = .mildDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -72,7 +72,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is ModerateDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .ModerateDepression
+                        evaluation.severity = .moderateDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -84,7 +84,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is ModeratelySevereDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .ModeratelySevereDepression
+                        evaluation.severity = .moderatelySevereDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -96,7 +96,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is SevereDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .SevereDepression
+                        evaluation.severity = .severeDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -115,7 +115,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = false
-                    evaluation.severity = .MildDepression
+                    evaluation.severity = .mildDepression
                     viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                 }
                 
@@ -133,7 +133,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is NoDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .NoDepression
+                        evaluation.severity = .noDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -145,7 +145,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is MinimalDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .MinimalDepression
+                        evaluation.severity = .minimalDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -157,7 +157,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is MildDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .MildDepression
+                        evaluation.severity = .mildDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -169,7 +169,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is ModerateDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .ModerateDepression
+                        evaluation.severity = .moderateDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -181,7 +181,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is ModeratelySevereDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .ModeratelySevereDepression
+                        evaluation.severity = .moderatelySevereDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -193,7 +193,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 context(".severity on the evaluation is SevereDepression") {
                     
                     beforeEach {
-                        evaluation.severity = .SevereDepression
+                        evaluation.severity = .severeDepression
                         viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
                     }
                     
@@ -365,7 +365,7 @@ class EvaluationViewModelSpec: QuickSpec {
         describe(".answers") {
             
             beforeEach {
-                let stepResult = makeStepResult(.FeelingTired, value: .moreThanHalfTheDays)
+                let stepResult = makeStepResult(.feelingTired, value: .moreThanHalfTheDays)
                 
                 let answer = Answer(stepResult: stepResult)!
 
