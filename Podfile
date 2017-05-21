@@ -1,14 +1,15 @@
 platform :ios, '8.0'
+inhibit_all_warnings!
 use_frameworks!
 
 target 'Depressed?' do
-  pod 'ResearchKit', '~> 1.3'
+  pod 'ResearchKit', '~> 1.4'
 end
 
 target 'Depressed?Tests' do
-  pod 'Quick', '~> 1.0'
-  pod 'Nimble', '~> 6.0'
-  pod 'ResearchKit', '~> 1.3'
+  pod 'Quick', '~> 1.1'
+  pod 'Nimble', '~> 7.0'
+  pod 'ResearchKit', '~> 1.4'
 end
 
 post_install do |installer|
