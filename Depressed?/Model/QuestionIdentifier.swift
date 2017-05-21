@@ -2,42 +2,42 @@
 public enum QuestionIdentifier: String {
 
     ///  Having little interest or pleasure.
-    case LosingInterest
+    case losingInterest
 
     ///  Feeling down, depressed, or hopeless.
-    case FeelingDepressed
+    case feelingDepressed
 
     ///  Trouble sleeping or sleeping too much.
-    case TroubleSleeping
+    case troubleSleeping
 
     ///  Feeling tired or having little energy.
-    case FeelingTired
+    case feelingTired
 
     ///  Poor appetite or overeating.
-    case PoorAppetite
+    case poorAppetite
 
     ///  Feeling bad about yourself or like a failure.
-    case LowSelfEsteem
+    case lowSelfEsteem
 
     ///  Trouble concentrating on things.
-    case TroubleConcentrating
+    case troubleConcentrating
 
     ///  Moving or speaking slowly or more than usual.
-    case SlowOrFast
+    case slowOrFast
 
     ///  Thoughts to be better off dead or of hurting yourself.
-    case FeelingSuicidal
+    case feelingSuicidal
 
     /// The total amount of question identifiers.
     public static let count: Int = [
-        LosingInterest,
-        FeelingDepressed,
-        TroubleSleeping,
-        FeelingTired,
-        PoorAppetite,
-        LowSelfEsteem,
-        TroubleConcentrating,
-        SlowOrFast,
-        FeelingSuicidal
+        losingInterest,
+        feelingDepressed,
+        troubleSleeping,
+        feelingTired,
+        poorAppetite,
+        lowSelfEsteem,
+        troubleConcentrating,
+        slowOrFast,
+        feelingSuicidal
         ].count
 }

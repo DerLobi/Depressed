@@ -16,9 +16,9 @@ public struct Answer {
     ///  - returns: A newly initialized Answer or `nil`.
     public init?(stepResult: ORKStepResult) {
         guard let result = stepResult.firstResult as? ORKChoiceQuestionResult,
-            value = result.choiceAnswers?.first as? NSNumber,
-            score = PHQ9ChoiceValue(rawValue: value.integerValue),
-            identifier = QuestionIdentifier(rawValue: stepResult.identifier) else { return nil }
+            let value = result.choiceAnswers?.first as? NSNumber,
+            let score = PHQ9ChoiceValue(rawValue: value.intValue),
+            let identifier = QuestionIdentifier(rawValue: stepResult.identifier) else { return nil }
 
         answerScore = score
 

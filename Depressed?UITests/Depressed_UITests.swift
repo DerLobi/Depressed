@@ -6,7 +6,8 @@ class Depressed_UITests: XCTestCase {
         super.setUp()
 
         let app = XCUIApplication()
-        setLanguage(app)
+        
+        setupSnapshot(app)
         app.launch()
         
     }
@@ -30,6 +31,13 @@ class Depressed_UITests: XCTestCase {
             severalDaysCell = app.tables.staticTexts["An einzelnen Tagen"]
             moreThanHalfTheDaysCell = app.tables.staticTexts["An mehr als der Hälfte der Tage"]
             notAtAllCell = app.tables.staticTexts["Überhaupt nicht"]
+        } else if deviceLanguage == "fr" {
+            startButton = app.buttons["Démarrer le Test"]
+            viewDetailsButton = app.buttons["Voir les Details >"]
+            nearlyEveryDayCell = app.tables.staticTexts["Quasiment tous les jours"]
+            severalDaysCell = app.tables.staticTexts["Parfois"]
+            moreThanHalfTheDaysCell = app.tables.staticTexts["Régulièrement, au moins un jour sur deux"]
+            notAtAllCell = app.tables.staticTexts["Jamais"]
         } else {
             startButton = app.buttons["Start the Test"]
             viewDetailsButton = app.buttons["View Details >"]
@@ -76,6 +84,9 @@ class Depressed_UITests: XCTestCase {
         viewDetailsButton.tap()
         snapshot("04ResultDetails")
         
+        sleep(1)
+        app.tables.element.swipeUp()
+
         sleep(1)
         app.tables.element.swipeUp()
         snapshot("05ResultDetailsBottom")

@@ -4,7 +4,7 @@ import Foundation
 public struct FindingHelpViewModel {
 
     /// The URL of the help offer.
-    public let url: NSURL
+    public let url: URL
 
     /// A string describing the source of the help offer.
     public let credits: String
@@ -15,7 +15,7 @@ public struct FindingHelpViewModel {
     ///
     ///  - returns: A newly initialized `FindingHelpViewModel` instance
     public init(info: FindingHelpInformation) {
-        url = info.url
+        url = info.url as URL
         credits = String(format: NSLocalizedString("find_help_credits_format", comment: ""), info.organizationName)
     }
 }
