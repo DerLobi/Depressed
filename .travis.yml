@@ -1,7 +1,8 @@
 language: objective-c
 osx_image: xcode8.3
 install:
-- brew update && brew upgrade swiftlint
+- brew update
+- brew outdated swiftlint || brew upgrade swiftlint
 - bundle install
 script:
 - bundle exec fastlane test
