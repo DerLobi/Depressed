@@ -1,6 +1,6 @@
 devices([
-  "iPhone 6",
-  "iPhone 6 Plus",
+  "iPhone 7"
+  "iPhone 7 Plus",
   "iPhone 5",
   "iPhone 4s",
   "iPad Air",
@@ -8,9 +8,9 @@ devices([
   ])
 
 languages([
-  "en-US",
-  "de-DE",
-  "fr-FR"
+  ["en", "en_US"],
+  ["de", "de_DE"],
+  ["fr", "fr_FR"]
 ])
 
 scheme "Depressed?UITests"
