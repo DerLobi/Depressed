@@ -31,6 +31,13 @@ class Depressed_UITests: XCTestCase {
             severalDaysCell = app.tables.staticTexts["An einzelnen Tagen"]
             moreThanHalfTheDaysCell = app.tables.staticTexts["An mehr als der Hälfte der Tage"]
             notAtAllCell = app.tables.staticTexts["Überhaupt nicht"]
+        } else if deviceLanguage == "fr" {
+            startButton = app.buttons["Démarrer le Test"]
+            viewDetailsButton = app.buttons["Voir les Details >"]
+            nearlyEveryDayCell = app.tables.staticTexts["Quasiment tous les jours"]
+            severalDaysCell = app.tables.staticTexts["Parfois"]
+            moreThanHalfTheDaysCell = app.tables.staticTexts["More than half the days"]
+            notAtAllCell = app.tables.staticTexts["Jamais"]
         } else {
             startButton = app.buttons["Start the Test"]
             viewDetailsButton = app.buttons["View Details >"]
@@ -78,6 +85,7 @@ class Depressed_UITests: XCTestCase {
         snapshot("04ResultDetails")
         
         sleep(1)
+        app.tables.element.swipeUp()
         app.tables.element.swipeUp()
         snapshot("05ResultDetailsBottom")
     }
