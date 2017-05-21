@@ -4,5 +4,6 @@ install:
 - brew update
 - brew outdated swiftlint || brew upgrade swiftlint
 - bundle install
+- pod repo update
 script:
 - bundle exec fastlane test
