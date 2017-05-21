@@ -4,22 +4,22 @@ import ResearchKit
 public enum Severity: String {
 
     ///  No depression.
-    case NoDepression
+    case noDepression
 
     ///  Minimal depression.
-    case MinimalDepression
+    case minimalDepression
 
     ///  Mild depression.
-    case MildDepression
+    case mildDepression
 
     ///  Moderate depression.
-    case ModerateDepression
+    case moderateDepression
 
     ///  Moderately severe depression.
-    case ModeratelySevereDepression
+    case moderatelySevereDepression
 
     ///  Severe depression.
-    case SevereDepression
+    case severeDepression
 }
 
 ///  Summed up results of taking the test.
@@ -110,18 +110,18 @@ public struct Evaluation: EvaluationType {
             .filter { $0 != nil }
             .map { $0! }
 
-        for answer in answers where (answer.question.identifier == .FeelingSuicidal
+        for answer in answers where (answer.question.identifier == .feelingSuicidal
             && answer.answerScore >= .severalDays)
             || answer.answerScore >= .moreThanHalfTheDays {
 
                 numberOfCriticalQuestions += 1
 
                 switch answer.question.identifier {
-                case .LosingInterest:
+                case .losingInterest:
                     losingInterestCritical = true
-                case .FeelingDepressed:
+                case .feelingDepressed:
                     feelingDepressedCritical = true
-                case .FeelingSuicidal:
+                case .feelingSuicidal:
                     suicidal = true
                 default:
                     break
@@ -142,18 +142,18 @@ public struct Evaluation: EvaluationType {
 private func severityForScore(_ score: Int) -> Severity {
     switch score {
     case 0:
-        return .NoDepression
+        return .noDepression
     case 1...4:
-        return .MinimalDepression
+        return .minimalDepression
     case 5...9:
-        return .MildDepression
+        return .mildDepression
     case 10...14:
-        return .ModerateDepression
+        return .moderateDepression
     case 15...19:
-        return .ModeratelySevereDepression
+        return .moderatelySevereDepression
     case 20...27:
-        return .SevereDepression
+        return .severeDepression
     default:
-        return .NoDepression
+        return .noDepression
     }
 }

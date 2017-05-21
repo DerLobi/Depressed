@@ -53,22 +53,22 @@ public struct EvaluationViewModel {
             explanationText = NSLocalizedString("explanation_depression", comment: "")
 
             switch evaluation.severity {
-            case .NoDepression:
+            case .noDepression:
                 diagnosis = NSLocalizedString("diagnosis_no_depression", comment: "")
                 diagnosisText = NSLocalizedString("diagnosis_text_no_depression", comment: "")
-            case .MinimalDepression:
+            case .minimalDepression:
                 diagnosis = NSLocalizedString("diagnosis_minimal_depression", comment: "")
                 diagnosisText = NSLocalizedString("diagnosis_text_minimal_depression", comment: "")
-            case .MildDepression:
+            case .mildDepression:
                 diagnosis = NSLocalizedString("diagnosis_mild_depression", comment: "")
                 diagnosisText = NSLocalizedString("diagnosis_text_mild_depression", comment: "")
-            case .ModerateDepression:
+            case .moderateDepression:
                 diagnosis = NSLocalizedString("diagnosis_moderate_depression", comment: "")
                 diagnosisText = NSLocalizedString("diagnosis_text_moderate_depression", comment: "")
-            case .ModeratelySevereDepression:
+            case .moderatelySevereDepression:
                 diagnosis = NSLocalizedString("diagnosis_moderately_severe_depression", comment: "")
                 diagnosisText = NSLocalizedString("diagnosis_text_moderately_severe_depression", comment: "")
-            case .SevereDepression:
+            case .severeDepression:
                 diagnosis = NSLocalizedString("diagnosis_severe_depression", comment: "")
                 diagnosisText = NSLocalizedString("diagnosis_text_severe_depression", comment: "")
             }

@@ -12,15 +12,15 @@ open class SelfTestTask: NSObject, ORKTask {
     ///
     ///  - returns: a newly initialized `SelfTestTask` instance
     public override init() {
-        let pleasureInterestQuestion = Question(identifier: .LosingInterest)
-        let depressedQuestion = Question(identifier: .FeelingDepressed)
-        let sleepQuestion = Question(identifier: .TroubleSleeping)
-        let tiredQuestion = Question(identifier: .FeelingTired)
-        let appetiteQuestion = Question(identifier: .PoorAppetite)
-        let selfEsteemQuestion = Question(identifier: .LowSelfEsteem)
-        let concentrationQuestion = Question(identifier: .TroubleConcentrating)
-        let slowFastQuestion = Question(identifier: .SlowOrFast)
-        let suicideQuestion = Question(identifier: .FeelingSuicidal)
+        let pleasureInterestQuestion = Question(identifier: .losingInterest)
+        let depressedQuestion = Question(identifier: .feelingDepressed)
+        let sleepQuestion = Question(identifier: .troubleSleeping)
+        let tiredQuestion = Question(identifier: .feelingTired)
+        let appetiteQuestion = Question(identifier: .poorAppetite)
+        let selfEsteemQuestion = Question(identifier: .lowSelfEsteem)
+        let concentrationQuestion = Question(identifier: .troubleConcentrating)
+        let slowFastQuestion = Question(identifier: .slowOrFast)
+        let suicideQuestion = Question(identifier: .feelingSuicidal)
 
         steps = [
             pleasureInterestQuestion.step,
