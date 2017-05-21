@@ -15,4 +15,4 @@ languages([
 
 scheme "Depressed?UITests"
 
-clear_previous_screenshots
+clear_previous_screenshots true
