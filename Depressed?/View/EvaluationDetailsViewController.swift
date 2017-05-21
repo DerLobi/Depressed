@@ -13,7 +13,7 @@ class EvaluationDetailsViewController: UITableViewController {
 
     var viewModel: EvaluationViewModel? {
         didSet {
-            if let _ = viewModel {
+            if viewModel != nil {
                 tableView.reloadData()
             }
         }
