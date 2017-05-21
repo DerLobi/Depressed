@@ -6,8 +6,8 @@ class InfoViewController: UIViewController {
 
     var viewModel = InfoViewModel()
 
-    @IBAction func dismiss(sender: AnyObject) {
-        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func dismiss(_ sender: AnyObject) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
     override func viewDidLoad() {

@@ -15,7 +15,7 @@ class AnswerSpec: QuickSpec {
                 
                 beforeEach {
                     let result = ORKChoiceQuestionResult()
-                    result.choiceAnswers = [NSNumber(int: 2)]
+                    result.choiceAnswers = [NSNumber(value: 2)]
                     let stepResult = ORKStepResult(stepIdentifier: "foo", results: [result])
                     answer = Answer(stepResult: stepResult)
                 }
@@ -28,7 +28,7 @@ class AnswerSpec: QuickSpec {
             context("the stepResult has no firstResult") {
                 
                 beforeEach {
-                    let stepResult = ORKStepResult(stepIdentifier: QuestionIdentifier.FeelingTired.rawValue, results: [])
+                    let stepResult = ORKStepResult(stepIdentifier: QuestionIdentifier.feelingTired.rawValue, results: [])
                     answer = Answer(stepResult: stepResult)
                 }
                 
@@ -41,7 +41,7 @@ class AnswerSpec: QuickSpec {
                 
                 beforeEach {
                     let result = ORKChoiceQuestionResult()
-                    let stepResult = ORKStepResult(stepIdentifier: QuestionIdentifier.FeelingTired.rawValue, results: [result])
+                    let stepResult = ORKStepResult(stepIdentifier: QuestionIdentifier.feelingTired.rawValue, results: [result])
                     answer = Answer(stepResult: stepResult)
                 }
                 
@@ -54,8 +54,8 @@ class AnswerSpec: QuickSpec {
                 
                 beforeEach {
                     let result = ORKChoiceQuestionResult()
-                    result.choiceAnswers = [NSNumber(int: 27)]
-                    let stepResult = ORKStepResult(stepIdentifier: QuestionIdentifier.FeelingTired.rawValue, results: [result])
+                    result.choiceAnswers = [NSNumber(value: 27)]
+                    let stepResult = ORKStepResult(stepIdentifier: QuestionIdentifier.feelingTired.rawValue, results: [result])
                     answer = Answer(stepResult: stepResult)
                 }
                 
@@ -71,13 +71,13 @@ class AnswerSpec: QuickSpec {
             
             beforeEach {
                 let result = ORKChoiceQuestionResult()
-                result.choiceAnswers = [NSNumber(int: 2)]
-                let stepResult = ORKStepResult(stepIdentifier: QuestionIdentifier.FeelingTired.rawValue, results: [result])
+                result.choiceAnswers = [NSNumber(value: 2)]
+                let stepResult = ORKStepResult(stepIdentifier: QuestionIdentifier.feelingTired.rawValue, results: [result])
                 answer = Answer(stepResult: stepResult)
             }
             
             it("has the same identifier as that of the stepResult") {
-                expect(answer.question.identifier).to(equal(QuestionIdentifier.FeelingTired))
+                expect(answer.question.identifier).to(equal(QuestionIdentifier.feelingTired))
             }
         }
         
@@ -87,13 +87,13 @@ class AnswerSpec: QuickSpec {
             
             beforeEach {
                 let result = ORKChoiceQuestionResult()
-                result.choiceAnswers = [NSNumber(int: 2)]
-                let stepResult = ORKStepResult(stepIdentifier: QuestionIdentifier.FeelingTired.rawValue, results: [result])
+                result.choiceAnswers = [NSNumber(value: 2)]
+                let stepResult = ORKStepResult(stepIdentifier: QuestionIdentifier.feelingTired.rawValue, results: [result])
                 answer = Answer(stepResult: stepResult)
             }
             
             it("is equal to the first choiceAnswer of the stepResult") {
-                expect(answer.answerScore).to(equal(PHQ9ChoiceValue.MoreThanHalfTheDays))
+                expect(answer.answerScore).to(equal(PHQ9ChoiceValue.moreThanHalfTheDays))
             }
             
         }

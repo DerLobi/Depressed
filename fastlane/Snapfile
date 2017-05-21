@@ -1,18 +1,18 @@
 devices([
-  "iPhone 6s",
-  "iPhone 6s Plus",
-  "iPhone 5s",
+  "iPhone 7"
+  "iPhone 7 Plus",
+  "iPhone 5",
   "iPhone 4s",
-  "iPad Air 2",
-  "iPad Pro"
+  "iPad Air",
+  "iPad Pro (12.9 inch)"
   ])
 
 languages([
-  "en-US",
-  "de-DE",
-  "fr-FR"
+  ["en", "en_US"],
+  ["de", "de_DE"],
+  ["fr", "fr_FR"]
 ])
 
 scheme "Depressed?UITests"
 
-clear_previous_screenshots
+clear_previous_screenshots true

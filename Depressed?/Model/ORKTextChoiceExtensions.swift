@@ -5,16 +5,16 @@ import ResearchKit
 public enum PHQ9ChoiceValue: Int {
 
     ///  Not at all.
-    case NotAtAll = 0
+    case notAtAll = 0
 
     ///  Several days.
-    case SeveralDays = 1
+    case severalDays = 1
 
     ///  More than half the days.
-    case MoreThanHalfTheDays = 2
+    case moreThanHalfTheDays = 2
 
     ///  Nearly every day.
-    case NearlyEveryDay = 3
+    case nearlyEveryDay = 3
 }
 
 extension PHQ9ChoiceValue: Comparable { }
@@ -34,9 +34,9 @@ extension ORKTextChoice {
     /// Choices the user can choose from, expressing the frequency.
     @nonobjc
     static let phq9Choices: [ORKTextChoice] = [
-        ORKTextChoice(text: NSLocalizedString("choice_not_at_all", comment: ""), value: PHQ9ChoiceValue.NotAtAll.rawValue),
-        ORKTextChoice(text: NSLocalizedString("choice_several_days", comment: ""), value: PHQ9ChoiceValue.SeveralDays.rawValue),
-        ORKTextChoice(text: NSLocalizedString("choice_more_than_half_the_days", comment: ""), value: PHQ9ChoiceValue.MoreThanHalfTheDays.rawValue),
-        ORKTextChoice(text: NSLocalizedString("choice_nearly_every_day", comment: ""), value: PHQ9ChoiceValue.NearlyEveryDay.rawValue)
+        ORKTextChoice(text: NSLocalizedString("choice_not_at_all", comment: ""), value: PHQ9ChoiceValue.notAtAll.rawValue as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: NSLocalizedString("choice_several_days", comment: ""), value: PHQ9ChoiceValue.severalDays.rawValue as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: NSLocalizedString("choice_more_than_half_the_days", comment: ""), value: PHQ9ChoiceValue.moreThanHalfTheDays.rawValue as NSCoding & NSCopying & NSObjectProtocol),
+        ORKTextChoice(text: NSLocalizedString("choice_nearly_every_day", comment: ""), value: PHQ9ChoiceValue.nearlyEveryDay.rawValue as NSCoding & NSCopying & NSObjectProtocol)
     ]
 }
