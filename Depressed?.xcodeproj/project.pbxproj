@@ -42,6 +42,7 @@
 		CAAB26D71C3C727700A7B943 /* InfoViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26D61C3C727700A7B943 /* InfoViewModelSpec.swift */; };
 		CAEE7DC21C07499000DDAA5E /* Depressed_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */; };
 		CAEE7DCA1C074AA300DDAA5E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC91C074AA300DDAA5E /* SnapshotHelper.swift */; };
+		CAF545F71ED1F4F80018A049 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF545F61ED1F4F80018A049 /* Button.swift */; };
 		CAF8A5591C29E44400E30E90 /* AnswerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8A5581C29E44400E30E90 /* AnswerSpec.swift */; };
 		CAF8A55B1C29EB4800E30E90 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8A55A1C29EB4800E30E90 /* Question.swift */; };
 		CAF8A55D1C29F0E600E30E90 /* QuestionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF8A55C1C29F0E600E30E90 /* QuestionSpec.swift */; };
@@ -121,6 +122,7 @@
 		CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depressed_UITests.swift; sourceTree = "<group>"; };
 		CAEE7DC31C07499000DDAA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAEE7DC91C074AA300DDAA5E /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		CAF545F61ED1F4F80018A049 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CAF8A5581C29E44400E30E90 /* AnswerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerSpec.swift; sourceTree = "<group>"; };
 		CAF8A55A1C29EB4800E30E90 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		CAF8A55C1C29F0E600E30E90 /* QuestionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionSpec.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				CA8683721BE004A9003E87A4 /* Main.storyboard */,
 				CA855A411C284E8C00C9376E /* ScoreCell.swift */,
 				CA8683701BE004A9003E87A4 /* StartViewController.swift */,
+				CAF545F61ED1F4F80018A049 /* Button.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				CAF8A5611C2A023200E30E90 /* AnswerCell.swift in Sources */,
 				CA855A3E1C283C7D00C9376E /* EvaluationDetailsViewController.swift in Sources */,
 				CA3269EF1C65319000AE4E14 /* FindingHelpViewModel.swift in Sources */,
+				CAF545F71ED1F4F80018A049 /* Button.swift in Sources */,
 				CA86838F1BE00981003E87A4 /* SelfTestTask.swift in Sources */,
 				CA86836F1BE004A9003E87A4 /* AppDelegate.swift in Sources */,
 				CA4F98E81C4ECA9D004E070A /* FindingHelpInformation.swift in Sources */,
