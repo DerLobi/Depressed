@@ -36,6 +36,10 @@ class EvaluationViewController: UIViewController {
 
         if #available(iOS 9.0, *) {
             let safariViewController = SFSafariViewController(url: url as URL)
+
+            if #available(iOS 10.0, *) {
+                safariViewController.preferredControlTintColor = Appearance.darkPurple
+            }
             safariViewController.delegate = self
             UIApplication.shared.setStatusBarStyle(.default, animated: true)
             present(safariViewController, animated: true, completion: nil)
