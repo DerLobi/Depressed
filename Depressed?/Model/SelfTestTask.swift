@@ -29,14 +29,14 @@ open class SelfTestTask: ORKOrderedTask {
     ///  - parameter result: The current task result.
     ///
     ///  - returns: The progress of the current step.
-    open func progress(ofCurrentStep step: ORKStep, with result: ORKTaskResult) -> ORKTaskProgress {
+    open override func progress(ofCurrentStep step: ORKStep, with result: ORKTaskResult) -> ORKTaskProgress {
         let index = steps.index(of: step)
 
         if let index = index {
-            return ORKTaskProgressMake(UInt(index), UInt(steps.count))
+            return ORKTaskProgress(current: UInt(index), total: UInt(steps.count))
         }
 
-        return ORKTaskProgressMake(0, UInt(steps.count))
+        return ORKTaskProgress(current: 0, total: UInt(steps.count))
     }
 
 }
