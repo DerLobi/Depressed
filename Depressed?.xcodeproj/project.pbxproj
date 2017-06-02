@@ -40,6 +40,7 @@
 		CA8683971BE16D0B003E87A4 /* QuestionIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */; };
 		CAAB26D51C3C711A00A7B943 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26D41C3C711A00A7B943 /* InfoViewModel.swift */; };
 		CAAB26D71C3C727700A7B943 /* InfoViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26D61C3C727700A7B943 /* InfoViewModelSpec.swift */; };
+		CAB4B02F1EE191EC00D2E130 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB4B02E1EE191EC00D2E130 /* Appearance.swift */; };
 		CAEE7DC21C07499000DDAA5E /* Depressed_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */; };
 		CAEE7DCA1C074AA300DDAA5E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC91C074AA300DDAA5E /* SnapshotHelper.swift */; };
 		CAF545F71ED1F4F80018A049 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF545F61ED1F4F80018A049 /* Button.swift */; };
@@ -118,6 +119,7 @@
 		CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIdentifier.swift; sourceTree = "<group>"; };
 		CAAB26D41C3C711A00A7B943 /* InfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewModel.swift; sourceTree = "<group>"; };
 		CAAB26D61C3C727700A7B943 /* InfoViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewModelSpec.swift; sourceTree = "<group>"; };
+		CAB4B02E1EE191EC00D2E130 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		CAEE7DBF1C07499000DDAA5E /* Depressed?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Depressed?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depressed_UITests.swift; sourceTree = "<group>"; };
 		CAEE7DC31C07499000DDAA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 				CA855A411C284E8C00C9376E /* ScoreCell.swift */,
 				CA8683701BE004A9003E87A4 /* StartViewController.swift */,
 				CAF545F61ED1F4F80018A049 /* Button.swift */,
+				CAB4B02E1EE191EC00D2E130 /* Appearance.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 				CA8683911BE010B8003E87A4 /* ORKTextChoiceExtensions.swift in Sources */,
 				CA8683971BE16D0B003E87A4 /* QuestionIdentifier.swift in Sources */,
 				CA8683711BE004A9003E87A4 /* StartViewController.swift in Sources */,
+				CAB4B02F1EE191EC00D2E130 /* Appearance.swift in Sources */,
 				CA6EACC61C29D0CC00841E5F /* Answer.swift in Sources */,
 				CA6600421BEC09EF00042495 /* EvaluationViewController.swift in Sources */,
 				CA6600441BED058C00042495 /* InfoViewController.swift in Sources */,
