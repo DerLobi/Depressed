@@ -5,7 +5,7 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
 
     @IBAction func startTest(_ sender: AnyObject) {
 
-        let task = SelfTestTask()
+        let task = SelfTestTask.task()
         let taskController = ORKTaskViewController(task: task, taskRun: nil)
         taskController.delegate = self
         taskController.modalPresentationStyle = .pageSheet
