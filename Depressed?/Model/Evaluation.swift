@@ -101,17 +101,14 @@ public struct Evaluation: EvaluationType {
         }
 
         suicidal = false
-
         losingInterestCritical = false
         feelingDepressedCritical = false
         var numberOfCriticalQuestions = 0
 
-        answers = stepResults.map { Answer(stepResult: $0) }
-            .filter { $0 != nil }
-            .map { $0! }
+        answers = stepResults.flatMap { Answer(stepResult: $0) }
 
-        for answer in answers where (answer.question.identifier == .feelingSuicidal
-            && answer.answerScore >= .severalDays)
+        for answer in answers
+            where (answer.question.identifier == .feelingSuicidal && answer.answerScore >= .severalDays)
             || answer.answerScore >= .moreThanHalfTheDays {
 
                 numberOfCriticalQuestions += 1
@@ -134,26 +131,29 @@ public struct Evaluation: EvaluationType {
 
         self.numberOfAnswersCritical = numberOfCriticalQuestions >= 4
 
-        severity = severityForScore(score)
+        self.severity = Severity(score)
     }
 
 }
 
-private func severityForScore(_ score: Int) -> Severity {
-    switch score {
-    case 0:
-        return .noDepression
-    case 1...4:
-        return .minimalDepression
-    case 5...9:
-        return .mildDepression
-    case 10...14:
-        return .moderateDepression
-    case 15...19:
-        return .moderatelySevereDepression
-    case 20...27:
-        return .severeDepression
-    default:
-        return .noDepression
+fileprivate extension Severity {
+
+    init(_ score: Int) {
+        switch score {
+        case 0:
+            self = .noDepression
+        case 1...4:
+            self = .minimalDepression
+        case 5...9:
+            self = .mildDepression
+        case 10...14:
+            self = .moderateDepression
+        case 15...19:
+            self = .moderatelySevereDepression
+        case 20...27:
+            self = .severeDepression
+        default:
+            self = .noDepression
+        }
     }
 }
