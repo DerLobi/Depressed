@@ -17,7 +17,6 @@ struct Appearance {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
 
         appDelegate.window?.tintColor = darkPurple
-        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = darkPurple
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName: UIColor.white
         ]
