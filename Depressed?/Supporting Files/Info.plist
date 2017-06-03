@@ -19,9 +19,19 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>10</string>
+	<string>12</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Depressed does not need to use your camera</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Depressed does not need to share health data</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Depressed does not need to update health data</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Depressed does not need to use your microphone</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Depressed does not need to access motion data</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
