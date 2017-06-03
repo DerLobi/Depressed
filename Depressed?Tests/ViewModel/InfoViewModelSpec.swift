@@ -17,7 +17,7 @@ class InfoViewModelSpec: QuickSpec {
             
             it("returns the version and build number") {
                 
-                let infoDictionary = NSBundle.mainBundle().infoDictionary!
+                let infoDictionary = Bundle.main.infoDictionary!
                 let version = infoDictionary["CFBundleShortVersionString"] as! String
                 let build = infoDictionary["CFBundleVersion"] as! String
 

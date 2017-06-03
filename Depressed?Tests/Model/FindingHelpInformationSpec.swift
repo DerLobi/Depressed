@@ -15,7 +15,7 @@ class FindingHelpInformationSpec: QuickSpec {
             context("locale is fr_FR") {
                 
                 beforeEach {
-                    let locale = NSLocale(localeIdentifier: "fr-FR")
+                    let locale = Locale(identifier: "fr-FR")
                     info = FindingHelpInformation(locale: locale)
                 }
                 
@@ -27,7 +27,7 @@ class FindingHelpInformationSpec: QuickSpec {
             context("locale is de_AT") {
                 
                 beforeEach {
-                    let locale = NSLocale(localeIdentifier: "de-AT")
+                    let locale = Locale(identifier: "de-AT")
                     info = FindingHelpInformation(locale: locale)
                 }
                 
@@ -39,7 +39,7 @@ class FindingHelpInformationSpec: QuickSpec {
             context("locale is de_CH") {
                 
                 beforeEach {
-                    let locale = NSLocale(localeIdentifier: "de-CH")
+                    let locale = Locale(identifier: "de-CH")
                     info = FindingHelpInformation(locale: locale)
                 }
                 
@@ -55,10 +55,10 @@ class FindingHelpInformationSpec: QuickSpec {
             sharedExamples("returns the correct URL for the locale") { (context: SharedExampleContext) in
                 
                 let localeIdentifier = context()["locale"]! as! String
-                let expectedURL = NSURL(string: (context()["url"] as! String))
+                let expectedURL = URL(string: (context()["url"] as! String))
                 
                 beforeEach {
-                    let locale = NSLocale(localeIdentifier: localeIdentifier)
+                    let locale = Locale(identifier: localeIdentifier)
                     info = FindingHelpInformation(locale: locale)
                 }
                 
@@ -104,7 +104,7 @@ class FindingHelpInformationSpec: QuickSpec {
                 let organizationName = context()["name"] as! String
                 
                 beforeEach {
-                    let locale = NSLocale(localeIdentifier: localeIdentifier)
+                    let locale = Locale(identifier: localeIdentifier)
                     info = FindingHelpInformation(locale: locale)
                 }
                 

@@ -8,7 +8,7 @@ internal struct MutableEvaluation: EvaluationType {
     
     internal var score: Int = 0
     
-    internal var severity: Severity = .NoDepression
+    internal var severity: Severity = .noDepression
     
     internal var suicidal: Bool = false
     
