@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qVl-5S-NWb">
-    <device id="ipad9_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qVl-5S-NWb">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAA-z1-YBH" customClass="Button" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="192" y="488" width="384" height="50"/>
+                                <rect key="frame" x="30" y="134" width="354" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="97t-Ha-5a1"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be asked 9 questions to determine if you are depressed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hi-nW-Wee">
-                                <rect key="frame" x="192" y="405" width="384" height="22"/>
+                                <rect key="frame" x="30" y="51" width="354" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -115,11 +115,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rU6-B4-CCg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G4B-qx-BkC">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKk-GO-lTr">
-                                <rect key="frame" x="305.5" y="493" width="156" height="41"/>
+                                <rect key="frame" x="128.66666666666669" y="120" width="156.00000000000006" height="41"/>
                                 <string key="text">Made with Love 
 by Christian Lobach</string>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
@@ -127,20 +127,20 @@ by Christian Lobach</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtA-bm-2Ge">
-                                <rect key="frame" x="265.5" y="550" width="236" height="30"/>
+                                <rect key="frame" x="88.666666666666686" y="177" width="236" height="30"/>
                                 <state key="normal" title="This app uses Apple's ResearchKit"/>
                                 <connections>
-                                    <segue destination="SvN-7U-Q8J" kind="show" id="M4L-6Y-ALK"/>
+                                    <segue destination="SvN-7U-Q8J" kind="show" id="bYS-jw-QZ7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Depressed?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g99-6h-7XJ">
-                                <rect key="frame" x="285.5" y="393" width="197" height="46"/>
+                                <rect key="frame" x="108.66666666666669" y="20" width="197" height="46"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.2 (777)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Por-rP-7MP">
-                                <rect key="frame" x="351.5" y="447" width="64" height="21"/>
+                                <rect key="frame" x="174.66666666666666" y="74" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -193,19 +193,18 @@ by Christian Lobach</string>
         <!--ResearchKit-->
         <scene sceneID="XeJ-Fi-LlU">
             <objects>
-                <viewController title="ResearchKit" extendedLayoutIncludesOpaqueBars="YES" id="SvN-7U-Q8J" sceneMemberID="viewController">
+                <viewController title="ResearchKit" id="SvN-7U-Q8J" customClass="LicenseViewController" customModule="Depressed" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SqX-jm-ybY"/>
                         <viewControllerLayoutGuide type="bottom" id="K9b-ui-fOc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rPn-l5-bGc">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eX-9i-GX2">
-                                <rect key="frame" x="20" y="64" width="728" height="960"/>
-                                <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Copyright (c) 2015, Apple Inc. All rights reserved.
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5Z-u8-bwE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                <mutableString key="text">Copyright (c) 2015, Apple Inc. All rights reserved.
  
  Redistribution and use in source and binary forms, with or without modification,
  are permitted provided that the following conditions are met:
@@ -231,24 +230,27 @@ by Christian Lobach</string>
  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="7eX-9i-GX2" firstAttribute="leading" secondItem="rPn-l5-bGc" secondAttribute="leadingMargin" id="X86-Fg-gZM"/>
-                            <constraint firstItem="K9b-ui-fOc" firstAttribute="top" secondItem="7eX-9i-GX2" secondAttribute="bottom" id="iLH-aV-aQ1"/>
-                            <constraint firstItem="7eX-9i-GX2" firstAttribute="top" secondItem="SqX-jm-ybY" secondAttribute="bottom" id="pTq-eW-or0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7eX-9i-GX2" secondAttribute="trailing" id="vkr-rM-F73"/>
+                            <constraint firstAttribute="trailing" secondItem="L5Z-u8-bwE" secondAttribute="trailing" id="8dP-51-HKx"/>
+                            <constraint firstItem="L5Z-u8-bwE" firstAttribute="leading" secondItem="rPn-l5-bGc" secondAttribute="leading" id="YmS-3f-WN8"/>
+                            <constraint firstItem="K9b-ui-fOc" firstAttribute="top" secondItem="L5Z-u8-bwE" secondAttribute="bottom" id="e1A-vF-bfP"/>
+                            <constraint firstItem="L5Z-u8-bwE" firstAttribute="top" secondItem="SqX-jm-ybY" secondAttribute="bottom" id="t7x-Hu-BI1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="L5Z-u8-bwE" id="dEt-bN-9Ke"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9c-4d-BK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3161" y="-467"/>
+            <point key="canvasLocation" x="3365" y="-467"/>
         </scene>
         <!--Evaluation View Controller-->
         <scene sceneID="fA5-Vd-lTf">
@@ -259,23 +261,23 @@ by Christian Lobach</string>
                         <viewControllerLayoutGuide type="bottom" id="Wf9-BC-EKz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zd9-yr-bKF">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your answers indicate that you have a severe depression" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvL-49-Ptb">
-                                <rect key="frame" x="192" y="245.5" width="384" height="21"/>
+                                <rect key="frame" x="20" y="60" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You said that you had thoughts about being better of dead, please talk to your doctor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2E-Nh-YXO">
-                                <rect key="frame" x="192" y="333.5" width="384" height="41"/>
+                                <rect key="frame" x="20" y="148" width="374" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-ZG-HW7">
-                                <rect key="frame" x="334" y="274.5" width="100" height="30"/>
+                                <rect key="frame" x="157" y="89" width="100" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="View Details &gt;"/>
                                 <connections>
@@ -283,7 +285,7 @@ by Christian Lobach</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19Z-vg-aia" customClass="Button" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="192" y="454.5" width="384" height="50"/>
+                                <rect key="frame" x="20" y="612" width="374" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Aio-Hw-cyn"/>
@@ -298,7 +300,7 @@ by Christian Lobach</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="'Find Help' link provided by Organization" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuG-8i-WLh">
-                                <rect key="frame" x="192" y="521.5" width="384" height="17"/>
+                                <rect key="frame" x="20" y="679" width="374" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -384,19 +386,19 @@ by Christian Lobach</string>
             <objects>
                 <tableViewController id="HHJ-Sh-ieB" customClass="EvaluationDetailsViewController" customModule="Depressed" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="jDn-XE-k4O">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.43922001119999998" green="0.2392199934" blue="0.78430998330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="explanation" rowHeight="70" id="NJd-ee-Zfm" customClass="ExplanationCell" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="768" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NJd-ee-Zfm" id="MZn-Eh-7ve">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6td-z7-f5L">
-                                            <rect key="frame" x="140" y="20" width="488" height="20"/>
+                                            <rect key="frame" x="30" y="20" width="354" height="20"/>
                                             <string key="text">You have answered the first and second questions with at least "more than half the days". Thus a depressive disorder has to be considered.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -420,20 +422,20 @@ by Christian Lobach</string>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="answersHeader" rowHeight="42" id="0K2-2p-gUg">
-                                <rect key="frame" x="0.0" y="98" width="768" height="42"/>
+                                <rect key="frame" x="0.0" y="98" width="414" height="42"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0K2-2p-gUg" id="9Bw-hN-vdf">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="42"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUESTION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35X-YK-Xi6">
-                                            <rect key="frame" x="140" y="12" width="61" height="16"/>
+                                            <rect key="frame" x="30" y="12" width="61" height="16"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oo3-HR-aZX">
-                                            <rect key="frame" x="588" y="12" width="40" height="15"/>
+                                            <rect key="frame" x="344" y="12" width="40" height="15"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -455,20 +457,20 @@ by Christian Lobach</string>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="answer" rowHeight="34" id="VPH-VQ-PbV" customClass="AnswerCell" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="140" width="768" height="34"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="34"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VPH-VQ-PbV" id="UI8-3a-uLU">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="34"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="34"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling tired" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dt2-MX-ERs">
-                                            <rect key="frame" x="140" y="6" width="95" height="22"/>
+                                            <rect key="frame" x="30" y="6" width="95" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TP-Ac-wbj">
-                                            <rect key="frame" x="618" y="6" width="10" height="21"/>
+                                            <rect key="frame" x="374" y="6" width="10" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -500,44 +502,44 @@ by Christian Lobach</string>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="score" rowHeight="145" id="kCe-Ih-bJ5" customClass="ScoreCell" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="174" width="768" height="145"/>
+                                <rect key="frame" x="0.0" y="174" width="414" height="145"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kCe-Ih-bJ5" id="vdJ-Nz-LBB">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="145"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y6-5u-kcL">
-                                            <rect key="frame" x="286" y="15" width="36" height="36"/>
+                                            <rect key="frame" x="109" y="15" width="36" height="36"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iu-zm-zvi">
-                                            <rect key="frame" x="447" y="15" width="34" height="36"/>
+                                            <rect key="frame" x="270" y="15" width="34" height="36"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="YOUR SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-al-zkL">
-                                            <rect key="frame" x="266" y="53" width="77" height="15"/>
+                                            <rect key="frame" x="89" y="53" width="77" height="15"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="POSSIBLE SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY1-iF-8h4">
-                                            <rect key="frame" x="414" y="53" width="100" height="15"/>
+                                            <rect key="frame" x="237" y="53" width="100" height="15"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Minimal depression" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRl-kJ-s57">
-                                            <rect key="frame" x="308" y="80" width="152" height="29"/>
+                                            <rect key="frame" x="131" y="80" width="152" height="29"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQi-vW-U1L" userLabel="divider">
-                                            <rect key="frame" x="383.5" y="15" width="1" height="53"/>
+                                            <rect key="frame" x="206.66666666666666" y="15" width="1" height="53"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="1" id="BTk-O6-f2J"/>
@@ -569,80 +571,80 @@ by Christian Lobach</string>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mapping" rowHeight="217" id="1sh-EF-2CL">
-                                <rect key="frame" x="0.0" y="319" width="768" height="217"/>
+                                <rect key="frame" x="0.0" y="319" width="414" height="217"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1sh-EF-2CL" id="H20-RE-fAd">
-                                    <rect key="frame" x="0.0" y="0.0" width="768" height="217"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="217"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIAGNOSIS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Q7-n5-2yo">
-                                            <rect key="frame" x="140" y="12" width="64" height="15"/>
+                                            <rect key="frame" x="30" y="12" width="64" height="15"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minimal depression" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSy-nE-IZQ">
-                                            <rect key="frame" x="140" y="39" width="148" height="21"/>
+                                            <rect key="frame" x="30" y="39" width="148" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mild depression" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBu-Gb-iFQ">
-                                            <rect key="frame" x="140" y="72" width="121" height="21"/>
+                                            <rect key="frame" x="30" y="72" width="121" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5-9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fb3-uy-UcU">
-                                            <rect key="frame" x="599" y="72" width="29" height="21"/>
+                                            <rect key="frame" x="355" y="72" width="29" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Moderate depression" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIH-1G-A0a">
-                                            <rect key="frame" x="140" y="105" width="163" height="22"/>
+                                            <rect key="frame" x="30" y="105" width="163" height="22"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10-14" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7v-x8-E3l">
-                                            <rect key="frame" x="584" y="105" width="44" height="21"/>
+                                            <rect key="frame" x="340" y="105" width="44" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moderately severe depression" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Unb-XS-5AL">
-                                            <rect key="frame" x="140" y="139" width="231" height="21"/>
+                                            <rect key="frame" x="30" y="139" width="231" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15-19" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIu-YK-LHN">
-                                            <rect key="frame" x="584" y="139" width="44" height="21"/>
+                                            <rect key="frame" x="340" y="139" width="44" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Severe depression" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ria-Ey-Ss8">
-                                            <rect key="frame" x="140" y="172" width="142" height="21"/>
+                                            <rect key="frame" x="30" y="172" width="142" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20-27" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adl-DY-CTr">
-                                            <rect key="frame" x="581" y="172" width="47" height="21"/>
+                                            <rect key="frame" x="337" y="172" width="47" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNB-Zn-k2a">
-                                            <rect key="frame" x="588" y="12" width="40" height="15"/>
+                                            <rect key="frame" x="344" y="12" width="40" height="15"/>
                                             <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="12"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1-4" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCM-zn-hWT">
-                                            <rect key="frame" x="602" y="39" width="26" height="21"/>
+                                            <rect key="frame" x="358" y="39" width="26" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
