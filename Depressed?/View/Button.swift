@@ -13,7 +13,7 @@ class Button: ORKBorderedButton {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        tintColor = UIColor(red:0.34, green:0.20, blue:0.58, alpha:1.00)
+        tintColor = Appearance.darkPurple
         init_ORKTextButton()
     }
 

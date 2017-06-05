@@ -2,21 +2,21 @@ import Foundation
 import Depressed
 
 ///  Struct with mutable properties implementing `EvaluationType` for use in tests.
-internal struct MutableEvaluation: EvaluationType {
+struct MutableEvaluation: EvaluationType {
     
-    internal var depressiveDisorderConsidered: Bool = false
+    var depressiveDisorderConsidered: Bool = false
     
-    internal var score: Int = 0
+    var score: Int = 0
     
-    internal var severity: Severity = .noDepression
+    var severity: Severity = .noDepression
     
-    internal var suicidal: Bool = false
+    var suicidal: Bool = false
     
-    internal var losingInterestCritical: Bool = false
+    var losingInterestCritical: Bool = false
     
-    internal var feelingDepressedCritical: Bool = false
+    var feelingDepressedCritical: Bool = false
     
-    internal var numberOfAnswersCritical: Bool = false
+    var numberOfAnswersCritical: Bool = false
     
-    internal var answers: [Answer] = []
+    var answers: [Answer] = []
 }
