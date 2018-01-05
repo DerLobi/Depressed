@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode9
 install:
-- brew bundle
+- brew update && brew bundle
 - bundle install
 - pod repo update
 script:
