@@ -105,7 +105,7 @@ public struct Evaluation: EvaluationType {
         feelingDepressedCritical = false
         var numberOfCriticalQuestions = 0
 
-        answers = stepResults.flatMap { Answer(stepResult: $0) }
+        answers = stepResults.compactMap { Answer(stepResult: $0) }
 
         for answer in answers
             where (answer.question.identifier == .feelingSuicidal && answer.answerScore >= .severalDays)

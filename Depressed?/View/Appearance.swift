@@ -18,7 +18,7 @@ struct Appearance {
 
         appDelegate.window?.tintColor = darkPurple
         UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: UIColor.white
+            NSAttributedString.Key.foregroundColor: UIColor.white
         ]
 
     }

@@ -56,7 +56,7 @@ class EvaluationViewController: UIViewController {
         let attributedDiagnosisText = NSMutableAttributedString(string: viewModel.diagnosisText)
         let diagnosisRange = diagnosisText.range(of: viewModel.diagnosis)
 
-        attributedDiagnosisText.addAttribute(NSAttributedStringKey.font, value: UIFont.boldSystemFont(ofSize: 17.0), range: diagnosisRange)
+        attributedDiagnosisText.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: 17.0), range: diagnosisRange)
 
         resultLabel.attributedText = attributedDiagnosisText
         additionalLabel.text = viewModel.suicidalText
