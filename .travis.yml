@@ -1,7 +1,10 @@
 language: objective-c
 osx_image: xcode9
+addons:
+  homebrew:
+    update: true
+    brewfile: true
 install:
-- brew update && brew bundle
 - bundle install
 - pod repo update
 script:
