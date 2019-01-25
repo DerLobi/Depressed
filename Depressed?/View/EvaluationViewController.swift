@@ -33,18 +33,9 @@ class EvaluationViewController: UIViewController {
 
     @IBAction func findHelpTapped(_ sender: AnyObject) {
         guard let url = viewModel?.findingHelpViewModel?.url else { return }
-
-        if #available(iOS 9.0, *) {
-            let safariViewController = SFSafariViewController(url: url as URL)
-
-            if #available(iOS 10.0, *) {
-                safariViewController.preferredControlTintColor = Appearance.darkPurple
-            }
-
-            present(safariViewController, animated: true, completion: nil)
-        } else {
-            UIApplication.shared.openURL(url as URL)
-        }
+        let safariViewController = SFSafariViewController(url: url as URL)
+        safariViewController.preferredControlTintColor = Appearance.darkPurple
+        present(safariViewController, animated: true, completion: nil)
     }
 
     fileprivate func updateUIWithViewModel(_ viewModel: EvaluationViewModel) {
