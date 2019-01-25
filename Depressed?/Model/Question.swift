@@ -18,7 +18,7 @@ public struct Question {
                                    title: title,
                                    question: text,
                                    answer: ORKTextChoiceAnswerFormat.phq9Format)
-        step.isOptional = false        
+        step.isOptional = false
         return step
     }
 
