@@ -17,10 +17,6 @@ struct Appearance {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
 
         appDelegate.window?.tintColor = darkPurple
-        UINavigationBar.appearance().titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: UIColor.white
-        ]
-
     }
 
 }

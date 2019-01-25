@@ -9,6 +9,10 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
         let taskController = ORKTaskViewController(task: task, taskRun: nil)
         taskController.delegate = self
         taskController.modalPresentationStyle = .pageSheet
+        taskController.navigationBar.prefersLargeTitles = false
+        taskController.navigationBar.titleTextAttributes = [
+            .foregroundColor: Appearance.darkPurple
+        ]
         present(taskController, animated: true, completion: nil)
     }
 

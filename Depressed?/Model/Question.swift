@@ -14,9 +14,11 @@ public struct Question {
 
     /// An `ORKStep` representation, suitable to use with a `ORKTask`.
     public var step: ORKQuestionStep {
-        let step = ORKQuestionStep(identifier: identifier.rawValue, title: title, answer: ORKTextChoiceAnswerFormat.phq9Format)
-        step.text = text
-        step.isOptional = false
+        let step = ORKQuestionStep(identifier: identifier.rawValue,
+                                   title: title,
+                                   question: text,
+                                   answer: ORKTextChoiceAnswerFormat.phq9Format)
+        step.isOptional = false        
         return step
     }
 
