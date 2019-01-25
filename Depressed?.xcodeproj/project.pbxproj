@@ -346,7 +346,6 @@
 				CA8683691BE004A9003E87A4 /* Resources */,
 				CA80EB201CA1D9EB0079CFBF /* SwiftLint */,
 				8BA495D51B91C8563A18AC2C /* [CP] Embed Pods Frameworks */,
-				9DBEB0946447BA513C8B5EA6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,7 +365,6 @@
 				CA86837C1BE004A9003E87A4 /* Frameworks */,
 				CA86837D1BE004A9003E87A4 /* Resources */,
 				6966543B10FF84EA2419F9B1 /* [CP] Embed Pods Frameworks */,
-				8F8898BAB14E801A009533BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -553,36 +551,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Depressed?/Pods-Depressed?-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8F8898BAB14E801A009533BA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Depressed?Tests/Pods-Depressed?Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9DBEB0946447BA513C8B5EA6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Depressed?/Pods-Depressed?-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CA80EB201CA1D9EB0079CFBF /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -595,7 +563,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -769,7 +737,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -810,7 +778,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -828,7 +796,6 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ES9894LW4A;
 				INFOPLIST_FILE = "Depressed?/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed";
 				PRODUCT_MODULE_NAME = Depressed;
@@ -849,7 +816,6 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ES9894LW4A;
 				INFOPLIST_FILE = "Depressed?/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed";
 				PRODUCT_MODULE_NAME = Depressed;
