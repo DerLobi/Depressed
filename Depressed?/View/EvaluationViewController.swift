@@ -40,8 +40,7 @@ class EvaluationViewController: UIViewController {
             if #available(iOS 10.0, *) {
                 safariViewController.preferredControlTintColor = Appearance.darkPurple
             }
-            safariViewController.delegate = self
-            UIApplication.shared.setStatusBarStyle(.default, animated: true)
+
             present(safariViewController, animated: true, completion: nil)
         } else {
             UIApplication.shared.openURL(url as URL)
@@ -71,11 +70,4 @@ class EvaluationViewController: UIViewController {
         }
     }
 
-}
-
-@available(iOS 9.0, *)
-extension EvaluationViewController: SFSafariViewControllerDelegate {
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
-    }
 }
