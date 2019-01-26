@@ -92,8 +92,8 @@
 /* Class = "UILabel"; text = "Depressed?"; ObjectID = "g99-6h-7XJ"; */
 "g99-6h-7XJ.text" = "Dépressif?";
 
-/* Class = "UIButton"; normalTitle = "View Details >"; ObjectID = "lN6-ZG-HW7"; */
-"lN6-ZG-HW7.normalTitle" = "Voir les Details >";
+/* Class = "UIButton"; normalTitle = "View Details"; ObjectID = "lN6-ZG-HW7"; */
+"lN6-ZG-HW7.normalTitle" = "Voir les Details";
 
 /* Class = "UILabel"; text = "POSSIBLE SCORE"; ObjectID = "nY1-iF-8h4"; */
 "nY1-iF-8h4.text" = "SCORE POSSIBLE";
