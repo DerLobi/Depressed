@@ -40,6 +40,7 @@
 		CAAB26D51C3C711A00A7B943 /* InfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26D41C3C711A00A7B943 /* InfoViewModel.swift */; };
 		CAAB26D71C3C727700A7B943 /* InfoViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAAB26D61C3C727700A7B943 /* InfoViewModelSpec.swift */; };
 		CAB4B02F1EE191EC00D2E130 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB4B02E1EE191EC00D2E130 /* Appearance.swift */; };
+		CAD38B3D21FCAB5900E45A76 /* AppIcon-Debug.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD38B3C21FCAB5900E45A76 /* AppIcon-Debug.xcassets */; };
 		CAEE7DC21C07499000DDAA5E /* Depressed_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */; };
 		CAEE7DCA1C074AA300DDAA5E /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEE7DC91C074AA300DDAA5E /* SnapshotHelper.swift */; };
 		CAF463AB1EE47B3300CFE7BE /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF463AA1EE47B3300CFE7BE /* LicenseViewController.swift */; };
@@ -120,6 +121,7 @@
 		CAAB26D61C3C727700A7B943 /* InfoViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewModelSpec.swift; sourceTree = "<group>"; };
 		CAB4B02E1EE191EC00D2E130 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		CAB4B0311EE1AC9F00D2E130 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CAD38B3C21FCAB5900E45A76 /* AppIcon-Debug.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "AppIcon-Debug.xcassets"; sourceTree = "<group>"; };
 		CAEE7DBF1C07499000DDAA5E /* Depressed?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Depressed?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAEE7DC11C07499000DDAA5E /* Depressed_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Depressed_UITests.swift; sourceTree = "<group>"; };
 		CAEE7DC31C07499000DDAA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				CA8683721BE004A9003E87A4 /* Main.storyboard */,
 				CA855A411C284E8C00C9376E /* ScoreCell.swift */,
 				CA8683701BE004A9003E87A4 /* StartViewController.swift */,
+				CAD38B3C21FCAB5900E45A76 /* AppIcon-Debug.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD38B3D21FCAB5900E45A76 /* AppIcon-Debug.xcassets in Resources */,
 				CA4423F31BF3F15600606895 /* Localizable.strings in Resources */,
 				CA8683791BE004A9003E87A4 /* LaunchScreen.storyboard in Resources */,
 				CA4423E91BF3F15400606895 /* InfoPlist.strings in Resources */,
@@ -827,6 +831,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ES9894LW4A;
+				EXCLUDED_SOURCE_FILE_NAMES = "AppIcon-Debug.xcassets";
 				INFOPLIST_FILE = "Depressed?/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed";
