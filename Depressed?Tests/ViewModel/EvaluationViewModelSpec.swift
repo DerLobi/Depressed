@@ -1,4 +1,4 @@
-import Depressed
+@testable import Depressed
 import Foundation
 import Nimble
 import Quick

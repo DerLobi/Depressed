@@ -9,8 +9,10 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
         let taskController = ORKTaskViewController(task: task, taskRun: nil)
         taskController.delegate = self
         taskController.modalPresentationStyle = .pageSheet
-
-        UIApplication.shared.setStatusBarStyle(.default, animated: true)
+        taskController.navigationBar.prefersLargeTitles = false
+        taskController.navigationBar.titleTextAttributes = [
+            .foregroundColor: Appearance.darkPurple
+        ]
         present(taskController, animated: true, completion: nil)
     }
 
@@ -35,8 +37,9 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
             }
         }
 
-        UIApplication.shared.setStatusBarStyle(.lightContent, animated: false)
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true) {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
     }
 
 }

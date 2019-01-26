@@ -33,19 +33,9 @@ class EvaluationViewController: UIViewController {
 
     @IBAction func findHelpTapped(_ sender: AnyObject) {
         guard let url = viewModel?.findingHelpViewModel?.url else { return }
-
-        if #available(iOS 9.0, *) {
-            let safariViewController = SFSafariViewController(url: url as URL)
-
-            if #available(iOS 10.0, *) {
-                safariViewController.preferredControlTintColor = Appearance.darkPurple
-            }
-            safariViewController.delegate = self
-            UIApplication.shared.setStatusBarStyle(.default, animated: true)
-            present(safariViewController, animated: true, completion: nil)
-        } else {
-            UIApplication.shared.openURL(url as URL)
-        }
+        let safariViewController = SFSafariViewController(url: url as URL)
+        safariViewController.preferredControlTintColor = Appearance.darkPurple
+        present(safariViewController, animated: true, completion: nil)
     }
 
     fileprivate func updateUIWithViewModel(_ viewModel: EvaluationViewModel) {
@@ -56,7 +46,7 @@ class EvaluationViewController: UIViewController {
         let attributedDiagnosisText = NSMutableAttributedString(string: viewModel.diagnosisText)
         let diagnosisRange = diagnosisText.range(of: viewModel.diagnosis)
 
-        attributedDiagnosisText.addAttribute(NSAttributedStringKey.font, value: UIFont.boldSystemFont(ofSize: 17.0), range: diagnosisRange)
+        attributedDiagnosisText.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: 17.0), range: diagnosisRange)
 
         resultLabel.attributedText = attributedDiagnosisText
         additionalLabel.text = viewModel.suicidalText
@@ -71,11 +61,4 @@ class EvaluationViewController: UIViewController {
         }
     }
 
-}
-
-@available(iOS 9.0, *)
-extension EvaluationViewController: SFSafariViewControllerDelegate {
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
-    }
 }

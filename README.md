@@ -1,4 +1,4 @@
-[![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg)](https://developer.apple.com/swift/) [![License](http://img.shields.io/:license-mit-blue.svg)](https://raw.githubusercontent.com/DerLobi/Depressed/master/LICENSE) [![Build Status](https://travis-ci.org/DerLobi/Depressed.svg)](https://travis-ci.org/DerLobi/Depressed)
+[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg)](https://developer.apple.com/swift/) [![License](http://img.shields.io/:license-mit-blue.svg)](https://raw.githubusercontent.com/DerLobi/Depressed/master/LICENSE) [![Build Status](https://travis-ci.org/DerLobi/Depressed.svg)](https://travis-ci.org/DerLobi/Depressed)
 ---
 ![Depressed?](https://raw.githubusercontent.com/DerLobi/Depressed/master/logo.png)
 
