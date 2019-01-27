@@ -112,7 +112,7 @@ public struct EvaluationViewModel {
     }
 
     /// Called when the viewController asked the system to request a review from the user
-    func didShowReviewPrompt() {
+    public func didShowReviewPrompt() {
         settings.didShowRatingPrompt = true
     }
 
