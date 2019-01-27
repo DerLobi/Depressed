@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAA-z1-YBH" customClass="Button" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="26" y="283.5" width="323" height="36"/>
+                                <rect key="frame" x="26" y="280.5" width="323" height="42"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start the Test"/>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be asked 9 questions to determine if you are depressed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hi-nW-Wee" customClass="ShadowLabel" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="26" y="180" width="323" height="42.5"/>
+                                <rect key="frame" x="26" y="177" width="323" height="42.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -255,21 +255,21 @@ by Christian Lobach</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You said that you had thoughts about being better of dead, please talk to your doctor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2E-Nh-YXO" customClass="ShadowLabel" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="20" y="188.5" width="335" height="42.5"/>
+                                <rect key="frame" x="20" y="200.5" width="335" height="42.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-ZG-HW7" customClass="Button" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="144" y="126.5" width="87" height="30"/>
+                                <rect key="frame" x="123.5" y="126.5" width="128" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="View Details"/>
                                 <connections>
-                                    <segue destination="HHJ-Sh-ieB" kind="show" id="P5Y-y9-3la"/>
+                                    <action selector="viewDetailsTapped:" destination="2iT-wc-f4b" eventType="touchUpInside" id="uVk-VA-Tue"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19Z-vg-aia" customClass="Button" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="20" y="558" width="335" height="36"/>
+                                <rect key="frame" x="20" y="552" width="335" height="42"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Find Help"/>
@@ -368,7 +368,7 @@ by Christian Lobach</string>
         <!--Evaluation Details View Controller-->
         <scene sceneID="apK-hi-91m">
             <objects>
-                <tableViewController id="HHJ-Sh-ieB" customClass="EvaluationDetailsViewController" customModule="Depressed" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="EvaluationDetails" id="HHJ-Sh-ieB" customClass="EvaluationDetailsViewController" customModule="Depressed" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="jDn-XE-k4O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

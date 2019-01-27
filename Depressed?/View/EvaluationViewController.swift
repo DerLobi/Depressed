@@ -27,10 +27,17 @@ class EvaluationViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(fontSizeChanged), name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detailsViewController = segue.destination as? EvaluationDetailsViewController {
-            detailsViewController.viewModel = viewModel
+    override func accessibilityPerformMagicTap() -> Bool {
+        viewDetailsTapped(self)
+        return true
+    }
+
+    @IBAction func viewDetailsTapped(_ sender: Any) {
+        guard let detailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EvaluationDetails") as? EvaluationDetailsViewController else {
+            return
         }
+        detailsViewController.viewModel = viewModel
+        navigationController?.pushViewController(detailsViewController, animated: true)
     }
 
     @IBAction func findHelpTapped(_ sender: AnyObject) {

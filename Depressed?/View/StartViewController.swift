@@ -3,6 +3,16 @@ import ResearchKit
 
 class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItem.rightBarButtonItem?.accessibilityLabel = NSLocalizedString("infobutton.accessibilityLabel", comment: "")
+    }
+
+    override func accessibilityPerformMagicTap() -> Bool {
+        startTest(self)
+        return true
+    }
+
     @IBAction func startTest(_ sender: AnyObject) {
 
         let task = SelfTestTask.task()
