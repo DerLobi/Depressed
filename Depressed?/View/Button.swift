@@ -31,8 +31,13 @@ class Button: UIButton {
 
     private func setUpAppearance() {
         layer.cornerRadius = 10.0
+        layer.shadowColor = Appearance.elephant.cgColor
+        layer.shadowOpacity = 0.8
+        layer.shadowRadius = 2.0
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+
         backgroundColor = .white
-        tintColor = Appearance.darkPurple
+        tintColor = Appearance.endeavour
         updateFontSize()
     }
 

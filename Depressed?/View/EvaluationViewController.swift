@@ -36,7 +36,7 @@ class EvaluationViewController: UIViewController {
     @IBAction func findHelpTapped(_ sender: AnyObject) {
         guard let url = viewModel?.findingHelpViewModel?.url else { return }
         let safariViewController = SFSafariViewController(url: url as URL)
-        safariViewController.preferredControlTintColor = Appearance.darkPurple
+        safariViewController.preferredControlTintColor = Appearance.endeavour
         present(safariViewController, animated: true, completion: nil)
     }
 
