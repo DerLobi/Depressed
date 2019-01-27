@@ -36,6 +36,11 @@ public struct EvaluationViewModel {
 
     /// Whether or not the user should be prompted to rate the app or leave a review
     public var shouldPromptForReview: Bool {
+
+        if ProcessInfo.processInfo.environment["UITests"]?.isEmpty == false {
+            return false
+        }
+
         return settings.didShowRatingPrompt == false && settings.numberOfFinishedSurveys > 1
     }
 
