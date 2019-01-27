@@ -23,6 +23,8 @@ class EvaluationViewController: UIViewController {
         if let viewModel = viewModel {
             updateUIWithViewModel(viewModel)
         }
+
+        NotificationCenter.default.addObserver(self, selector: #selector(fontSizeChanged), name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,19 +36,30 @@ class EvaluationViewController: UIViewController {
     @IBAction func findHelpTapped(_ sender: AnyObject) {
         guard let url = viewModel?.findingHelpViewModel?.url else { return }
         let safariViewController = SFSafariViewController(url: url as URL)
-        safariViewController.preferredControlTintColor = Appearance.darkPurple
+        safariViewController.preferredControlTintColor = Appearance.endeavour
         present(safariViewController, animated: true, completion: nil)
     }
 
-    fileprivate func updateUIWithViewModel(_ viewModel: EvaluationViewModel) {
+    @objc private func fontSizeChanged() {
+        if let viewModel = viewModel {
+            updateUIWithViewModel(viewModel)
+        }
+    }
+
+    func updateUIWithViewModel(_ viewModel: EvaluationViewModel) {
         guard isViewLoaded else { return }
 
         let diagnosisText = viewModel.diagnosisText as NSString
 
-        let attributedDiagnosisText = NSMutableAttributedString(string: viewModel.diagnosisText)
+        let font = UIFont.preferredFont(forTextStyle: .body, compatibleWith: traitCollection)
+        let boldFont = UIFont.boldSystemFont(ofSize: font.pointSize)
+
+        let attributedDiagnosisText = NSMutableAttributedString(string: viewModel.diagnosisText,
+                                                                attributes: [.font: font])
+
         let diagnosisRange = diagnosisText.range(of: viewModel.diagnosis)
 
-        attributedDiagnosisText.addAttribute(NSAttributedString.Key.font, value: UIFont.boldSystemFont(ofSize: 17.0), range: diagnosisRange)
+        attributedDiagnosisText.addAttribute(.font, value: boldFont, range: diagnosisRange)
 
         resultLabel.attributedText = attributedDiagnosisText
         additionalLabel.text = viewModel.suicidalText

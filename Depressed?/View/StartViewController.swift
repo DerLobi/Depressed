@@ -11,7 +11,7 @@ class StartViewController: UIViewController, ORKTaskViewControllerDelegate {
         taskController.modalPresentationStyle = .pageSheet
         taskController.navigationBar.prefersLargeTitles = false
         taskController.navigationBar.titleTextAttributes = [
-            .foregroundColor: Appearance.darkPurple
+            .foregroundColor: Appearance.endeavour
         ]
         present(taskController, animated: true, completion: nil)
     }

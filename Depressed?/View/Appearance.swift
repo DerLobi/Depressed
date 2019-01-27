@@ -10,13 +10,14 @@ import Foundation
 import UIKit
 
 struct Appearance {
-    static let lightPurple = #colorLiteral(red: 0.5223392248, green: 0.3648412228, blue: 0.7985767722, alpha: 1)
-    static let darkPurple = #colorLiteral(red: 0.4154375196, green: 0.2874074876, blue: 0.6436447501, alpha: 1)
+    
+    static let endeavour = UIColor(named: "Endeavour", in: Bundle(for: AppDelegate.self), compatibleWith: nil)!
+    static let elephant = UIColor(named: "Elephant", in: Bundle(for: AppDelegate.self), compatibleWith: nil)!
 
     static func setUp() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
 
-        appDelegate.window?.tintColor = darkPurple
+        appDelegate.window?.tintColor = Appearance.endeavour
     }
 
 }

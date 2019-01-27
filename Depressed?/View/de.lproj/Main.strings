@@ -35,8 +35,8 @@
 /* Class = "UINavigationItem"; title = "Depressed?"; ObjectID = "zXf-eP-or7"; */
 "zXf-eP-or7.title" = "Depressiv?";
 
-/* Class = "UILabel"; text = "View Details >"; ObjectID = "lN6-ZG-HW7"; */
-"lN6-ZG-HW7.normalTitle" = "Details anzeigen >";
+/* Class = "UILabel"; text = "View Details"; ObjectID = "lN6-ZG-HW7"; */
+"lN6-ZG-HW7.normalTitle" = "Details anzeigen";
 
 "tAu-al-zkL.text" = "DEINE PUNKTZAHL";
 
