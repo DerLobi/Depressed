@@ -1,5 +1,6 @@
 import UIKit
 import SafariServices
+import StoreKit
 
 class EvaluationViewController: UIViewController {
 
@@ -78,6 +79,11 @@ class EvaluationViewController: UIViewController {
         } else {
             findHelpButton.isHidden = true
             findHelpLabel.isHidden = true
+        }
+
+        if viewModel.shouldPromptForReview {
+            SKStoreReviewController.requestReview()
+            viewModel.didShowReviewPrompt()
         }
     }
 

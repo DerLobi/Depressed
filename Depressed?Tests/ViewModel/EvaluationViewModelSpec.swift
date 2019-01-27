@@ -19,7 +19,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = false
                     evaluation.severity = .mildDepression
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                 }
                 
                 it("is the localized string diagnosis_no_depression") {
@@ -37,7 +37,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .noDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
 
                     it("is the localized string diagnosis_no_depression") {
@@ -49,7 +49,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .minimalDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_minimal_depression") {
@@ -61,7 +61,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .mildDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_mild_depression") {
@@ -73,7 +73,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .moderateDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_moderate_depression") {
@@ -85,7 +85,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .moderatelySevereDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_moderately_severe_depression") {
@@ -97,7 +97,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .severeDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_severe_depression") {
@@ -116,7 +116,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = false
                     evaluation.severity = .mildDepression
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                 }
                 
                 it("is the localized string diagnosis_text_no_depression") {
@@ -134,7 +134,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .noDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_text_no_depression") {
@@ -146,7 +146,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .minimalDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_text_minimal_depression") {
@@ -158,7 +158,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .mildDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_text_mild_depression") {
@@ -170,7 +170,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .moderateDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_text_moderate_depression") {
@@ -182,7 +182,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .moderatelySevereDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_text_moderately_severe_depression") {
@@ -194,7 +194,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     
                     beforeEach {
                         evaluation.severity = .severeDepression
-                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                        viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     }
                     
                     it("is the localized string diagnosis_text_severe_depression") {
@@ -211,7 +211,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = true
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                 }
                 
                 it("returns the localized string 'explanation_depression'") {
@@ -237,7 +237,7 @@ class EvaluationViewModelSpec: QuickSpec {
                     evaluation.losingInterestCritical = losingInterestCritical
                     evaluation.feelingDepressedCritical = feelingDepressedCritical
                     
-                    let viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                    let viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                     
                     it("decides correctly") {
                         expect(viewModel.explanationText).to(equal(expectedExplanation))
@@ -299,7 +299,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 
                 beforeEach {
                     evaluation.suicidal = false
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                 }
 
                 it("is nil") {
@@ -311,7 +311,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 
                 beforeEach {
                     evaluation.suicidal = true
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                 }
                 
                 it("is the localized string suicidal_text") {
@@ -324,7 +324,7 @@ class EvaluationViewModelSpec: QuickSpec {
             
             beforeEach {
                 evaluation.score = 23
-                viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
             }
             
             it("is equal to the evaluation's score") {
@@ -339,7 +339,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = true
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                 }
                 
                 it("returns true") {
@@ -352,7 +352,7 @@ class EvaluationViewModelSpec: QuickSpec {
 
                 beforeEach {
                     evaluation.depressiveDisorderConsidered = false
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                 }
                 
                 it("returns false") {
@@ -370,7 +370,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 let answer = Answer(stepResult: stepResult)!
 
                 evaluation.answers = [answer]
-                viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
             }
             
             it("is equal to the evaluation's score") {
@@ -386,7 +386,7 @@ class EvaluationViewModelSpec: QuickSpec {
 
                 beforeEach {
                     let info = FindingHelpInformation(url: URL(string: "http://example.com")!, organizationName: "Example Alliance Against Depression")
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: info)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: info, settings: SettingsMock())
                 }
                 
                 it("returns false") {
@@ -397,7 +397,7 @@ class EvaluationViewModelSpec: QuickSpec {
             context("it gets initialized without a FindingHelpInformation") {
 
                 beforeEach {
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                 }
                 
                 it("returns false") {
@@ -412,7 +412,7 @@ class EvaluationViewModelSpec: QuickSpec {
                 
                 beforeEach {
                     let info = FindingHelpInformation(url: URL(string: "http://example.com")!, organizationName: "Example Alliance Against Depression")
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: info)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: info, settings: SettingsMock())
                 }
                 
                 it("is not nil") {
@@ -423,11 +423,105 @@ class EvaluationViewModelSpec: QuickSpec {
             context("it gets initialized without a FindingHelpInformation") {
                 
                 beforeEach {
-                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil)
+                    viewModel = EvaluationViewModel(evaluation: evaluation, findingHelpInformation: nil, settings: SettingsMock())
                 }
                 
                 it("is nil") {
                     expect(viewModel.findingHelpViewModel).to(beNil())
+                }
+            }
+        }
+
+        describe(".shouldPromptForReview") {
+
+            context("the survey has not been finished before") {
+
+                beforeEach {
+                    let settings = SettingsMock()
+                    settings.didShowRatingPrompt = false
+                    settings.numberOfFinishedSurveys = 0
+
+                    viewModel = EvaluationViewModel(evaluation: evaluation,
+                                                    findingHelpInformation: nil,
+                                                    settings: settings)
+                }
+
+                it("returns false") {
+                    expect(viewModel.shouldPromptForReview).to(beFalse())
+                }
+
+            }
+
+            context("the survey has been finished once") {
+                beforeEach {
+                    let settings = SettingsMock()
+                    settings.didShowRatingPrompt = false
+                    settings.numberOfFinishedSurveys = 1
+
+                    viewModel = EvaluationViewModel(evaluation: evaluation,
+                                                    findingHelpInformation: nil,
+                                                    settings: settings)
+                }
+
+                it("returns false") {
+                    expect(viewModel.shouldPromptForReview).to(beFalse())
+                }
+
+            }
+
+            context("the survey has been finished twice") {
+                beforeEach {
+                    let settings = SettingsMock()
+                    settings.didShowRatingPrompt = false
+                    settings.numberOfFinishedSurveys = 2
+
+                    viewModel = EvaluationViewModel(evaluation: evaluation,
+                                                    findingHelpInformation: nil,
+                                                    settings: settings)
+                }
+
+                it("returns true") {
+                    expect(viewModel.shouldPromptForReview).to(beTrue())
+                }
+
+            }
+
+            context("the survey has been finished more than once before") {
+
+                context("the prompt has not been shown before") {
+
+                    beforeEach {
+                        let settings = SettingsMock()
+                        settings.didShowRatingPrompt = false
+                        settings.numberOfFinishedSurveys = 3
+
+                        viewModel = EvaluationViewModel(evaluation: evaluation,
+                                                        findingHelpInformation: nil,
+                                                        settings: settings)
+                    }
+
+                    it("returns true") {
+                        expect(viewModel.shouldPromptForReview).to(beTrue())
+                    }
+
+                }
+
+                context("the prompt has been shown before") {
+
+                    beforeEach {
+                        let settings = SettingsMock()
+                        settings.didShowRatingPrompt = true
+                        settings.numberOfFinishedSurveys = 3
+
+                        viewModel = EvaluationViewModel(evaluation: evaluation,
+                                                        findingHelpInformation: nil,
+                                                        settings: settings)
+                    }
+
+                    it("returns false") {
+                        expect(viewModel.shouldPromptForReview).to(beFalse())
+                    }
+
                 }
             }
         }
