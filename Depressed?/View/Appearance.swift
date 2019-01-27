@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 struct Appearance {
-    
     static let endeavour = UIColor(named: "Endeavour", in: Bundle(for: AppDelegate.self), compatibleWith: nil)!
     static let elephant = UIColor(named: "Elephant", in: Bundle(for: AppDelegate.self), compatibleWith: nil)!
 
@@ -19,5 +18,4 @@ struct Appearance {
 
         appDelegate.window?.tintColor = Appearance.endeavour
     }
-
 }
