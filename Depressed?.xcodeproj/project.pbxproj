@@ -24,6 +24,8 @@
 		CA6600491BED454A00042495 /* EvaluationViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */; };
 		CA66004C1BED490200042495 /* MutableEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA66004B1BED490200042495 /* MutableEvaluation.swift */; };
 		CA6EACC61C29D0CC00841E5F /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6EACC51C29D0CC00841E5F /* Answer.swift */; };
+		CA6F650A21FE4BAC00D3DCD4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F650921FE4BAC00D3DCD4 /* Settings.swift */; };
+		CA6F650C21FE538A00D3DCD4 /* SettingsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6F650B21FE538A00D3DCD4 /* SettingsMock.swift */; };
 		CA855A3E1C283C7D00C9376E /* EvaluationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA855A3D1C283C7D00C9376E /* EvaluationDetailsViewController.swift */; };
 		CA855A401C284E7300C9376E /* ExplanationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA855A3F1C284E7300C9376E /* ExplanationCell.swift */; };
 		CA855A421C284E8C00C9376E /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA855A411C284E8C00C9376E /* ScoreCell.swift */; };
@@ -101,6 +103,8 @@
 		CA6600481BED454A00042495 /* EvaluationViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationViewModelSpec.swift; sourceTree = "<group>"; };
 		CA66004B1BED490200042495 /* MutableEvaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableEvaluation.swift; sourceTree = "<group>"; };
 		CA6EACC51C29D0CC00841E5F /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		CA6F650921FE4BAC00D3DCD4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		CA6F650B21FE538A00D3DCD4 /* SettingsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMock.swift; sourceTree = "<group>"; };
 		CA855A3D1C283C7D00C9376E /* EvaluationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationDetailsViewController.swift; sourceTree = "<group>"; };
 		CA855A3F1C284E7300C9376E /* ExplanationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplanationCell.swift; sourceTree = "<group>"; };
 		CA855A411C284E8C00C9376E /* ScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				CA66004B1BED490200042495 /* MutableEvaluation.swift */,
+				CA6F650B21FE538A00D3DCD4 /* SettingsMock.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 				CAF8A55A1C29EB4800E30E90 /* Question.swift */,
 				CA8683961BE16D0B003E87A4 /* QuestionIdentifier.swift */,
 				CA86838E1BE00981003E87A4 /* SelfTestTask.swift */,
+				CA6F650921FE4BAC00D3DCD4 /* Settings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -594,6 +600,7 @@
 				CAF8A5611C2A023200E30E90 /* AnswerCell.swift in Sources */,
 				CA855A3E1C283C7D00C9376E /* EvaluationDetailsViewController.swift in Sources */,
 				CA3269EF1C65319000AE4E14 /* FindingHelpViewModel.swift in Sources */,
+				CA6F650A21FE4BAC00D3DCD4 /* Settings.swift in Sources */,
 				CAF545F71ED1F4F80018A049 /* Button.swift in Sources */,
 				CA86838F1BE00981003E87A4 /* SelfTestTask.swift in Sources */,
 				CA86836F1BE004A9003E87A4 /* AppDelegate.swift in Sources */,
@@ -608,6 +615,7 @@
 			files = (
 				CA3269F11C65407D00AE4E14 /* FindingHelpInformationSpec.swift in Sources */,
 				CAF8A55D1C29F0E600E30E90 /* QuestionSpec.swift in Sources */,
+				CA6F650C21FE538A00D3DCD4 /* SettingsMock.swift in Sources */,
 				CA66004C1BED490200042495 /* MutableEvaluation.swift in Sources */,
 				CAF8A5591C29E44400E30E90 /* AnswerSpec.swift in Sources */,
 				CA3269F41C654CBE00AE4E14 /* FindingHelpViewModelSpec.swift in Sources */,
