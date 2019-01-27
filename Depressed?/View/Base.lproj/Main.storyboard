@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAA-z1-YBH" customClass="Button" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="30" y="318" width="354" height="36"/>
+                                <rect key="frame" x="30" y="315" width="354" height="42"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start the Test"/>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will be asked 9 questions to determine if you are depressed." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Hi-nW-Wee" customClass="ShadowLabel" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="30" y="214.66666666666669" width="354" height="42.333333333333314"/>
+                                <rect key="frame" x="30" y="211.66666666666669" width="354" height="42.333333333333343"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -260,13 +260,13 @@ by Christian Lobach</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You said that you had thoughts about being better of dead, please talk to your doctor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2E-Nh-YXO" customClass="ShadowLabel" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="20" y="188.33333333333334" width="374" height="42.333333333333343"/>
+                                <rect key="frame" x="20" y="200.33333333333334" width="374" height="42.333333333333343"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lN6-ZG-HW7" customClass="Button" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="163.66666666666666" y="126.33333333333331" width="87" height="30"/>
+                                <rect key="frame" x="143" y="126.33333333333331" width="128" height="42"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="View Details"/>
                                 <connections>
@@ -274,7 +274,7 @@ by Christian Lobach</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19Z-vg-aia" customClass="Button" customModule="Depressed" customModuleProvider="target">
-                                <rect key="frame" x="20" y="627.33333333333337" width="374" height="36"/>
+                                <rect key="frame" x="20" y="621.33333333333337" width="374" height="42"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Find Help"/>
@@ -368,7 +368,7 @@ by Christian Lobach</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxW-hD-lpn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2050" y="359"/>
+            <point key="canvasLocation" x="2049.275362318841" y="358.69565217391306"/>
         </scene>
         <!--Evaluation Details View Controller-->
         <scene sceneID="apK-hi-91m">
