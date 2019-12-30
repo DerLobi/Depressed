@@ -417,7 +417,7 @@
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = ES9894LW4A;
 						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					CA86837E1BE004A9003E87A4 = {
 						CreatedOnToolsVersion = 7.1;
@@ -821,6 +821,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon$(BUNDLE_ID_SUFFIX)";
 				BUNDLE_ID_SUFFIX = .debug;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ES9894LW4A;
 				INFOPLIST_FILE = "Depressed?/Supporting Files/Info.plist";
@@ -828,7 +829,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "de.christian-lobach.Depressed";
 				PRODUCT_MODULE_NAME = Depressed;
 				PRODUCT_NAME = Depressed;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: de.christian-lobach.Depressed";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -840,7 +841,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon$(BUNDLE_ID_SUFFIX)";
 				BUNDLE_ID_SUFFIX = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ES9894LW4A;
 				EXCLUDED_SOURCE_FILE_NAMES = "AppIcon-Debug.xcassets";
@@ -850,7 +852,7 @@
 				PRODUCT_MODULE_NAME = Depressed;
 				PRODUCT_NAME = Depressed;
 				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = "Depressed App Store";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
