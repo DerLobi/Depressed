@@ -37,3 +37,4 @@
 "explanation_no_depression_first_questions_not_critical" = "Vous n'avez pas répondu aux deux premières questions en utilisant au moins \"Régulièrement\". Vous ne semblez pas sujet à un syndrome dépressif.";
 "explanation_depression" = "Vous avez répondu au moins quatre fois en utilisant \"Régulièrement\", y compris à l'une des deux premières questions.  Vous ête probablement sujet à un syndrome dépressif.";
 "find_help_credits_format" = "Le liens \"Touver de l'aide\" est fournit par %@";
+"infobutton.accessibilityLabel" = "Info";

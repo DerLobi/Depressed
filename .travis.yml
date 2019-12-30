@@ -1,8 +1,9 @@
-language: objective-c
-osx_image: xcode8.3
+language: swift
+osx_image: xcode10.1
+addons:
+  homebrew:
+    brewfile: true
 install:
-- brew update
-- brew outdated swiftlint || brew upgrade swiftlint
 - bundle install
 - pod repo update
 script:

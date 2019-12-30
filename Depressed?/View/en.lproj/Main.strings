@@ -35,8 +35,8 @@
 /* Class = "UINavigationItem"; title = "Depressed?"; ObjectID = "zXf-eP-or7"; */
 "zXf-eP-or7.title" = "Depressed?";
 
-/* Class = "UILabel"; text = "View Details >"; ObjectID = "lN6-ZG-HW7"; */
-"lN6-ZG-HW7.normalTitle" = "View Details >";
+/* Class = "UILabel"; text = "View Details"; ObjectID = "lN6-ZG-HW7"; */
+"lN6-ZG-HW7.normalTitle" = "View Details";
 
 "tAu-al-zkL.text" = "YOUR SCORE";
 

@@ -1,5 +1,6 @@
 import UIKit
 import SafariServices
+import StoreKit
 
 class EvaluationViewController: UIViewController {
 
@@ -23,36 +24,50 @@ class EvaluationViewController: UIViewController {
         if let viewModel = viewModel {
             updateUIWithViewModel(viewModel)
         }
+
+        NotificationCenter.default.addObserver(self, selector: #selector(fontSizeChanged), name: UIContentSizeCategory.didChangeNotification, object: nil)
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let detailsViewController = segue.destination as? EvaluationDetailsViewController {
-            detailsViewController.viewModel = viewModel
+    override func accessibilityPerformMagicTap() -> Bool {
+        viewDetailsTapped(self)
+        return true
+    }
+
+    @IBAction func viewDetailsTapped(_ sender: Any) {
+        guard let detailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EvaluationDetails") as? EvaluationDetailsViewController else {
+            return
         }
+        detailsViewController.viewModel = viewModel
+        navigationController?.pushViewController(detailsViewController, animated: true)
     }
 
     @IBAction func findHelpTapped(_ sender: AnyObject) {
         guard let url = viewModel?.findingHelpViewModel?.url else { return }
+        let safariViewController = SFSafariViewController(url: url as URL)
+        safariViewController.preferredControlTintColor = Appearance.endeavour
+        present(safariViewController, animated: true, completion: nil)
+    }
 
-        if #available(iOS 9.0, *) {
-            let safariViewController = SFSafariViewController(url: url as URL)
-            safariViewController.delegate = self
-            UIApplication.shared.setStatusBarStyle(.default, animated: true)
-            present(safariViewController, animated: true, completion: nil)
-        } else {
-            UIApplication.shared.openURL(url as URL)
+    @objc private func fontSizeChanged() {
+        if let viewModel = viewModel {
+            updateUIWithViewModel(viewModel)
         }
     }
 
-    fileprivate func updateUIWithViewModel(_ viewModel: EvaluationViewModel) {
+    func updateUIWithViewModel(_ viewModel: EvaluationViewModel) {
         guard isViewLoaded else { return }
 
         let diagnosisText = viewModel.diagnosisText as NSString
 
-        let attributedDiagnosisText = NSMutableAttributedString(string: viewModel.diagnosisText)
+        let font = UIFont.preferredFont(forTextStyle: .body, compatibleWith: traitCollection)
+        let boldFont = UIFont.boldSystemFont(ofSize: font.pointSize)
+
+        let attributedDiagnosisText = NSMutableAttributedString(string: viewModel.diagnosisText,
+                                                                attributes: [.font: font])
+
         let diagnosisRange = diagnosisText.range(of: viewModel.diagnosis)
 
-        attributedDiagnosisText.addAttribute(NSFontAttributeName, value: UIFont.boldSystemFont(ofSize: 17.0), range: diagnosisRange)
+        attributedDiagnosisText.addAttribute(.font, value: boldFont, range: diagnosisRange)
 
         resultLabel.attributedText = attributedDiagnosisText
         additionalLabel.text = viewModel.suicidalText
@@ -65,13 +80,11 @@ class EvaluationViewController: UIViewController {
             findHelpButton.isHidden = true
             findHelpLabel.isHidden = true
         }
+
+        if viewModel.shouldPromptForReview {
+            SKStoreReviewController.requestReview()
+            viewModel.didShowReviewPrompt()
+        }
     }
 
-}
-
-@available(iOS 9.0, *)
-extension EvaluationViewController: SFSafariViewControllerDelegate {
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
-    }
 }

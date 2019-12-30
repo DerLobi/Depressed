@@ -9,6 +9,11 @@ public struct FindingHelpInformation {
     /// The name of the organization that we link to.
     public let organizationName: String
 
+    init(url: URL, organizationName: String) {
+        self.url = url
+        self.organizationName = organizationName
+    }
+
     ///  Creates a new `FindingHelpInformation` if information is available
     ///  for the given locale.
     ///

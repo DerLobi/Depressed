@@ -65,13 +65,13 @@ public struct Evaluation: EvaluationType {
     public let severity: Severity
 
     /// Whether the user answered that they would be better off dead at least some of the time.
-    public fileprivate(set) var suicidal: Bool
+    public private(set) var suicidal: Bool
 
     /// Whether the user answered the question about losing interest with at least "more than half the days".
-    public fileprivate(set) var losingInterestCritical: Bool
+    public private(set) var losingInterestCritical: Bool
 
     /// Whether the user answered the question about feeling depressed with at least "more than half the days".
-    public fileprivate(set) var feelingDepressedCritical: Bool
+    public private(set) var feelingDepressedCritical: Bool
 
     /// Whether the user answered at least four questions with at least "more than half the days".
     public let numberOfAnswersCritical: Bool
@@ -101,17 +101,14 @@ public struct Evaluation: EvaluationType {
         }
 
         suicidal = false
-
         losingInterestCritical = false
         feelingDepressedCritical = false
         var numberOfCriticalQuestions = 0
 
-        answers = stepResults.map { Answer(stepResult: $0) }
-            .filter { $0 != nil }
-            .map { $0! }
+        answers = stepResults.compactMap { Answer(stepResult: $0) }
 
-        for answer in answers where (answer.question.identifier == .feelingSuicidal
-            && answer.answerScore >= .severalDays)
+        for answer in answers
+            where (answer.question.identifier == .feelingSuicidal && answer.answerScore >= .severalDays)
             || answer.answerScore >= .moreThanHalfTheDays {
 
                 numberOfCriticalQuestions += 1
@@ -134,26 +131,29 @@ public struct Evaluation: EvaluationType {
 
         self.numberOfAnswersCritical = numberOfCriticalQuestions >= 4
 
-        severity = severityForScore(score)
+        self.severity = Severity(score)
     }
 
 }
 
-private func severityForScore(_ score: Int) -> Severity {
-    switch score {
-    case 0:
-        return .noDepression
-    case 1...4:
-        return .minimalDepression
-    case 5...9:
-        return .mildDepression
-    case 10...14:
-        return .moderateDepression
-    case 15...19:
-        return .moderatelySevereDepression
-    case 20...27:
-        return .severeDepression
-    default:
-        return .noDepression
+fileprivate extension Severity {
+
+    init(_ score: Int) {
+        switch score {
+        case 0:
+            self = .noDepression
+        case 1...4:
+            self = .minimalDepression
+        case 5...9:
+            self = .mildDepression
+        case 10...14:
+            self = .moderateDepression
+        case 15...19:
+            self = .moderatelySevereDepression
+        case 20...27:
+            self = .severeDepression
+        default:
+            self = .noDepression
+        }
     }
 }

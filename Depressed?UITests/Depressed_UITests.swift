@@ -6,7 +6,7 @@ class Depressed_UITests: XCTestCase {
         super.setUp()
 
         let app = XCUIApplication()
-        
+        app.launchEnvironment = ["UITests": "1"]
         setupSnapshot(app)
         app.launch()
         
@@ -26,21 +26,21 @@ class Depressed_UITests: XCTestCase {
         
         if deviceLanguage == "de" {
             startButton = app.buttons["Test starten"]
-            viewDetailsButton = app.buttons["Details anzeigen >"]
+            viewDetailsButton = app.buttons["Details anzeigen"]
             nearlyEveryDayCell = app.tables.staticTexts["Beinahe jeden Tag"]
             severalDaysCell = app.tables.staticTexts["An einzelnen Tagen"]
             moreThanHalfTheDaysCell = app.tables.staticTexts["An mehr als der Hälfte der Tage"]
             notAtAllCell = app.tables.staticTexts["Überhaupt nicht"]
         } else if deviceLanguage == "fr" {
             startButton = app.buttons["Démarrer le Test"]
-            viewDetailsButton = app.buttons["Voir les Details >"]
+            viewDetailsButton = app.buttons["Voir les Details"]
             nearlyEveryDayCell = app.tables.staticTexts["Quasiment tous les jours"]
             severalDaysCell = app.tables.staticTexts["Parfois"]
             moreThanHalfTheDaysCell = app.tables.staticTexts["Régulièrement, au moins un jour sur deux"]
             notAtAllCell = app.tables.staticTexts["Jamais"]
         } else {
             startButton = app.buttons["Start the Test"]
-            viewDetailsButton = app.buttons["View Details >"]
+            viewDetailsButton = app.buttons["View Details"]
             nearlyEveryDayCell = app.tables.staticTexts["Nearly every day"]
             severalDaysCell = app.tables.staticTexts["Several days"]
             moreThanHalfTheDaysCell = app.tables.staticTexts["More than half the days"]
@@ -73,14 +73,14 @@ class Depressed_UITests: XCTestCase {
         severalDaysCell.tap()
         
         sleep(1)
+        app.tables.firstMatch.swipeUp()
         notAtAllCell.tap()
 
         sleep(1)
         notAtAllCell.tap()
-                
+
+        sleep(1)
         snapshot("03Result")
-
-        sleep(1)
         viewDetailsButton.tap()
         snapshot("04ResultDetails")
         

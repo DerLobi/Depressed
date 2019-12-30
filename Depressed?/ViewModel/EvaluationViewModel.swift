@@ -34,13 +34,28 @@ public struct EvaluationViewModel {
         return findingHelpViewModel != nil
     }
 
+    /// Whether or not the user should be prompted to rate the app or leave a review
+    public var shouldPromptForReview: Bool {
+
+        if ProcessInfo.processInfo.environment["UITests"]?.isEmpty == false {
+            return false
+        }
+
+        return settings.didShowRatingPrompt == false && settings.numberOfFinishedSurveys > 1
+    }
+
+    private let settings: SettingsProtocol
+
     ///  Creates a new view model from the given evaluation.
     ///
     ///  - parameter evaluation:             An `Evaluation`.
     ///  - parameter findingHelpInformation: A `FindingHelpInformation` or `nil` if none is available.
+    ///  - parameter settings:               An instance conforming to `SettingsProtocol`. Used to determine if we should prompt for a review
     ///
     ///  - returns: a newly initialized `EvaluationViewModel` instance
-    public init(evaluation: EvaluationType, findingHelpInformation: FindingHelpInformation?) {
+    public init(evaluation: EvaluationType, findingHelpInformation: FindingHelpInformation?, settings: SettingsProtocol) {
+
+        self.settings = settings
 
         if let findingHelpInformation = findingHelpInformation {
             findingHelpViewModel = FindingHelpViewModel(info: findingHelpInformation)
@@ -94,6 +109,11 @@ public struct EvaluationViewModel {
         score = String(evaluation.score)
 
         answers = evaluation.answers.map { ($0.question.title, String($0.answerScore.rawValue)) }
+    }
+
+    /// Called when the viewController asked the system to request a review from the user
+    public func didShowReviewPrompt() {
+        settings.didShowRatingPrompt = true
     }
 
 }
